@@ -3964,3 +3964,11 @@ h1, h2, h3, h4, h5, h6, [class*="title"], [class*="-h2"], [class*="heading"] {
     justify-content: stretch;
   }
 }
+
+/* Home hero: size it to the visible screen. On phones 100vh counts the area behind the address bar,
+   which pushed the "Proyek Terbaru" card below the fold on first load. svh = the visible height. */
+@supports (height: 100svh) {
+  .navbar-hero-wrapper, .hero-background-wrapper {
+    height: 100svh;
+  }
+}
