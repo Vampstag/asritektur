@@ -1,0 +1,33 @@
+/*
+ * Initial states for elements animated by js/animations.js and js/menu.js.
+ * They stay hidden until the scripts have set up their start values (html.is-ready),
+ * which avoids a flash of the final state before the animation begins.
+ */
+
+html.js:not(.is-ready) :is(
+  .secondary-button .arrow-button-icon.black,
+  .navbar-popup-wrapper,
+  .menu-line.top,
+  .menu-line.bottom,
+  [data-split-reveal],
+  .works-card .works-card-image,
+  .display-large,
+  .testimonial-stiky-wrapper .testimonial-card-wrapper,
+  .testimonial-stiky-wrapper .testimonial-title-wrapper,
+  .label-line.works-line,
+  .label-line.about-line,
+  .navbar-hero-wrapper,
+  .stats-number-count .display-medium,
+  .label-line.service-line,
+  .about-paralax-image,
+  .label-line.cta-line
+) {
+  visibility: hidden !important;
+}
+
+/* Service cards only flip on desktop (see js/animations.js) */
+@media (min-width: 992px) {
+  html.js:not(.is-ready) :is(.service-card .service-card-front, .service-card .service-card-back) {
+    visibility: hidden !important;
+  }
+}

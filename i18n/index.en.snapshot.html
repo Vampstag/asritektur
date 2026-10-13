@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="#093B4F" name="theme-color"/>
+        <title>Asritektur - Architecture Studio</title>
+        <meta content="Architecture studio designing bold, honest, and lasting structures. From concept to completion, we prioritize clarity over complexity. Built with intention." name="description"/>
+        <meta content="Asritektur - Architecture Studio" property="og:title"/>
+        <meta content="Architecture studio designing bold, honest, and lasting structures. From concept to completion, we prioritize clarity over complexity. Built with intention." property="og:description"/>
+        <meta content="assets/img/og/og-image.png" property="og:image"/>
+        <meta property="og:type" content="website"/>
+        <meta content="Asritektur - Architecture Studio" name="twitter:title"/>
+        <meta content="Architecture studio designing bold, honest, and lasting structures. From concept to completion, we prioritize clarity over complexity. Built with intention." name="twitter:description"/>
+        <meta content="assets/img/og/og-image.png" name="twitter:image"/>
+        <meta content="summary_large_image" name="twitter:card"/>
+        <link href="assets/img/favicons/favicon-32.png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)"/>
+        <link href="assets/img/favicons/favicon-32-dark.png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)"/>
+        <link href="assets/img/favicons/favicon-48.png" rel="icon" type="image/png" sizes="48x48" media="(prefers-color-scheme: light)"/>
+        <link href="assets/img/favicons/favicon-48-dark.png" rel="icon" type="image/png" sizes="48x48" media="(prefers-color-scheme: dark)"/>
+        <link href="assets/img/favicons/icon-192.png" rel="icon" type="image/png" sizes="192x192"/>
+        <link href="assets/img/favicons/icon-512.png" rel="icon" type="image/png" sizes="512x512"/>
+        <link href="assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+        <link href="assets/fonts/Switzer-Regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="assets/fonts/Switzer-Medium.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="css/fonts.css" rel="stylesheet"/>
+        <link href="css/base.css" rel="stylesheet"/>
+        <link href="css/main.css" rel="stylesheet"/>
+        <link href="css/animations.css" rel="stylesheet"/>
+
+        <!-- Marks JS as available (animations.css hides animated elements until js/animations.js is ready). -->
+        <script>
+            document.documentElement.classList.add("js");
+            // Safety net: never leave the page hidden if a script fails to load.
+            setTimeout(function () {
+                document.documentElement.classList.add("is-ready");
+            }, 4000);
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Asritektur",
+                "logo": "assets/logo/logo-main.png",
+                "url": "/",
+                "description": "Architecture studio designing bold, honest, and lasting structures. From concept to completion, we prioritize clarity over complexity. Built with intention.",
+                "sameAs": [
+                    "https://www.instagram.com",
+                    "https://www.linkedin.com",
+                    "https://www.behance.net",
+                    "https://dribbble.com"
+                ],
+                "slogan": "Built with intention. Designing structures that define the landscape of the future.",
+                "foundingDate": "2024",
+                "location": [
+                    {
+                        "@type": "Place",
+                        "name": "Asritektur Malang",
+                        "hasMap": "https://maps.app.goo.gl/o6NkaTuLfb2RA3ug9",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Jl. Merdeka Selatan No.5, Kauman, Kec. Klojen",
+                            "addressLocality": "Kota Malang",
+                            "addressRegion": "Jawa Timur",
+                            "postalCode": "65119",
+                            "addressCountry": "ID"
+                        }
+                    },
+                    {
+                        "@type": "Place",
+                        "name": "Asritektur Tuban",
+                        "hasMap": "https://maps.app.goo.gl/hNUdBTtqpzhVoGMj8",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Perumahan Bale Agung No.B3, Perbon, Latsari, Kec. Tuban",
+                            "addressLocality": "Kabupaten Tuban",
+                            "addressRegion": "Jawa Timur",
+                            "postalCode": "62310",
+                            "addressCountry": "ID"
+                        }
+                    }
+                ]
+            }</script>
+    </head>
+    <body class="landing-page">
+        <section class="navbar-section">
+            <div class="block-container navbar-container container">
+                <div class="navbar-block">
+                    <div class="navbar-logo-wrapper">
+                        <img src="assets/logo/logo-typeface-dark.png" alt="Asritektur" width="2013" height="330" class="navbar-logo"/>
+                    </div>
+                    <div class="navbar-menu-wrapper">
+                        <a href="#About" class="link-wrapper inline-block">
+                            <p class="nav-text">About</p>
+                            <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                        </a>
+                        <a href="#Works" class="link-wrapper inline-block">
+                            <p class="nav-text">Works</p>
+                            <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                        </a>
+                        <a href="#Service" class="link-wrapper inline-block">
+                            <p class="nav-text">Services</p>
+                            <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                        </a>
+                    </div>
+                    <div class="navbar-contact-wrapper">
+                        <a href="#" class="link-wrapper inline-block">
+                            <p class="nav-text">CONTACT</p>
+                            <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                        </a>
+                    </div>
+                    <div class="menu-wrapper" role="button" tabindex="0" aria-label="Toggle menu" aria-expanded="false">
+                        <div class="menu-line top"></div>
+                        <div class="menu-line bottom"></div>
+                    </div>
+                    <div class="navbar-popup-wrapper">
+                        <div class="navbar-menu-popup">
+                            <a href="#About" class="link-wrapper inline-block">
+                                <p class="nav-text">About</p>
+                                <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                            </a>
+                            <a href="#Works" class="link-wrapper inline-block">
+                                <p class="nav-text">Works</p>
+                                <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                            </a>
+                            <a href="#Service" class="link-wrapper inline-block">
+                                <p class="nav-text">Services</p>
+                                <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                            </a>
+                        </div>
+                        <div class="navbar-contact-popup">
+                            <a href="#" class="link-wrapper inline-block">
+                                <p class="nav-text">CONTACT</p>
+                                <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="navbar-hero-about-wrapper">
+            <div class="navbar-hero-wrapper">
+                <section class="hero-section">
+                    <div class="block-container hero-container container">
+                        <div class="hero-block">
+                            <div class="hero-background-wrapper">
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                            </div>
+                            <div class="hero-image-wrapper">
+                                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero/hero-poster.webp" width="1920" height="1080" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+                                    <source src="assets/vid/hero-loop.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div class="hero-wrapper">
+                                <div class="hero-meta-wrapper">
+                                    <div class="meta-table-wrapper">
+                                        <div class="hero-meta-table">
+                                            <p class="body-small bs-grey-400">Based:</p>
+                                            <p class="body-small bs-grey-400">Tuban &amp; Malang, ID</p>
+                                            <p class="body-small bs-grey-400">Since:</p>
+                                            <p class="body-small bs-grey-400">2024</p>
+                                            <p class="body-small bs-grey-400">Clients:</p>
+                                            <p class="body-small bs-grey-400">400+</p>
+                                        </div>
+                                    </div>
+                                    <div class="hero-meta">
+                                        <div class="hero-meta-wrapper-h5">
+                                            <h5 class="heading-5">Space.</h5>
+                                        </div>
+                                        <p class="body-small bs-grey-300">AS 001 Asritektur</p>
+                                    </div>
+                                </div>
+                                <div class="hero-title-wrapper">
+                                    <h1 class="display-large hero-title">
+                                        <span class="hero-title-line">Everyone Deserves</span>
+                                        <span class="hero-title-line">Better Living</span>
+                                    </h1>
+                                </div>
+                                <div class="hero-content-wrapper">
+                                    <div class="hero-subtext-wrapper">
+                                        <div class="label-wrapper">
+                                            <div class="label-line hero-line"></div>
+                                            <p class="body-medium bm-grey-400">Overview</p>
+                                        </div>
+                                        <p class="body-medium bm-grey-400">Asritektur is an architecture studio that designs bold, honest, and lasting structures. From concept to completion.</p>
+                                    </div>
+                                    <div class="hero-aside">
+                                        <!-- TODO: point href to the page of the latest project / case study -->
+                                        <a href="#Works" class="latest-card" aria-label="Proyek terbaru: Tropical House. Lihat proyek">
+                                            <img src="assets/img/works/works-3-500.webp" width="500" height="279" alt="" class="latest-card-image"/>
+                                            <div class="latest-card-text">
+                                                <p class="latest-card-label"><span class="latest-card-dot"></span>Proyek Terbaru</p>
+                                                <p class="latest-card-title">Tropical House</p>
+                                                <p class="latest-card-cta">Lihat Proyek</p>
+                                            </div>
+                                            <img src="assets/img/icons/arrow.svg" width="14" height="14" alt="" class="latest-card-arrow"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section id="About" class="about-section">
+                <div class="block-container about-container container">
+                    <div class="about-block">
+                        <div class="about-contet-wrapper">
+                            <div class="label-wrapper">
+                                <div class="label-line about-line"></div>
+                                <p class="body-medium bm-grey-200">Tentang Asritektur</p>
+                            </div>
+                            <h2 data-split-reveal class="display-medium dm-white about-heading">Membantu Mewujudkan<br/>Hunian Impian<br/>Setiap Orang</h2>
+                            <div class="about-description-block">
+                                <div class="about-description-wrapper">
+                                    <p class="body-large bl-white">Asritektur Indonesia adalah studio desain arsitektur yang memadukan pengalaman di dunia properti, pengembangan perumahan, dan praktik arsitektur.</p>
+                                    <p class="body-large bl-white">Kami percaya setiap ruang harus dirancang dengan memahami kebutuhan penghuninya, kondisi lapangan, dan anggaran pembangunan.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-paralax-wrapper slider" data-slider data-autoplay="5000" role="region" aria-roledescription="carousel" aria-label="Featured projects">
+                            <div class="slider-track">
+                            <figure class="slider-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 6">
+                                <img src="assets/img/about/slide-1-1600.webp" srcset="assets/img/about/slide-1-800.webp 800w, assets/img/about/slide-1-1080.webp 1080w, assets/img/about/slide-1-1600.webp 1600w" sizes="(max-width: 1400px) 100vw, 1321px" width="1600" height="893" loading="lazy" alt="Modern two-storey house at dusk with timber screens and warm interior lighting" class="about-paralax-image"/>
+                            </figure>
+                            <figure class="slider-slide" role="group" aria-roledescription="slide" aria-label="2 of 6" aria-hidden="true">
+                                <img src="assets/img/about/slide-2-1600.webp" srcset="assets/img/about/slide-2-800.webp 800w, assets/img/about/slide-2-1080.webp 1080w, assets/img/about/slide-2-1600.webp 1600w" sizes="(max-width: 1400px) 100vw, 1321px" width="1600" height="893" loading="lazy" alt="Hillside tropical house with layered terraces and a lit entrance at dusk" class="about-paralax-image"/>
+                            </figure>
+                            <figure class="slider-slide" role="group" aria-roledescription="slide" aria-label="3 of 6" aria-hidden="true">
+                                <img src="assets/img/about/slide-3-1600.webp" srcset="assets/img/about/slide-3-800.webp 800w, assets/img/about/slide-3-1080.webp 1080w, assets/img/about/slide-3-1600.webp 1600w" sizes="(max-width: 1400px) 100vw, 1321px" width="1600" height="893" loading="lazy" alt="Three-storey dark-clad house with a carport and rooftop planting at dusk" class="about-paralax-image"/>
+                            </figure>
+                            <figure class="slider-slide" role="group" aria-roledescription="slide" aria-label="4 of 6" aria-hidden="true">
+                                <img src="assets/img/about/slide-4-1600.webp" srcset="assets/img/about/slide-4-800.webp 800w, assets/img/about/slide-4-1080.webp 1080w, assets/img/about/slide-4-1600.webp 1600w" sizes="(max-width: 1400px) 100vw, 1321px" width="1600" height="893" loading="lazy" alt="Contemporary house with a dark flat-roofed volume, a stone wall and timber accents" class="about-paralax-image"/>
+                            </figure>
+                            <figure class="slider-slide" role="group" aria-roledescription="slide" aria-label="5 of 6" aria-hidden="true">
+                                <img src="assets/img/about/slide-5-1600.webp" srcset="assets/img/about/slide-5-800.webp 800w, assets/img/about/slide-5-1080.webp 1080w, assets/img/about/slide-5-1600.webp 1600w" sizes="(max-width: 1400px) 100vw, 1321px" width="1600" height="893" loading="lazy" alt="Single-storey modern house with a warm timber door and landscaped front yard" class="about-paralax-image"/>
+                            </figure>
+                            <figure class="slider-slide" role="group" aria-roledescription="slide" aria-label="6 of 6" aria-hidden="true">
+                                <img src="assets/img/about/slide-6-1600.webp" srcset="assets/img/about/slide-6-800.webp 800w, assets/img/about/slide-6-1080.webp 1080w, assets/img/about/slide-6-1600.webp 1600w" sizes="(max-width: 1400px) 100vw, 1321px" width="1600" height="893" loading="lazy" alt="Two-storey house with stone cladding, large glass panels and a pitched roof" class="about-paralax-image"/>
+                            </figure>
+                            </div>
+                            <button type="button" class="slider-arrow slider-prev" aria-label="Previous project"><img src="assets/img/icons/arrow-forward-white.svg" width="20" height="20" alt=""/></button>
+                            <button type="button" class="slider-arrow slider-next" aria-label="Next project"><img src="assets/img/icons/arrow-forward-white.svg" width="20" height="20" alt=""/></button>
+                        </div>
+                        <div class="about-description-block">
+                            <div class="about-description-wrapper">
+                                <p class="body-large bl-white">Sejak 2024, kami telah membantu ratusan klien mewujudkan hunian pribadi, bangunan komersial, hingga villa di berbagai wilayah Indonesia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="Works" class="works-section">
+            <div class="block-container works-container container">
+                <div class="works-block">
+                    <div class="works-ttile-wrapper">
+                        <div class="label-wrapper">
+                            <div class="label-line works-line"></div>
+                            <p class="body-medium bm-grey-200">Seletected Project</p>
+                        </div>
+                        <div class="works-title-subtext">
+                            <h2 data-split-reveal class="heading-2 h2-white">Works That Define Us</h2>
+                            <p class="body-medium bm-white">Archive Project / Forbes / 2026</p>
+                        </div>
+                    </div>
+                    <div class="works-card-block">
+                        <div class="works-card-wrapper">
+                            <div>
+                                <div role="list">
+                                    <div role="listitem">
+                                        <a href="/project/cement-void" class="works-card wc-1 inline-block">
+                                            <div class="works-card-image-wrapper">
+                                                <img src="assets/img/works/works-1.webp" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 677px" srcset="assets/img/works/works-1-500.webp 500w, assets/img/works/works-1-800.webp 800w, assets/img/works/works-1.webp 1600w" width="1600" height="893" alt="Modern house with a curved raw-concrete volume, timber lattice screen and a pool in the front garden" class="works-card-image"/>
+                                            </div>
+                                            <div class="works-card-text">
+                                                <div class="works-description-wrapper-1">
+                                                    <h3 class="heading-3 h3-white">Cement Void</h3>
+                                                    <p class="body-small bs-grey-200">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                                </div>
+                                                <div class="works-support-wrapper">
+                                                    <p class="body-small bs-white">Area 450 SQM</p>
+                                                    <p class="body-small bs-white">Status is Built</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collection-list-wrapper">
+                                <div role="list">
+                                    <div role="listitem">
+                                        <a href="/project/thermal-grid" class="works-card wc-2 inline-block">
+                                            <div class="works-card-image-wrapper wci-2">
+                                                <img src="assets/img/works/works-2.webp" loading="lazy" sizes="(max-width: 538px) 100vw, 538px" srcset="assets/img/works/works-2-500.webp 500w, assets/img/works/works-2-800.webp 800w, assets/img/works/works-2.webp 1600w" width="1600" height="893" alt="Three-storey modern house at dusk with a cantilevered upper floor and a warm timber facade" class="works-card-image"/>
+                                            </div>
+                                            <div class="works-card-text">
+                                                <div class="works-description-wrapper-2">
+                                                    <h3 class="heading-3 h3-white">Thermal Grid</h3>
+                                                    <p class="body-small bs-grey-200">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines.</p>
+                                                </div>
+                                                <div class="works-support-wrapper">
+                                                    <p class="body-small bs-white">Area 450 SQM</p>
+                                                    <p class="body-small bs-white">Status is Built</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div role="list">
+                                <div role="listitem">
+                                    <a href="/project/dural-shift" class="works-card wc-3 inline-block">
+                                        <div class="works-card-image-wrapper wci-3">
+                                            <img src="assets/img/works/works-3.webp" loading="lazy" sizes="(max-width: 660px) 100vw, 660px" srcset="assets/img/works/works-3-500.webp 500w, assets/img/works/works-3-800.webp 800w, assets/img/works/works-3.webp 1600w" width="1600" height="893" alt="Tropical modern house with a pitched roof and landscaped garden lit at dusk" class="works-card-image"/>
+                                        </div>
+                                        <div class="works-card-text wct-down">
+                                            <div class="works-description-wrapper-3">
+                                                <h3 class="heading-3 h3-white">Dural Shift</h3>
+                                                <p class="body-small bs-grey-200">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling. Designed a fresh and minimal identity for a sustainable coffee.</p>
+                                            </div>
+                                            <div class="works-support-wrapper">
+                                                <p class="body-small bs-white">Area 450 SQM</p>
+                                                <p class="body-small bs-white">Status is Built</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="service-stats-testimonial-wrapper">
+            <div class="stats-wrapper">
+                <section class="stats-section">
+                    <div class="block-container stats-container container">
+                        <div class="stats-block">
+                            <div class="stats-card-wrapper">
+                                <div class="stats-card">
+                                    <div class="stats-number-count first">
+                                        <h2 class="display-medium dm-white">67</h2>
+                                        <h2 class="display-medium dm-white">48</h2>
+                                        <h2 class="display-medium dm-white">34</h2>
+                                        <h2 class="display-medium dm-white">26</h2>
+                                        <h2 class="display-medium dm-white">12</h2>
+                                    </div>
+                                    <p class="body-medium bm-grey-200">
+                                        Completed Projects<br/>
+                                    </p>
+                                </div>
+                                <div class="stats-card">
+                                    <div class="stats-number-count second">
+                                        <h2 class="display-medium dm-white">00</h2>
+                                        <h2 class="display-medium dm-white">05</h2>
+                                        <h2 class="display-medium dm-white">08</h2>
+                                        <h2 class="display-medium dm-white">10</h2>
+                                        <h2 class="display-medium dm-white">12</h2>
+                                    </div>
+                                    <p class="body-medium bm-grey-200">
+                                        Years Active<br/>
+                                    </p>
+                                </div>
+                                <div class="stats-card">
+                                    <div class="stats-number-count third">
+                                        <h2 class="display-medium dm-white">32</h2>
+                                        <h2 class="display-medium dm-white">28</h2>
+                                        <h2 class="display-medium dm-white">24</h2>
+                                        <h2 class="display-medium dm-white">16</h2>
+                                        <h2 class="display-medium dm-white">12</h2>
+                                    </div>
+                                    <p class="body-medium bm-grey-200">
+                                        SQM Built<br/>
+                                    </p>
+                                </div>
+                                <div class="stats-card">
+                                    <div class="stats-number-count fourth">
+                                        <h2 class="display-medium dm-white">00</h2>
+                                        <h2 class="display-medium dm-white">02</h2>
+                                        <h2 class="display-medium dm-white">04</h2>
+                                        <h2 class="display-medium dm-white">07</h2>
+                                        <h2 class="display-medium dm-white">08</h2>
+                                    </div>
+                                    <p class="body-medium bm-grey-200">
+                                        Presence Client<br/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="stats-subtext-wrapper">
+                                <p class="body-medium bm-grey-200">By The Numbers</p>
+                                <p class="body-medium bm-grey-200">2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section id="Service" class="service-section">
+                <div class="block-container service-container container">
+                    <div class="service-block">
+                        <div class="service-heading-wrapper">
+                            <div class="label-wrapper service-label">
+                                <h3 class="heading-3 h3-no-wrap">Our Service</h3>
+                                <div class="label-line service-line"></div>
+                            </div>
+                            <h2 data-split-reveal class="heading-2">From Brief to Build</h2>
+                        </div>
+                        <div class="service-card-block">
+                            <div class="service-card-wrapper">
+                                <div class="service-card">
+                                    <div class="service-card-front">
+                                        <div class="title-number-service-card-wrapper">
+                                            <h3 class="heading-6">Architectual Design</h3>
+                                            <p class="body-extra-large bel-grey-300">01</p>
+                                        </div>
+                                        <div class="services-card-description-mobile-wrapper">
+                                            <p class="body-medium bm-grey-400">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <div class="services-logo">
+                                            <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                        </div>
+                                        <div class="services-card-description-wrapper">
+                                            <p class="body-medium bm-grey-400">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-card">
+                                    <div class="service-card-front">
+                                        <div class="title-number-service-card-wrapper">
+                                            <h4 class="heading-6">Intertior Design</h4>
+                                            <p class="body-extra-large bel-grey-300">02</p>
+                                        </div>
+                                        <div class="services-card-description-mobile-wrapper">
+                                            <p class="body-medium bm-grey-400">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <div class="services-logo">
+                                            <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                        </div>
+                                        <div class="services-card-description-wrapper">
+                                            <p class="body-medium bm-grey-400">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-card sc-first">
+                                    <div class="service-text sc-no-card">
+                                        <div class="service-subtext-wrapper">
+                                            <p class="body-medium">Cultural · Bali · 2026. A modular pavilion exploring the intersection of traditional weaving patterns and contemporary steel structures.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-card-wrapper">
+                                <div class="service-card">
+                                    <div class="service-card-front">
+                                        <div class="title-number-service-card-wrapper">
+                                            <h5 class="heading-6">Design Consultation</h5>
+                                            <p class="body-extra-large bel-grey-300">03</p>
+                                        </div>
+                                        <div class="services-card-description-mobile-wrapper">
+                                            <p class="body-medium bm-grey-400">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <div class="services-logo">
+                                            <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                        </div>
+                                        <div class="services-card-description-wrapper">
+                                            <p class="body-medium bm-grey-400">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-card sc-last">
+                                    <div class="service-text sc-no-card"></div>
+                                </div>
+                                <div class="service-card">
+                                    <div class="service-card-front">
+                                        <div class="title-number-service-card-wrapper">
+                                            <h6 class="heading-6">Projecct Document</h6>
+                                            <p class="body-extra-large bel-grey-300">04</p>
+                                        </div>
+                                        <div class="services-card-description-mobile-wrapper">
+                                            <p class="body-medium bm-grey-400">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <div class="services-logo">
+                                            <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                        </div>
+                                        <div class="services-card-description-wrapper">
+                                            <p class="body-medium bm-grey-400">Designed a fresh and minimal identity for a sustainable coffee brand focusing on fair-trade brand guidelines sourcing and community-driven storytelling.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="testimonial-cta-wrapper">
+                <div class="testimonial-stiky-block">
+                    <div class="testimonial-stiky-wrapper">
+                        <section class="testimonial-section">
+                            <div class="block-container testimonial-container container">
+                                <div class="testimonial-block">
+                                    <div class="testimonial-title-wrapper">
+                                        <h2 class="heading-2">What Were</h2>
+                                        <h2 class="heading-2">They Said?</h2>
+                                    </div>
+                                    <div class="testimonial-card-wrapper">
+                                        <div class="testimonial-card">
+                                            <p class="body-extra-large">“Asritektur© didn’t just redesign our website , they completely redefined how we present ourselves as a brand. From structure to messaging.”</p>
+                                            <div class="testimonial-account">
+                                                <div class="rating-wrapper">
+                                                    <p class="body-extra-large">5/5</p>
+                                                    <div class="star-rating-wrapper">
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-wrapper">
+                                                    <p class="body-small bs-grey-300">
+                                                        Sophie Laurent<br/>Head of Marketing
+                                                    </p>
+                                                    <img src="assets/img/testimonials/testimonial-1.webp" loading="lazy" alt="Profile of a blonde woman with a ponytail wearing a gray turtleneck sweater." class="testimonial-profile-image"/>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-logo">
+                                                <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <p class="body-extra-large">“Working with Asritektur completely elevated how we present ourselves. The new direction feels timeless, clear, and premium.”</p>
+                                            <div class="testimonial-account">
+                                                <div class="rating-wrapper">
+                                                    <p class="body-extra-large">5/5</p>
+                                                    <div class="star-rating-wrapper">
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-wrapper">
+                                                    <p class="body-small bs-grey-300">
+                                                        Daniel Foster
+<br/>Founder, Atelier North
+                                                    </p>
+                                                    <img src="assets/img/testimonials/testimonial-2.webp" loading="lazy" alt="Portrait of a man wearing a light gray hoodie looking to the side against a plain background." class="testimonial-profile-image"/>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-logo">
+                                                <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <p class="body-extra-large">“Asritektur didn’t just redesign our studio — they reshaped the entire experience of our brand and communication.”</p>
+                                            <div class="testimonial-account">
+                                                <div class="rating-wrapper">
+                                                    <p class="body-extra-large">5/5</p>
+                                                    <div class="star-rating-wrapper">
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-wrapper">
+                                                    <p class="body-small bs-grey-300">
+                                                        Sophie Laurent<br/>Head of Marketing
+                                                    </p>
+                                                    <img src="assets/img/testimonials/testimonial-3.webp" loading="lazy" alt="Woman in black blazer, turtleneck, and sunglasses with hair pulled back, against a plain light background." class="testimonial-profile-image"/>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-logo">
+                                                <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <p class="body-extra-large">“From concept to execution, Asritektur created a brand presence that finally reflects the quality of our architectural work.”</p>
+                                            <div class="testimonial-account">
+                                                <div class="rating-wrapper">
+                                                    <p class="body-extra-large">5/5</p>
+                                                    <div class="star-rating-wrapper">
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-wrapper">
+                                                    <p class="body-small bs-grey-300">
+                                                        Ethan Brooks
+<br/>Managing Partner
+                                                    </p>
+                                                    <img src="assets/img/testimonials/testimonial-4.webp" loading="lazy" alt="Portrait of a middle-aged man with gray hair wearing a gray sweater against a white background." class="testimonial-profile-image"/>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-logo">
+                                                <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <p class="body-extra-large">“Asritektur helped us redefine our visual language and positioning with a result that feels both modern and authentic.”</p>
+                                            <div class="testimonial-account">
+                                                <div class="rating-wrapper">
+                                                    <p class="body-extra-large">5/5</p>
+                                                    <div class="star-rating-wrapper">
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-wrapper">
+                                                    <p class="body-small bs-grey-300">
+                                                        Olivia Bennett
+<br/>Brand Manager
+                                                    </p>
+                                                    <img src="assets/img/testimonials/testimonial-5.webp" loading="lazy" alt="Blond woman wearing black sunglasses, gray jacket, and carrying a brown shoulder bag on light gray background." class="testimonial-profile-image"/>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-logo">
+                                                <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <p class="body-extra-large">“The team at Asritektur brought structure, clarity, and sophistication to our brand in a way we couldn’t achieve before.”</p>
+                                            <div class="testimonial-account">
+                                                <div class="rating-wrapper">
+                                                    <p class="body-extra-large">5/5</p>
+                                                    <div class="star-rating-wrapper">
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-wrapper">
+                                                    <p class="body-small bs-grey-300">
+                                                        Marcus Hale
+<br/>Studio Director
+                                                    </p>
+                                                    <img src="assets/img/testimonials/testimonial-6.webp" loading="lazy" alt="Young man with short hair wearing a blue hoodie against a plain gray background." class="testimonial-profile-image"/>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-logo">
+                                                <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <p class="body-extra-large">“Asritektur gave our studio a stronger identity and a more confident voice across every client touchpoint.”</p>
+                                            <div class="testimonial-account">
+                                                <div class="rating-wrapper">
+                                                    <p class="body-extra-large">5/5</p>
+                                                    <div class="star-rating-wrapper">
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                        <img src="assets/img/icons/star.svg" loading="lazy" alt="Green emoji-style smiley face with one raised eyebrow and a slight frown."/>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-wrapper">
+                                                    <p class="body-small bs-grey-300">
+                                                        Chloe Mitchell
+<br/>Operations Lead
+                                                    </p>
+                                                    <img src="assets/img/testimonials/testimonial-7.webp" loading="lazy" alt="Close-up of a person with short hair wearing a black garment against a plain gray background." class="testimonial-profile-image"/>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-logo">
+                                                <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" class="testimonial-logo-image"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <section class="cta-section">
+                    <div class="block-container cta-container container">
+                        <div class="cta-block">
+                            <div class="hero-background-wrapper">
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                            </div>
+                            <div class="cta-image-wrapper">
+                                <img src="assets/img/cta/cta-bg-1600.webp" loading="lazy" sizes="max(100vw, 178vh)" srcset="assets/img/cta/cta-bg-500.webp 500w, assets/img/cta/cta-bg-800.webp 800w, assets/img/cta/cta-bg-1080.webp 1080w, assets/img/cta/cta-bg-1600.webp 1600w, assets/img/cta/cta-bg-1920.webp 1920w" width="1920" height="1072" alt="" class="cta-image-ascii"/>
+                            </div>
+                            <div class="cta-wrapper">
+                                <div class="label-wrapper">
+                                    <div class="label-line cta-line"></div>
+                                    <p class="body-medium bm-grey-400">Contact Request</p>
+                                </div>
+                                <div class="cta-display-wrapper">
+                                    <h2 class="display-medium">Have a Project in Mind? Let’s Talk!</h2>
+                                </div>
+                                <div class="cta-description-wrapper">
+                                    <p class="body-extra-large">Whether it &#x27;s a new build, a renovation, or just an idea — we &#x27;d love to hear it. Build with intention.</p>
+                                </div>
+                                <div class="cta-button-wrapper">
+                                    <a href="#Service" class="primary-button inline-block">
+                                        <img loading="lazy" alt="" src="assets/img/icons/bracket.svg" class="bracket-icon"/>
+                                        <div class="button-text-arrow-wrapper">
+                                            <p class="button-text bt-white">Start a Project</p>
+                                            <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="promary-arrow"/>
+                                        </div>
+                                        <img loading="lazy" alt="" src="assets/img/icons/bracket.svg" class="bracket-icon bracket-right"/>
+                                    </a>
+                                    <a href="#Works" class="secondary-button inline-block">
+                                        <div class="button-text-arrow-wrapper">
+                                            <p class="button-text">See Our Work</p>
+                                        </div>
+                                        <div class="button-arrow-wrapper">
+                                            <img loading="lazy" src="assets/img/icons/arrow-forward-white.svg" alt="White arrow pointing right on a transparent background." class="arrow-button-icon"/>
+                                            <img loading="lazy" src="assets/img/icons/arrow-forward-blue.svg" alt="Black arrow pointing to the right on a white background." class="arrow-button-icon black"/>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="footer-section-wrapper">
+            <section class="footer-section">
+                <div class="block-container footer-container container">
+                    <div class="footer-block">
+                        <div class="footer-navigation-wrapper">
+                            <div class="footer-subtext-wrapper">
+                                <div class="label-wrapper">
+                                    <div class="label-line footer-line"></div>
+                                    <p class="body-medium bm-grey-400">Overview</p>
+                                </div>
+                                <p class="body-extra-large">Built with intention. Designing structures that define the landscape of the future.</p>
+                            </div>
+                            <div class="footer-navigation">
+                                <p class="body-small bs-grey-400">Navigation</p>
+                                <div class="footer-link-wrapper">
+                                    <a href="/" aria-current="page" class="link-wrapper link-wrapper--footer inline-block is-current">
+                                        <p class="nav-text">Home</p>
+                                        <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                                    </a>
+                                    <a href="#Works" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">Works</p>
+                                        <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                                    </a>
+                                    <a href="#About" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">About</p>
+                                        <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                                    </a>
+                                    <a href="#Service" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">Service</p>
+                                        <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-navigation">
+                                <p class="body-small bs-grey-400">Social</p>
+                                <div class="footer-link-wrapper">
+                                    <a href="https://www.instagram.com" target="_blank" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">Instargam</p>
+                                        <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                                    </a>
+                                    <a href="https://www.linkedin.com" target="_blank" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">LinkedIn</p>
+                                        <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                                    </a>
+                                    <a href="https://www.behance.net" target="_blank" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">Behance</p>
+                                        <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                                    </a>
+                                    <a href="https://dribbble.com" target="_blank" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">Dribbble</p>
+                                        <img loading="lazy" src="assets/img/icons/arrow.svg" alt="Orange arrow pointing right with thick borders and a gradient orange fill." class="arrow-link-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-navigation">
+                                <p class="body-small bs-grey-400">Our Offices</p>
+                                <div class="footer-address-wrapper">
+                                    <div class="footer-office">
+                                        <p class="body-medium footer-office-name">Malang</p>
+                                        <p class="body-small bs-grey-400">Jl. Merdeka Selatan No.5, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                                        <a href="https://maps.app.goo.gl/o6NkaTuLfb2RA3ug9" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                            <p class="nav-text">View map</p>
+                                            <img loading="lazy" src="assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                        </a>
+                                    </div>
+                                    <div class="footer-office">
+                                        <p class="body-medium footer-office-name">Tuban</p>
+                                        <p class="body-small bs-grey-400">Perumahan Bale Agung No.B3, Perbon, Latsari, Kec. Tuban, Kabupaten Tuban, Jawa Timur 62310</p>
+                                        <a href="https://maps.app.goo.gl/hNUdBTtqpzhVoGMj8" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                            <p class="nav-text">View map</p>
+                                            <img loading="lazy" src="assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-form">
+                            <div class="contact-form">
+                                <div class="form-block form-wrap">
+                                    <form id="newsletter-form" name="newsletter" method="post" data-endpoint="" class="form">
+                                        <label for="newsletter-email" class="field-label">Email</label>
+                                        <input class="text-field form-input" maxlength="256" name="email" placeholder="Email" type="email" id="newsletter-email" autocomplete="email" required/>
+                                        <input type="submit" data-wait-text="Please wait..." aria-label="Submit registration" class="submit-button btn-base" value="SUBMIT"/>
+                                    </form>
+                                    <div class="success-message form-done">
+                                        <div>Thank you! Your submission has been received!</div>
+                                    </div>
+                                    <div class="error-message form-fail">
+                                        <div>Oops! Something went wrong while submitting the form.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-logo">
+                                <img src="assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" width="2013" height="330" class="footer-logo-image"/>
+                            </div>
+                        </div>
+                        <div class="bottom-bar-wrapper">
+                            <p class="body-small bs-grey-400">
+                                © 2026 Asritektur. All Rights Reserved
+                            </p>
+                            <div class="footer-utility-wrapper">
+                                <a href="/license" class="nav-text nt-grey-300">
+                                    License<br/>
+                                </a>
+                                <a href="/style-guide" class="nav-text nt-grey-300">
+                                    Style Guide<br/>
+                                </a>
+                                <a href="/404" class="nav-text nt-grey-300">
+                                    404<br/>
+                                </a>
+                                <a href="/changelog" class="nav-text nt-grey-300">
+                                    Changelog<br/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" class="wa-widget" target="_blank" rel="noopener noreferrer" aria-label="Konsultasi gratis dengan kami via WhatsApp">
+            <span class="wa-widget-label">Konsultasi dengan kami (gratis)</span>
+            <span class="wa-widget-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </span>
+        </a>
+        <script src="js/vendor/gsap.min.js"></script>
+        <script src="js/vendor/ScrollTrigger.min.js"></script>
+        <script src="js/vendor/SplitText.min.js"></script>
+        <script src="js/vendor/lenis.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/animations.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/hero-video.js"></script>
+        <script src="js/form.js"></script>
+    </body>
+</html>

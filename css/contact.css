@@ -1,0 +1,340 @@
+/*
+ * Contact page (contact.html) and 404 page (404.html).
+ * Both reuse the building blocks of the Services page (css/services.css) and the home page (css/main.css).
+ */
+
+/* ---------- 404 ---------- */
+
+/* Layout comes from the .not-found-* rules in main.css; the navbar is fixed, so the one-screen wrapper starts below it */
+.not-found-page .not-found-navbar-wrapper {
+  padding-top: var(--nav-height);
+}
+
+.not-found-page .not-found-block {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* "404" is a single word: bigger than the usual display size, still capped by the screen height */
+.nf-title {
+  font-family: var(--_typography---font--switzer);
+  font-weight: var(--_typography---font-weight--medium);
+  color: var(--blue);
+  margin: 0;
+  font-size: min(clamp(120px, 20vw, 300px), 30vh);
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.not-found-page .not-found-caption {
+  max-width: 520px;
+}
+
+.not-found-page .not-found-caption p {
+  color: var(--grey-400);
+  margin: 0;
+}
+
+.nf-actions {
+  grid-column-gap: 24px;
+  grid-row-gap: 16px;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Hairline - label - hairline, above and below the content */
+.nf-frame {
+  grid-column-gap: 16px;
+  align-items: center;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+}
+
+.nf-frame-line {
+  background-color: var(--grey-200);
+  flex: 1;
+  height: 1px;
+}
+
+.nf-frame-text {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.nf-metadata-end {
+  text-align: right;
+  align-items: flex-end;
+}
+
+/* The corner facts sit under the fixed WhatsApp button's corner: keep the right one clear of it */
+@media screen and (min-width: 768px) {
+  .not-found-page .not-found-metadata-wrapper {
+    padding-right: 72px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Phone: the corner facts and the dotted pattern would crowd the centred content */
+  .not-found-page .not-found-metadata-wrapper,
+  .not-found-page .not-found-decorative-patern-wrapper {
+    display: none;
+  }
+
+  .not-found-page .not-found-block {
+    padding-bottom: 96px;
+  }
+}
+
+/* ---------- contact ---------- */
+
+/* Full-screen photo with the form in a blue card on top of it */
+.ct-section {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: calc(var(--nav-height) + 64px) 20px 96px;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ct-bg {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.ct-bg-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Keeps the photo calm and the card edges clear */
+.ct-bg::after {
+  content: "";
+  background-color: #093b4f66;
+  position: absolute;
+  inset: 0;
+}
+
+.ct-container {
+  width: 100%;
+  max-width: 1160px;
+  position: relative;
+}
+
+.ct-card {
+  background-color: var(--blue);
+  color: var(--white);
+  grid-row-gap: 48px;
+  flex-flow: column;
+  padding: 64px;
+  display: flex;
+}
+
+.ct-title {
+  color: var(--white);
+  font-size: clamp(36px, 5vw, 72px);
+  max-width: 14em;
+}
+
+.ct-form {
+  grid-row-gap: 32px;
+  flex-flow: column;
+  display: flex;
+}
+
+.ct-row {
+  grid-column-gap: 48px;
+  grid-row-gap: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid;
+}
+
+.ct-field {
+  grid-row-gap: 12px;
+  flex-flow: column;
+  min-width: 0;
+  display: flex;
+}
+
+.ct-field label {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--grey-200);
+  line-height: 1;
+  margin: 0;
+}
+
+.ct-optional {
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--grey-200);
+  opacity: .7;
+}
+
+.ct-field input,
+.ct-field select,
+.ct-field textarea {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-large);
+  line-height: var(--_typography---font-height--fh-4);
+  color: var(--white);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--grey-300);
+  border-radius: 0;
+  width: 100%;
+  padding: 8px 0 12px;
+  transition: border-color .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ct-field select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23ffffff' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-position: right 4px center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding-right: 28px;
+}
+
+/* The open list is drawn by the browser: keep it readable on its own white background */
+.ct-field option {
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+.ct-field textarea {
+  resize: vertical;
+  min-height: 112px;
+}
+
+.ct-field input::placeholder,
+.ct-field textarea::placeholder {
+  color: var(--grey-200);
+  opacity: .55;
+}
+
+.ct-field input:focus,
+.ct-field select:focus,
+.ct-field textarea:focus {
+  border-bottom-color: var(--gold);
+  outline: 0;
+}
+
+.ct-field.has-error input,
+.ct-field.has-error textarea {
+  border-bottom-color: #ff8a80;
+}
+
+/* The browser's autofill paints a pale background: keep the text readable */
+.ct-field input:-webkit-autofill {
+  -webkit-text-fill-color: var(--white);
+  transition: background-color 9999s ease-out;
+}
+
+.ct-actions {
+  grid-column-gap: 32px;
+  grid-row-gap: 20px;
+  flex-flow: wrap;
+  align-items: center;
+  margin-top: 8px;
+  display: flex;
+}
+
+.ct-submit {
+  cursor: pointer;
+}
+
+.ct-note {
+  color: var(--grey-200);
+  max-width: 420px;
+  margin: 0;
+}
+
+.ct-link {
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  transition: text-decoration-color .2s;
+}
+
+.ct-link:hover, .ct-link:focus-visible {
+  text-decoration-color: var(--white);
+}
+
+.ct-status {
+  color: var(--white);
+  border-left: 2px solid var(--gold);
+  margin: 0;
+  padding-left: 16px;
+}
+
+.ct-status[hidden] {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .ct-section {
+    padding-bottom: 72px;
+  }
+
+  .ct-card {
+    padding: 48px 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ct-section {
+    padding: calc(var(--nav-height) + 24px) 0 0;
+    align-items: stretch;
+  }
+
+  /* On a phone the card spans the screen width (the photo shows below it on tall screens) */
+  .ct-card {
+    grid-row-gap: 32px;
+    padding: 40px 24px 56px;
+  }
+
+  .ct-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 404 digits: fixed-width cells so the flicker never moves the layout; hidden until the script has measured them */
+html.js:not(.nf-ready) .nf-title {
+  visibility: hidden;
+}
+
+.nf-digit {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
+
+/* Digits still changing are a little lighter, the locked ones are solid */
+.nf-digit:not(.is-locked) {
+  opacity: .45;
+}
+
+.nf-digit {
+  transition: opacity .25s;
+}

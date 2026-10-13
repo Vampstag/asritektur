@@ -1,0 +1,392 @@
+/*
+ * Case-study pages (projects/<year>/<project>.html, starting from projects/2026/template-1.html).
+ * They reuse the building blocks of the Services page (css/services.css: .svc-* sections, hero, image reveal) and the
+ * home page (css/main.css); this file only adds what is specific to a project page. Motion: js/services.js.
+ */
+
+/* ---------- hero ---------- */
+
+/* One-word project names can be much bigger than the Services headline; still capped by the screen height */
+.cs-title {
+  font-size: min(clamp(56px, 13vw, 216px), 22vh);
+  line-height: 1;
+  max-width: none;
+}
+
+.cs-hero-bottom {
+  grid-column-gap: 48px;
+  grid-row-gap: 32px;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  display: flex;
+}
+
+.cs-hero-bottom .hero-meta-table {
+  grid-column-gap: 32px;
+  grid-row-gap: 8px;
+}
+
+.cs-tagline {
+  text-align: right;
+  max-width: 420px;
+  margin: 0;
+}
+
+/* ---------- brief: spec sheet ---------- */
+
+.cs-specs {
+  grid-column-gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 112px 0 0;
+  padding: 0;
+  display: grid;
+}
+
+.cs-spec {
+  grid-row-gap: 16px;
+  border-top: 1px solid var(--grey-200);
+  flex-flow: column;
+  padding-top: 24px;
+  display: flex;
+}
+
+.cs-spec dt {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+  line-height: 1;
+}
+
+.cs-spec dd {
+  font-family: var(--_typography---font--switzer);
+  font-size: clamp(24px, 2.4vw, 36px);
+  font-weight: var(--_typography---font-weight--regular);
+  line-height: 1.1;
+  color: var(--blue);
+  margin: 0;
+}
+
+/* ---------- concept ---------- */
+
+.cs-concept {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.cs-concept .svc-h2 {
+  color: var(--white);
+}
+
+.cs-principles {
+  grid-column-gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 112px;
+  display: grid;
+}
+
+.cs-principle {
+  grid-row-gap: 16px;
+  border-top: 1px solid var(--grey-400);
+  flex-flow: column;
+  padding: 32px 32px 0 0;
+  display: flex;
+}
+
+.cs-principle-index {
+  font-family: var(--_typography---font--switzer);
+  font-size: var(--_typography---font-size--heading-5);
+  line-height: 1;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 40px;
+}
+
+.cs-principle-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--white);
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 1.1;
+  font-weight: var(--_typography---font-weight--regular);
+  text-transform: none;
+  margin: 0;
+}
+
+.cs-principle p {
+  max-width: 340px;
+  margin: 0;
+}
+
+/* ---------- gallery ---------- */
+
+.cs-gallery-section {
+  background-color: var(--grey-100);
+}
+
+.cs-gallery {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 112px;
+  display: grid;
+}
+
+.cs-shot {
+  border-radius: 4px;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+}
+
+.cs-shot.is-wide {
+  grid-column: 1 / -1;
+}
+
+/* ---------- next project ---------- */
+
+.cs-next {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.cs-next-layout {
+  grid-column-gap: 96px;
+  grid-row-gap: 56px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.cs-next-text {
+  grid-row-gap: 32px;
+  flex-flow: column;
+  flex: 1;
+  align-items: flex-start;
+  min-width: 0;
+  display: flex;
+}
+
+.cs-next-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--white);
+  font-size: clamp(40px, 5.6vw, 88px);
+  line-height: 1.04;
+  font-weight: var(--_typography---font-weight--medium);
+  text-wrap: balance;
+  text-transform: none;
+  margin: 0;
+}
+
+.cs-next-meta {
+  margin: 0;
+}
+
+.cs-next-media {
+  border-radius: 4px;
+  flex: 0 1 42%;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+/* ---------- responsive ---------- */
+
+@media screen and (max-width: 991px) {
+  .cs-specs {
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 72px;
+  }
+
+  .cs-principles {
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr;
+    margin-top: 72px;
+  }
+
+  .cs-principle {
+    padding-right: 0;
+  }
+
+  .cs-gallery {
+    margin-top: 72px;
+  }
+
+  .cs-next-layout {
+    flex-flow: column-reverse;
+    align-items: stretch;
+  }
+
+  .cs-next-media {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cs-hero-bottom {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .cs-tagline {
+    text-align: left;
+  }
+
+  .cs-gallery {
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .cs-specs {
+    grid-column-gap: 16px;
+  }
+}
+
+/* Keep the tagline clear of the fixed WhatsApp button (56px + 24px margin) */
+@media screen and (min-width: 768px) {
+  .cs-hero-bottom {
+    padding-right: 80px;
+  }
+}
+
+/* ---------- archive (projects/index.html) ---------- */
+
+.pl-grid {
+  grid-column-gap: 48px;
+  grid-row-gap: 112px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  margin-top: 112px;
+  display: grid;
+}
+
+/* Every second cell sits lower, like the Works cards on the home page */
+.pl-grid > :nth-child(even) {
+  margin-top: 120px;
+}
+
+.pl-card {
+  grid-row-gap: 20px;
+  color: var(--blue);
+  flex-flow: column;
+  text-decoration: none;
+  display: flex;
+}
+
+.pl-card-media {
+  border-radius: 4px;
+  aspect-ratio: 16 / 9;
+}
+
+.pl-card-head {
+  grid-column-gap: 16px;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 12px;
+  display: flex;
+}
+
+.pl-card-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(28px, 2.8vw, 40px);
+  line-height: 1.05;
+  font-weight: var(--_typography---font-weight--regular);
+  text-transform: none;
+  margin: 0;
+}
+
+.pl-card-arrow {
+  flex: none;
+  transform: rotate(-45deg);
+}
+
+.pl-card-desc {
+  max-width: 460px;
+  margin: 0;
+}
+
+/* Paket / luas / lokasi as label + value pairs, hairline on top */
+.pl-card-meta {
+  grid-column-gap: 24px;
+  grid-row-gap: 20px;
+  border-top: 1px solid var(--grey-200);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 12px 0 0;
+  padding: 24px 0 0;
+  display: grid;
+}
+
+.pl-card-meta > div {
+  grid-row-gap: 8px;
+  flex-flow: column;
+  display: flex;
+}
+
+.pl-card-meta dt {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+  line-height: 1;
+}
+
+.pl-card-meta dd {
+  font-family: var(--_typography---font--switzer);
+  font-size: var(--_typography---font-size--body-large);
+  font-weight: var(--_typography---font-weight--medium);
+  line-height: 1.2;
+  color: var(--blue);
+  margin: 0;
+}
+
+.pl-note {
+  grid-row-gap: 24px;
+  background-color: var(--grey-100);
+  border-radius: 8px;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 48px;
+  display: flex;
+}
+
+.pl-note p {
+  max-width: 380px;
+  margin: 0;
+}
+
+.pl-note-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(28px, 2.8vw, 40px);
+  line-height: 1.1;
+  font-weight: var(--_typography---font-weight--regular);
+  text-transform: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .pl-grid {
+    grid-row-gap: 80px;
+    margin-top: 72px;
+  }
+
+  .pl-grid > :nth-child(even) {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pl-grid {
+    grid-row-gap: 64px;
+    grid-template-columns: 1fr;
+  }
+
+  .pl-note {
+    padding: 32px 24px;
+  }
+}
