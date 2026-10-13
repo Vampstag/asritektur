@@ -4,14 +4,14 @@
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="#093B4F" name="theme-color"/>
-        <title>Arsip Proyek - Asritektur</title>
+        <title>Proyek - Asritektur</title>
         <meta content="Arsip proyek Asritektur: rumah dan bangunan yang kami rancang, dari beton ekspos hingga tropis modern, lengkap dengan paket, luas lahan, luas bangunan, dan lokasi." name="description"/>
-        <meta content="Arsip Proyek - Asritektur" property="og:title"/>
+        <meta content="Proyek - Asritektur" property="og:title"/>
         <meta content="Arsip proyek Asritektur: rumah dan bangunan yang kami rancang, dari beton ekspos hingga tropis modern, lengkap dengan paket, luas lahan, luas bangunan, dan lokasi." property="og:description"/>
         <meta content="../assets/img/og/og-image.png" property="og:image"/>
         <meta property="og:type" content="website"/>
         <meta property="og:locale" content="id_ID"/>
-        <meta content="Arsip Proyek - Asritektur" name="twitter:title"/>
+        <meta content="Proyek - Asritektur" name="twitter:title"/>
         <meta content="Arsip proyek Asritektur: rumah dan bangunan yang kami rancang, dari beton ekspos hingga tropis modern, lengkap dengan paket, luas lahan, luas bangunan, dan lokasi." name="twitter:description"/>
         <meta content="../assets/img/og/og-image.png" name="twitter:image"/>
         <meta content="summary_large_image" name="twitter:card"/>
@@ -23,12 +23,14 @@
         <link href="../assets/img/favicons/icon-512.png" rel="icon" type="image/png" sizes="512x512"/>
         <link href="../assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 
-        <link href="../assets/fonts/Switzer-Regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
-        <link href="../assets/fonts/Switzer-Medium.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="../assets/fonts/BeVietnamPro-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="../assets/fonts/BeVietnamPro-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
         <link href="../css/fonts.css" rel="stylesheet"/>
         <link href="../css/base.css" rel="stylesheet"/>
         <link href="../css/main.css" rel="stylesheet"/>
         <link href="../css/animations.css" rel="stylesheet"/>
+        <link href="../css/faq.css" rel="stylesheet"/>
+        <link href="../css/archive.css" rel="stylesheet"/>
         <link href="../css/services.css" rel="stylesheet"/>
         <link href="../css/project.css" rel="stylesheet"/>
 
@@ -57,7 +59,7 @@
                             <p class="nav-text">Beranda</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
-                        <a href="../#About" class="link-wrapper inline-block">
+                        <a href="../about/" class="link-wrapper inline-block">
                             <p class="nav-text">Tentang</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
@@ -69,14 +71,13 @@
                             <p class="nav-text">Layanan dan Harga</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
-                        <!-- TODO: point href to the journal page once it exists -->
-                        <a href="#" class="link-wrapper inline-block">
+                        <a href="../journal/" class="link-wrapper inline-block">
                             <p class="nav-text">Jurnal</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
                     </div>
                     <div class="navbar-contact-wrapper">
-                        <a href="../contact.html" class="link-wrapper inline-block">
+                        <a href="../contact/" class="link-wrapper inline-block">
                             <p class="nav-text">HUBUNGI KAMI</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
@@ -100,7 +101,7 @@
                                 <span class="menu-link-mask"><span class="menu-link-text">Beranda</span></span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
-                            <a href="../#About" class="menu-link">
+                            <a href="../about/" class="menu-link">
                                 <span class="menu-link-index">02</span>
                                 <span class="menu-link-mask"><span class="menu-link-text">Tentang</span></span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
@@ -115,15 +116,14 @@
                                 <span class="menu-link-mask"><span class="menu-link-text">Layanan dan Harga</span></span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
-                            <!-- TODO: point href to the journal page once it exists -->
-                            <a href="#" class="menu-link">
+                            <a href="../journal/" class="menu-link">
                                 <span class="menu-link-index">05</span>
                                 <span class="menu-link-mask"><span class="menu-link-text">Jurnal</span></span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
                         </nav>
                         <div class="navbar-contact-popup">
-                            <a href="../contact.html" class="menu-cta">
+                            <a href="../contact/" class="menu-cta">
                                 <span>Hubungi Kami</span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-cta-arrow"/>
                             </a>
@@ -194,7 +194,7 @@
             </section>
 
             <!-- Archive: two columns, every second card sits lower; the fourth cell is a quiet invitation -->
-            <section id="Arsip" class="svc-section pl-archive">
+            <section id="Arsip" class="svc-section pl-archive" data-archive data-archive-noun="proyek">
                 <div class="block-container svc-container">
                     <div class="svc-block">
                         <div class="svc-heading">
@@ -204,16 +204,97 @@
                             </div>
                             <h2 class="svc-h2" data-svc-reveal>Rumah yang Telah Kami Rancang</h2>
                         </div>
-                        <!-- TODO: satu kartu per proyek. Salin satu blok .pl-card, ganti foto (16:9), nama, deskripsi, data, dan tautan.
-                             Data di bawah masih contoh yang sama dengan kartu di home. Tautan hanya ada untuk template studi kasus. -->
-                        <div class="pl-grid">
-                            <a href="2026/template-1.html" class="pl-card" data-svc-reveal>
+                        <div class="ar-toolbar">
+                            <div class="ar-search">
+                                <label for="ar-q" class="ar-label">Cari proyek</label>
+                                <input id="ar-q" type="search" data-archive-search placeholder="Cari gaya, lokasi, atau paket" autocomplete="off" spellcheck="false"/>
+                            </div>
+                            <button type="button" class="ar-filter-toggle" data-archive-toggle aria-expanded="false" aria-controls="ar-filters"><span>Filter</span><span class="ar-badge" data-archive-badge hidden>0</span><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+                            <div class="ar-filters" id="ar-filters" data-archive-panel>
+                                <div class="ar-group">
+                                    <span class="ar-label" id="ar-paket-l">Paket</span>
+                                    <div class="ar-chips" role="group" aria-labelledby="ar-paket-l" data-archive-filter="paket">
+                                    <button type="button" class="ar-chip is-active" data-value="" aria-pressed="true">Semua</button>
+                                    <button type="button" class="ar-chip" data-value="Standard" aria-pressed="false">Standard</button>
+                                    <button type="button" class="ar-chip" data-value="Premium" aria-pressed="false">Premium</button>
+                                    <button type="button" class="ar-chip" data-value="Profesional" aria-pressed="false">Profesional</button>
+                                    <button type="button" class="ar-chip" data-value="Signature" aria-pressed="false">Signature</button>
+                                    </div>
+                                </div>
+                                <div class="ar-group">
+                                    <span class="ar-label" id="ar-jenis-l">Jenis</span>
+                                    <div class="ar-chips" role="group" aria-labelledby="ar-jenis-l" data-archive-filter="jenis">
+                                    <button type="button" class="ar-chip is-active" data-value="" aria-pressed="true">Semua</button>
+                                    <button type="button" class="ar-chip" data-value="Residensial" aria-pressed="false">Residensial</button>
+                                    <button type="button" class="ar-chip" data-value="Komersial" aria-pressed="false">Komersial</button>
+                                    </div>
+                                </div>
+                                <div class="ar-group">
+                                    <label class="ar-label" for="ar-gaya">Gaya</label>
+                                    <select id="ar-gaya" class="ar-select" data-archive-select="gaya">
+                                    <option value="">Semua gaya</option>
+                                    <option value="Brutalism">Brutalism</option>
+                                    <option value="Minimalist Kontemporer">Minimalist Kontemporer</option>
+                                    <option value="Modern Tropis">Modern Tropis</option>
+                                    <option value="Japandi">Japandi</option>
+                                    <option value="Skandinavia">Skandinavia</option>
+                                    <option value="Industrial">Industrial</option>
+                                    <option value="Neoklasik">Neoklasik</option>
+                                    <option value="Klasik Modern">Klasik Modern</option>
+                                    <option value="Mediterania">Mediterania</option>
+                                    <option value="Mid-Century">Mid-Century</option>
+                                    <option value="Rustic Modern">Rustic Modern</option>
+                                    <option value="Etnik Nusantara">Etnik Nusantara</option>
+                                    <option value="Luxury Kontemporer">Luxury Kontemporer</option>
+                                    <option value="Tropis Kontemporer">Tropis Kontemporer</option>
+                                    </select>
+                                </div>
+                                <div class="ar-group">
+                                    <label class="ar-label" for="ar-lokasi">Lokasi</label>
+                                    <select id="ar-lokasi" class="ar-select" data-archive-select="lokasi">
+                                    <option value="">Semua kota</option>
+                                    <option value="Balikpapan">Balikpapan</option>
+                                    <option value="Bandung">Bandung</option>
+                                    <option value="Bekasi">Bekasi</option>
+                                    <option value="Bogor">Bogor</option>
+                                    <option value="Denpasar">Denpasar</option>
+                                    <option value="Jakarta">Jakarta</option>
+                                    <option value="Makassar">Makassar</option>
+                                    <option value="Malang">Malang</option>
+                                    <option value="Medan">Medan</option>
+                                    <option value="Semarang">Semarang</option>
+                                    <option value="Surabaya">Surabaya</option>
+                                    <option value="Tuban">Tuban</option>
+                                    <option value="Yogyakarta">Yogyakarta</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="ar-bar">
+                                <div class="ar-bar-left">
+                                    <p class="ar-count" data-archive-count role="status" aria-live="polite"></p>
+                                    <button type="button" class="ar-reset" data-archive-reset data-archive-reset-toggle hidden>Reset</button>
+                                </div>
+                                <div class="ar-layout" role="group" aria-label="Tata letak daftar proyek">
+                                    <button type="button" class="ar-layout-btn is-active" data-archive-layout="editorial" aria-pressed="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="7"/><rect x="9" y="5.5" width="5.5" height="9"/></svg><span>Editorial</span></button>
+                                    <button type="button" class="ar-layout-btn" data-archive-layout="grid" aria-pressed="false"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="1.5" y="1.5" width="3.5" height="5"/><rect x="6.25" y="1.5" width="3.5" height="5"/><rect x="11" y="1.5" width="3.5" height="5"/><rect x="1.5" y="9.5" width="3.5" height="5"/><rect x="6.25" y="9.5" width="3.5" height="5"/><rect x="11" y="9.5" width="3.5" height="5"/></svg><span>Kisi</span></button>
+                                    <button type="button" class="ar-layout-btn" data-archive-layout="list" aria-pressed="false"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="1.5" y="2" width="4" height="3.5"/><path d="M8 3.75h6.5"/><rect x="1.5" y="6.25" width="4" height="3.5"/><path d="M8 8h6.5"/><rect x="1.5" y="10.5" width="4" height="3.5"/><path d="M8 12.25h6.5"/></svg><span>Daftar</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TODO: 30 kartu contoh. Nama gaya, kota, paket, luas, dan foto di bawah hanya pengisi; ganti dengan data proyek asli.
+                             Semua kartu menuju template studi kasus (2026/template-1.html) sebagai acuan. Satu kartu = satu blok <a class="pl-card" data-archive-item ...>;
+                             atribut data-paket / data-gaya / data-lokasi / data-jenis dipakai filter dan pencarian (js/archive.js). -->
+                        <div class="pl-grid" data-archive-grid data-layout="editorial">
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Profesional" data-gaya="Brutalism" data-lokasi="Malang" data-jenis="Residensial" data-svc-reveal>
                                 <div class="pl-card-media img-reveal">
-                                    <img src="../assets/img/works/works-1-800.webp" srcset="../assets/img/works/works-1-500.webp 500w, ../assets/img/works/works-1-800.webp 800w, ../assets/img/works/works-1.webp 1600w" sizes="(max-width: 767px) 100vw, 660px" width="800" height="447" loading="lazy" alt="Rumah modern dengan volume beton ekspos melengkung, kisi kayu, dan kolam di taman depan" class="img-parallax"/>
+                                    <img src="../assets/img/works/works-1-800.webp" srcset="../assets/img/works/works-1-500.webp 500w, ../assets/img/works/works-1-800.webp 800w, ../assets/img/works/works-1.webp 1600w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1600" height="893" loading="lazy" alt="Rumah modern dengan volume beton ekspos melengkung, kisi kayu, dan kolam di taman depan" class="img-parallax"/>
                                     <span class="img-cover is-grey" aria-hidden="true"></span>
                                 </div>
                                 <div class="pl-card-head">
-                                    <h3 class="pl-card-title">Brutalism</h3>
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 01 · Residensial</p>
+                                        <h3 class="pl-card-title">Brutalism</h3>
+                                    </div>
                                     <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
                                 </div>
                                 <p class="body-medium bm-grey-300 pl-card-desc">Beton ekspos, massa tegas, dan tekstur material yang jujur.</p>
@@ -224,13 +305,16 @@
                                     <div><dt>Lokasi</dt><dd>Malang,<br/>Jawa Timur</dd></div>
                                 </dl>
                             </a>
-                            <a href="#" class="pl-card" data-svc-reveal data-svc-delay="0.1">
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Minimalist Kontemporer" data-lokasi="Tuban" data-jenis="Residensial" data-svc-reveal>
                                 <div class="pl-card-media img-reveal">
-                                    <img src="../assets/img/works/works-2-800.webp" srcset="../assets/img/works/works-2-500.webp 500w, ../assets/img/works/works-2-800.webp 800w, ../assets/img/works/works-2.webp 1600w" sizes="(max-width: 767px) 100vw, 660px" width="800" height="447" loading="lazy" alt="Rumah modern tiga lantai saat senja dengan lantai atas menjorok dan fasad kayu hangat" class="img-parallax"/>
+                                    <img src="../assets/img/works/works-2-800.webp" srcset="../assets/img/works/works-2-500.webp 500w, ../assets/img/works/works-2-800.webp 800w, ../assets/img/works/works-2.webp 1600w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1600" height="893" loading="lazy" alt="Rumah modern tiga lantai saat senja dengan lantai atas menjorok dan fasad kayu hangat" class="img-parallax"/>
                                     <span class="img-cover is-grey" aria-hidden="true"></span>
                                 </div>
                                 <div class="pl-card-head">
-                                    <h3 class="pl-card-title">Minimalist Kontemporer</h3>
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 02 · Residensial</p>
+                                        <h3 class="pl-card-title">Minimalist Kontemporer</h3>
+                                    </div>
                                     <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
                                 </div>
                                 <p class="body-medium bm-grey-300 pl-card-desc">Garis bersih, bukaan luas, dan material yang hangat.</p>
@@ -241,13 +325,16 @@
                                     <div><dt>Lokasi</dt><dd>Tuban,<br/>Jawa Timur</dd></div>
                                 </dl>
                             </a>
-                            <a href="#" class="pl-card" data-svc-reveal>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Modern Tropis" data-lokasi="Denpasar" data-jenis="Residensial" data-svc-reveal>
                                 <div class="pl-card-media img-reveal">
-                                    <img src="../assets/img/works/works-3-800.webp" srcset="../assets/img/works/works-3-500.webp 500w, ../assets/img/works/works-3-800.webp 800w, ../assets/img/works/works-3.webp 1600w" sizes="(max-width: 767px) 100vw, 660px" width="800" height="447" loading="lazy" alt="Rumah tropis modern beratap miring dengan taman yang diterangi lampu saat senja" class="img-parallax"/>
+                                    <img src="../assets/img/works/works-3-800.webp" srcset="../assets/img/works/works-3-500.webp 500w, ../assets/img/works/works-3-800.webp 800w, ../assets/img/works/works-3.webp 1600w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1600" height="893" loading="lazy" alt="Rumah tropis modern beratap miring dengan taman yang diterangi lampu saat senja" class="img-parallax"/>
                                     <span class="img-cover is-grey" aria-hidden="true"></span>
                                 </div>
                                 <div class="pl-card-head">
-                                    <h3 class="pl-card-title">Modern Tropis</h3>
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 03 · Residensial</p>
+                                        <h3 class="pl-card-title">Modern Tropis</h3>
+                                    </div>
                                     <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
                                 </div>
                                 <p class="body-medium bm-grey-300 pl-card-desc">Atap miring, sirkulasi udara alami, dan dekat dengan taman.</p>
@@ -258,22 +345,594 @@
                                     <div><dt>Lokasi</dt><dd>Denpasar,<br/>Bali</dd></div>
                                 </dl>
                             </a>
-                            <div class="pl-note" data-svc-reveal data-svc-delay="0.1">
-                                <div class="label-wrapper">
-                                    <div class="label-line svc-line"></div>
-                                    <p class="body-medium bm-grey-300">Arsip Terus Bertambah</p>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Signature" data-gaya="Japandi" data-lokasi="Bandung" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-1-800.webp" srcset="../assets/img/about/slide-1-800.webp 800w, ../assets/img/about/slide-1-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah modern dua lantai saat senja dengan kisi kayu dan cahaya interior hangat" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
                                 </div>
-                                <h3 class="pl-note-title">Punya rencana hunian sendiri?</h3>
-                                <p class="body-medium bm-grey-300">Ceritakan kebutuhan, lahan, dan anggaran Anda. Kami rancang yang paling sesuai.</p>
-                                <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="secondary-button inline-block">
-                                    <div class="button-text-arrow-wrapper">
-                                        <p class="button-text">Konsultasi Gratis</p>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 04 · Residensial</p>
+                                        <h3 class="pl-card-title">Japandi</h3>
                                     </div>
-                                    <div class="button-arrow-wrapper">
-                                        <img loading="lazy" src="../assets/img/icons/arrow-forward-white.svg" alt="" class="arrow-button-icon"/>
-                                        <img loading="lazy" src="../assets/img/icons/arrow-forward-blue.svg" alt="" class="arrow-button-icon black"/>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Ketenangan Jepang dan kehangatan Skandinavia dalam satu rumah.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Signature</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>450 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>310 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Bandung,<br/>Jawa Barat</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Profesional" data-gaya="Skandinavia" data-lokasi="Makassar" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-2-800.webp" srcset="../assets/img/about/slide-2-800.webp 800w, ../assets/img/about/slide-2-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah tropis di lereng dengan teras bertingkat dan pintu masuk berlampu saat senja" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 05 · Residensial</p>
+                                        <h3 class="pl-card-title">Skandinavia</h3>
                                     </div>
-                                </a>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Terang, sederhana, dan berfokus pada kenyamanan sehari-hari.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Profesional</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>270 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>195 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Makassar,<br/>Sulawesi Selatan</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Industrial" data-lokasi="Denpasar" data-jenis="Komersial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-3-800.webp" srcset="../assets/img/about/slide-3-800.webp 800w, ../assets/img/about/slide-3-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah tiga lantai berpelapis gelap dengan carport dan tanaman di atap saat senja" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 06 · Komersial</p>
+                                        <h3 class="pl-card-title">Industrial</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Struktur terbuka, baja, dan beton yang tampil apa adanya.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Standard</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>120 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>90 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Denpasar,<br/>Bali</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Neoklasik" data-lokasi="Semarang" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-4-800.webp" srcset="../assets/img/about/slide-4-800.webp 800w, ../assets/img/about/slide-4-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah kontemporer dengan volume atap datar gelap, dinding batu, dan aksen kayu" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 07 · Residensial</p>
+                                        <h3 class="pl-card-title">Neoklasik</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Proporsi simetris dengan detail klasik yang disederhanakan.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>160 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>120 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Semarang,<br/>Jawa Tengah</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Klasik Modern" data-lokasi="Bekasi" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-5-800.webp" srcset="../assets/img/about/slide-5-800.webp 800w, ../assets/img/about/slide-5-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah modern satu lantai dengan pintu kayu hangat dan halaman depan yang tertata" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 08 · Residensial</p>
+                                        <h3 class="pl-card-title">Klasik Modern</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Elemen klasik dengan garis yang lebih ringan dan fungsional.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>190 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>155 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Bekasi,<br/>Jawa Barat</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Mediterania" data-lokasi="Jakarta" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-6-800.webp" srcset="../assets/img/about/slide-6-800.webp 800w, ../assets/img/about/slide-6-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah dua lantai dengan dinding batu, panel kaca besar, dan atap pelana" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 09 · Residensial</p>
+                                        <h3 class="pl-card-title">Mediterania</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Dinding putih, lengkung, dan teras yang hangat.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>290 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>190 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Jakarta,<br/>DKI Jakarta</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Mid-Century" data-lokasi="Medan" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-7-800.jpg" srcset="../assets/img/about/slide-7-800.jpg 800w, ../assets/img/about/slide-7-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="642" loading="lazy" alt="Ruang keluarga dan dapur dengan dinding kayu, jendela besar, dan kursi pijat oranye" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 10 · Residensial</p>
+                                        <h3 class="pl-card-title">Mid-Century</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Atap datar, jendela lebar, dan garis horizontal yang tenang.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Standard</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>110 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>75 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Medan,<br/>Sumatera Utara</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Rustic Modern" data-lokasi="Tuban" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-8-800.jpg" srcset="../assets/img/about/slide-8-800.jpg 800w, ../assets/img/about/slide-8-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="675" loading="lazy" alt="Teras dengan dinding batu hitam, pergola kayu, dan taman batu yang tenang" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 11 · Residensial</p>
+                                        <h3 class="pl-card-title">Rustic Modern</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Kayu dan batu alam dalam tampilan yang rapi.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Standard</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>170 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>115 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Tuban,<br/>Jawa Timur</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Profesional" data-gaya="Etnik Nusantara" data-lokasi="Yogyakarta" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/success-800.jpg" srcset="../assets/img/about/success-800.jpg 800w, ../assets/img/about/success-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Ruang tamu dan ruang TV dengan tangga, lampu lingkar, dan jendela baja hitam" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 12 · Residensial</p>
+                                        <h3 class="pl-card-title">Etnik Nusantara</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Bahasa arsitektur lokal dalam wujud kontemporer.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Profesional</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>210 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>150 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Yogyakarta,<br/>DI Yogyakarta</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Profesional" data-gaya="Luxury Kontemporer" data-lokasi="Bogor" data-jenis="Komersial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/faq-800.jpg" srcset="../assets/img/about/faq-800.jpg 800w, ../assets/img/about/faq-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Ruang keluarga putih dengan plafon berpanel, lampu gantung, dan dapur terbuka" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 13 · Komersial</p>
+                                        <h3 class="pl-card-title">Luxury Kontemporer</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Material premium dengan pencahayaan yang dramatis.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Profesional</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>260 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>190 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Bogor,<br/>Jawa Barat</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Signature" data-gaya="Tropis Kontemporer" data-lokasi="Surabaya" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/services/hero-800.jpg" srcset="../assets/img/services/hero-800.jpg 800w, ../assets/img/services/hero-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah tropis modern beratap miring saat senja dengan taman dan pencahayaan hangat" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 14 · Residensial</p>
+                                        <h3 class="pl-card-title">Tropis Kontemporer</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Taman dalam, kisi kayu, dan ventilasi silang.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Signature</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>310 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>235 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Surabaya,<br/>Jawa Timur</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Profesional" data-gaya="Brutalism" data-lokasi="Balikpapan" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/works/works-1-800.webp" srcset="../assets/img/works/works-1-500.webp 500w, ../assets/img/works/works-1-800.webp 800w, ../assets/img/works/works-1.webp 1600w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1600" height="893" loading="lazy" alt="Rumah modern dengan volume beton ekspos melengkung, kisi kayu, dan kolam di taman depan" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 15 · Residensial</p>
+                                        <h3 class="pl-card-title">Brutalism</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Beton ekspos, massa tegas, dan tekstur material yang jujur.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Profesional</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>200 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>160 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Balikpapan,<br/>Kalimantan Timur</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Minimalist Kontemporer" data-lokasi="Malang" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/works/works-2-800.webp" srcset="../assets/img/works/works-2-500.webp 500w, ../assets/img/works/works-2-800.webp 800w, ../assets/img/works/works-2.webp 1600w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1600" height="893" loading="lazy" alt="Rumah modern tiga lantai saat senja dengan lantai atas menjorok dan fasad kayu hangat" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 16 · Residensial</p>
+                                        <h3 class="pl-card-title">Minimalist Kontemporer</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Garis bersih, bukaan luas, dan material yang hangat.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Standard</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>210 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>135 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Malang,<br/>Jawa Timur</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Modern Tropis" data-lokasi="Bandung" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/works/works-3-800.webp" srcset="../assets/img/works/works-3-500.webp 500w, ../assets/img/works/works-3-800.webp 800w, ../assets/img/works/works-3.webp 1600w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1600" height="893" loading="lazy" alt="Rumah tropis modern beratap miring dengan taman yang diterangi lampu saat senja" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 17 · Residensial</p>
+                                        <h3 class="pl-card-title">Modern Tropis</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Atap miring, sirkulasi udara alami, dan dekat dengan taman.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>280 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>185 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Bandung,<br/>Jawa Barat</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Japandi" data-lokasi="Makassar" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-1-800.webp" srcset="../assets/img/about/slide-1-800.webp 800w, ../assets/img/about/slide-1-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah modern dua lantai saat senja dengan kisi kayu dan cahaya interior hangat" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 18 · Residensial</p>
+                                        <h3 class="pl-card-title">Japandi</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Ketenangan Jepang dan kehangatan Skandinavia dalam satu rumah.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>170 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>120 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Makassar,<br/>Sulawesi Selatan</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Skandinavia" data-lokasi="Denpasar" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-2-800.webp" srcset="../assets/img/about/slide-2-800.webp 800w, ../assets/img/about/slide-2-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah tropis di lereng dengan teras bertingkat dan pintu masuk berlampu saat senja" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 19 · Residensial</p>
+                                        <h3 class="pl-card-title">Skandinavia</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Terang, sederhana, dan berfokus pada kenyamanan sehari-hari.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>220 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>160 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Denpasar,<br/>Bali</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Industrial" data-lokasi="Semarang" data-jenis="Komersial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-3-800.webp" srcset="../assets/img/about/slide-3-800.webp 800w, ../assets/img/about/slide-3-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah tiga lantai berpelapis gelap dengan carport dan tanaman di atap saat senja" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 20 · Komersial</p>
+                                        <h3 class="pl-card-title">Industrial</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Struktur terbuka, baja, dan beton yang tampil apa adanya.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Standard</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>170 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>125 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Semarang,<br/>Jawa Tengah</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Neoklasik" data-lokasi="Bekasi" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-4-800.webp" srcset="../assets/img/about/slide-4-800.webp 800w, ../assets/img/about/slide-4-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah kontemporer dengan volume atap datar gelap, dinding batu, dan aksen kayu" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 21 · Residensial</p>
+                                        <h3 class="pl-card-title">Neoklasik</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Proporsi simetris dengan detail klasik yang disederhanakan.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Standard</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>100 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>80 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Bekasi,<br/>Jawa Barat</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Profesional" data-gaya="Klasik Modern" data-lokasi="Jakarta" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-5-800.webp" srcset="../assets/img/about/slide-5-800.webp 800w, ../assets/img/about/slide-5-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah modern satu lantai dengan pintu kayu hangat dan halaman depan yang tertata" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 22 · Residensial</p>
+                                        <h3 class="pl-card-title">Klasik Modern</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Elemen klasik dengan garis yang lebih ringan dan fungsional.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Profesional</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>280 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>220 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Jakarta,<br/>DKI Jakarta</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Profesional" data-gaya="Mediterania" data-lokasi="Medan" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-6-800.webp" srcset="../assets/img/about/slide-6-800.webp 800w, ../assets/img/about/slide-6-1080.webp 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah dua lantai dengan dinding batu, panel kaca besar, dan atap pelana" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 23 · Residensial</p>
+                                        <h3 class="pl-card-title">Mediterania</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Dinding putih, lengkung, dan teras yang hangat.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Profesional</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>240 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>155 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Medan,<br/>Sumatera Utara</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Signature" data-gaya="Mid-Century" data-lokasi="Tuban" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-7-800.jpg" srcset="../assets/img/about/slide-7-800.jpg 800w, ../assets/img/about/slide-7-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="642" loading="lazy" alt="Ruang keluarga dan dapur dengan dinding kayu, jendela besar, dan kursi pijat oranye" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 24 · Residensial</p>
+                                        <h3 class="pl-card-title">Mid-Century</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Atap datar, jendela lebar, dan garis horizontal yang tenang.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Signature</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>580 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>385 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Tuban,<br/>Jawa Timur</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Profesional" data-gaya="Rustic Modern" data-lokasi="Yogyakarta" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/slide-8-800.jpg" srcset="../assets/img/about/slide-8-800.jpg 800w, ../assets/img/about/slide-8-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="675" loading="lazy" alt="Teras dengan dinding batu hitam, pergola kayu, dan taman batu yang tenang" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 25 · Residensial</p>
+                                        <h3 class="pl-card-title">Rustic Modern</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Kayu dan batu alam dalam tampilan yang rapi.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Profesional</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>330 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>230 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Yogyakarta,<br/>DI Yogyakarta</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Etnik Nusantara" data-lokasi="Bogor" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/success-800.jpg" srcset="../assets/img/about/success-800.jpg 800w, ../assets/img/about/success-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Ruang tamu dan ruang TV dengan tangga, lampu lingkar, dan jendela baja hitam" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 26 · Residensial</p>
+                                        <h3 class="pl-card-title">Etnik Nusantara</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Bahasa arsitektur lokal dalam wujud kontemporer.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Standard</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>140 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>100 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Bogor,<br/>Jawa Barat</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Luxury Kontemporer" data-lokasi="Surabaya" data-jenis="Komersial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/about/faq-800.jpg" srcset="../assets/img/about/faq-800.jpg 800w, ../assets/img/about/faq-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Ruang keluarga putih dengan plafon berpanel, lampu gantung, dan dapur terbuka" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 27 · Komersial</p>
+                                        <h3 class="pl-card-title">Luxury Kontemporer</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Material premium dengan pencahayaan yang dramatis.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>200 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>150 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Surabaya,<br/>Jawa Timur</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Tropis Kontemporer" data-lokasi="Balikpapan" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/services/hero-800.jpg" srcset="../assets/img/services/hero-800.jpg 800w, ../assets/img/services/hero-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1080" height="603" loading="lazy" alt="Rumah tropis modern beratap miring saat senja dengan taman dan pencahayaan hangat" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 28 · Residensial</p>
+                                        <h3 class="pl-card-title">Tropis Kontemporer</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Taman dalam, kisi kayu, dan ventilasi silang.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>250 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>190 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Balikpapan,<br/>Kalimantan Timur</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Premium" data-gaya="Brutalism" data-lokasi="Malang" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/works/works-1-800.webp" srcset="../assets/img/works/works-1-500.webp 500w, ../assets/img/works/works-1-800.webp 800w, ../assets/img/works/works-1.webp 1600w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1600" height="893" loading="lazy" alt="Rumah modern dengan volume beton ekspos melengkung, kisi kayu, dan kolam di taman depan" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 29 · Residensial</p>
+                                        <h3 class="pl-card-title">Brutalism</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Beton ekspos, massa tegas, dan tekstur material yang jujur.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Premium</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>160 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>125 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Malang,<br/>Jawa Timur</dd></div>
+                                </dl>
+                            </a>
+                            <a href="2026/template-1.html" class="pl-card" data-archive-item data-paket="Standard" data-gaya="Minimalist Kontemporer" data-lokasi="Bandung" data-jenis="Residensial" data-svc-reveal>
+                                <div class="pl-card-media img-reveal">
+                                    <img src="../assets/img/works/works-2-800.webp" srcset="../assets/img/works/works-2-500.webp 500w, ../assets/img/works/works-2-800.webp 800w, ../assets/img/works/works-2.webp 1600w" sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 660px" width="1600" height="893" loading="lazy" alt="Rumah modern tiga lantai saat senja dengan lantai atas menjorok dan fasad kayu hangat" class="img-parallax"/>
+                                    <span class="img-cover is-grey" aria-hidden="true"></span>
+                                </div>
+                                <div class="pl-card-head">
+                                    <div class="pl-card-heading">
+                                        <p class="pl-card-kicker">Proyek 30 · Residensial</p>
+                                        <h3 class="pl-card-title">Minimalist Kontemporer</h3>
+                                    </div>
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="pl-card-arrow"/>
+                                </div>
+                                <p class="body-medium bm-grey-300 pl-card-desc">Garis bersih, bukaan luas, dan material yang hangat.</p>
+                                <dl class="pl-card-meta">
+                                    <div><dt>Paket</dt><dd>Standard</dd></div>
+                                    <div><dt>Luas Lahan</dt><dd>140 m²</dd></div>
+                                    <div><dt>Luas Bangunan</dt><dd>90 m²</dd></div>
+                                    <div><dt>Lokasi</dt><dd>Bandung,<br/>Jawa Barat</dd></div>
+                                </dl>
+                            </a>
+                        </div>
+                        <div class="ar-empty" data-archive-empty hidden>
+                            <p class="ar-empty-title">Tidak ada proyek yang cocok.</p>
+                            <p class="body-medium bm-grey-300">Coba kata kunci lain atau kurangi filter. Kalau Anda mencari gaya tertentu, ceritakan kebutuhan Anda dan kami bantu.</p>
+                            <button type="button" class="secondary-button" data-archive-reset><div class="button-text-arrow-wrapper"><p class="button-text">Reset pencarian</p></div></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ: same section on every page (css/faq.css, js/faq.js). Photo changes per page. -->
+            <section class="faq-section">
+                <div class="block-container faq-container">
+                    <div class="faq-block">
+                        <div class="faq-grid">
+                            <div class="faq-left">
+                                <div class="label-wrapper">
+                                    <div class="label-line faq-line"></div>
+                                    <p class="body-medium">FAQ</p>
+                                </div>
+                                <div class="faq-media" data-faq-reveal>
+                                    <img src="../assets/img/about/slide-6-1080.webp" srcset="../assets/img/about/slide-6-800.webp 800w, ../assets/img/about/slide-6-1080.webp 1080w" sizes="(max-width: 991px) 100vw, 400px" width="1080" height="603" loading="lazy" alt="Rumah dua lantai dengan dinding batu, panel kaca besar, dan atap pelana"/>
+                                </div>
+                            </div>
+                            <div class="faq-right">
+                                <h2 class="faq-title" data-faq-reveal>Pertanyaan yang Sering Diajukan</h2>
+                                <div class="faq-list" data-faq-reveal>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-1"><span>Apakah konsultasi awalnya gratis?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-1" role="region"><div class="faq-inner"><p class="body-medium">Ya. Konsultasi awal gratis lewat WhatsApp. Ceritakan kebutuhan, lahan, dan anggaran Anda, lalu kami bantu menentukan paket yang sesuai.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-2"><span>Apakah bisa berkonsultasi dari luar kota?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-2" role="region"><div class="faq-inner"><p class="body-medium">Bisa. Konsultasi dapat dilakukan lewat WhatsApp, Zoom, atau kunjungan langsung, menyesuaikan kondisi proyek Anda. Kami melayani klien di seluruh Indonesia.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-3"><span>Berapa lama proses desainnya?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-3" role="region"><div class="faq-inner"><p class="body-medium">Paket Standard sekitar 15 hari, Premium 25 hari, dan Profesional 30 hari. Rinciannya ada di halaman Layanan dan Harga.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-4"><span>Berapa kali revisi yang bisa dilakukan?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-4" role="region"><div class="faq-inner"><p class="body-medium">Tergantung paket: 2 kali untuk Standard, 6 kali untuk Premium, dan 8 kali untuk Profesional.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-5"><span>Bagaimana proses pembayarannya?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-5" role="region"><div class="faq-inner"><p class="body-medium">Setelah ruang lingkup pekerjaan dan biaya disepakati, Anda melakukan pembayaran awal untuk memulai proyek. Langkah lengkapnya ada di bagian Proses Pemesanan pada halaman Layanan dan Harga.</p></div></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -308,7 +967,7 @@
                                     <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="primary-button inline-block">
                                         <img loading="lazy" alt="" src="../assets/img/icons/bracket.svg" class="bracket-icon"/>
                                         <div class="button-text-arrow-wrapper">
-                                            <p class="button-text bt-white">Mulai Proyek</p>
+                                            <p class="button-text bt-white">Konsultasi Gratis</p>
                                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="promary-arrow"/>
                                         </div>
                                         <img loading="lazy" alt="" src="../assets/img/icons/bracket.svg" class="bracket-icon bracket-right"/>
@@ -377,20 +1036,12 @@
                             </div>
                         </div>
                         <div class="footer-form">
-                            <div class="contact-form">
-                                <div class="form-block form-wrap">
-                                    <form id="newsletter-form" name="newsletter" method="post" data-endpoint="" class="form">
-                                        <label for="newsletter-email" class="field-label">Email</label>
-                                        <input class="text-field form-input" maxlength="256" name="email" placeholder="Email" type="email" id="newsletter-email" autocomplete="email" required/>
-                                        <input type="submit" data-wait-text="Mohon tunggu..." aria-label="Kirim pendaftaran" class="submit-button btn-base" value="KIRIM"/>
-                                    </form>
-                                    <div class="success-message form-done">
-                                        <div>Terima kasih! Email Anda sudah kami terima.</div>
-                                    </div>
-                                    <div class="error-message form-fail">
-                                        <div>Maaf, terjadi kesalahan saat mengirim formulir.</div>
-                                    </div>
-                                </div>
+                            <div class="footer-contact">
+                                <p class="body-small bs-grey-400">Ada pertanyaan?</p>
+                                <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                    <p class="nav-text">Konsultasi lewat WhatsApp</p>
+                                    <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                </a>
                             </div>
                             <div class="footer-logo">
                                 <img src="../assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" width="2013" height="330" class="footer-logo-image"/>
@@ -406,7 +1057,7 @@
                                     <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="back-to-top-arrow"/>
                                 </span>
                             </button>
-                            <p class="body-small bs-grey-400">Designed &amp; developed by <a href="https://hellodimas.my.id/" target="_blank" rel="noopener noreferrer" class="credit-link">MDKG</a></p>
+                            <p class="body-small bs-grey-400">Dirancang &amp; dikembangkan oleh <a href="https://hellodimas.my.id/" target="_blank" rel="noopener noreferrer" class="credit-link">MDKG</a></p>
                         </div>
                     </div>
                 </div>
@@ -426,8 +1077,9 @@
         <script src="../js/animations.js"></script>
         <script src="../js/menu.js"></script>
         <script src="../js/navbar.js"></script>
+        <script src="../js/faq.js"></script>
+        <script src="../js/archive.js"></script>
         <script src="../js/services.js"></script>
         <script src="../js/hero-video.js"></script>
-        <script src="../js/form.js"></script>
     </body>
 </html>

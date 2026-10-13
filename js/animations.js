@@ -157,7 +157,7 @@
     const lines = [
       { selector: ".label-line.works-line", from: 0, to: 80, ease: "none" },
       { selector: ".label-line.about-line", from: 0, to: 320 },
-      { selector: ".label-line.service-line", from: "0%", to: "100%" },
+      { selector: ".label-line.service-line", from: 0, to: 80 },
       { selector: ".label-line.cta-line", from: 0, to: 80 },
     ];
 

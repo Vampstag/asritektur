@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="#093B4F" name="theme-color"/>
+        <title>Tentang - Asritektur</title>
+        <meta content="Kenali Asritektur: studio desain arsitektur dan interior sejak 2024 di Tuban dan Malang, dengan tim arsitek bersertifikat yang melayani klien di seluruh Indonesia." name="description"/>
+        <meta content="Tentang - Asritektur" property="og:title"/>
+        <meta content="Kenali Asritektur: studio desain arsitektur dan interior sejak 2024 di Tuban dan Malang, dengan tim arsitek bersertifikat yang melayani klien di seluruh Indonesia." property="og:description"/>
+        <meta content="../assets/img/og/og-image.png" property="og:image"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:locale" content="id_ID"/>
+        <meta content="Tentang - Asritektur" name="twitter:title"/>
+        <meta content="Kenali Asritektur: studio desain arsitektur dan interior sejak 2024 di Tuban dan Malang, dengan tim arsitek bersertifikat yang melayani klien di seluruh Indonesia." name="twitter:description"/>
+        <meta content="../assets/img/og/og-image.png" name="twitter:image"/>
+        <meta content="summary_large_image" name="twitter:card"/>
+        <link href="../assets/img/favicons/favicon-32.png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)"/>
+        <link href="../assets/img/favicons/favicon-32-dark.png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)"/>
+        <link href="../assets/img/favicons/favicon-48.png" rel="icon" type="image/png" sizes="48x48" media="(prefers-color-scheme: light)"/>
+        <link href="../assets/img/favicons/favicon-48-dark.png" rel="icon" type="image/png" sizes="48x48" media="(prefers-color-scheme: dark)"/>
+        <link href="../assets/img/favicons/icon-192.png" rel="icon" type="image/png" sizes="192x192"/>
+        <link href="../assets/img/favicons/icon-512.png" rel="icon" type="image/png" sizes="512x512"/>
+        <link href="../assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+        <link href="../assets/fonts/BeVietnamPro-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="../assets/fonts/BeVietnamPro-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="../css/fonts.css" rel="stylesheet"/>
+        <link href="../css/base.css" rel="stylesheet"/>
+        <link href="../css/main.css" rel="stylesheet"/>
+        <link href="../css/animations.css" rel="stylesheet"/>
+        <link href="../css/faq.css" rel="stylesheet"/>
+        <link href="../css/services.css" rel="stylesheet"/>
+        <link href="../css/about.css" rel="stylesheet"/>
+
+        <!-- Marks JS as available (animations.css / services.css hide animated elements until the scripts are ready). -->
+        <script>
+            document.documentElement.classList.add("js");
+            // Safety net: never leave the page hidden or covered if a script fails to load.
+            setTimeout(function () {
+                var root = document.documentElement;
+                root.classList.add("is-ready");
+                if (!root.classList.contains("svc-ready")) root.classList.add("svc-failed");
+            }, 4000);
+        </script>
+    </head>
+    <body class="about-page">
+        <section class="navbar-section">
+            <div class="block-container navbar-container container">
+                <div class="navbar-block">
+                    <div class="navbar-logo-wrapper">
+                        <a href="../" aria-label="Asritektur, ke beranda">
+                            <img src="../assets/logo/logo-typeface-dark.png" alt="Asritektur" width="2013" height="330" class="navbar-logo"/>
+                        </a>
+                    </div>
+                    <div class="navbar-menu-wrapper">
+                        <a href="../" class="link-wrapper inline-block">
+                            <p class="nav-text">Beranda</p>
+                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                        </a>
+                        <a href="./" class="link-wrapper inline-block" aria-current="page">
+                            <p class="nav-text">Tentang</p>
+                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                        </a>
+                        <a href="../projects/" class="link-wrapper inline-block">
+                            <p class="nav-text">Proyek</p>
+                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                        </a>
+                        <a href="../services/" class="link-wrapper inline-block">
+                            <p class="nav-text">Layanan dan Harga</p>
+                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                        </a>
+                        <a href="../journal/" class="link-wrapper inline-block">
+                            <p class="nav-text">Jurnal</p>
+                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                        </a>
+                    </div>
+                    <div class="navbar-contact-wrapper">
+                        <a href="../contact/" class="link-wrapper inline-block">
+                            <p class="nav-text">HUBUNGI KAMI</p>
+                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                        </a>
+                    </div>
+                    <button type="button" class="menu-wrapper" aria-label="Buka atau tutup menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <span class="menu-label" aria-hidden="true">
+                            <span class="menu-label-track">
+                                <span class="menu-label-item">Menu</span>
+                                <span class="menu-label-item">Tutup</span>
+                            </span>
+                        </span>
+                        <span class="menu-icon" aria-hidden="true">
+                            <span class="menu-line top"></span>
+                            <span class="menu-line bottom"></span>
+                        </span>
+                    </button>
+                    <div class="navbar-popup-wrapper" id="mobile-menu" data-lenis-prevent>
+                        <nav class="navbar-menu-popup" aria-label="Menu utama">
+                            <a href="../" class="menu-link">
+                                <span class="menu-link-index">01</span>
+                                <span class="menu-link-mask"><span class="menu-link-text">Beranda</span></span>
+                                <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
+                            </a>
+                            <a href="./" class="menu-link" aria-current="page">
+                                <span class="menu-link-index">02</span>
+                                <span class="menu-link-mask"><span class="menu-link-text">Tentang</span></span>
+                                <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
+                            </a>
+                            <a href="../projects/" class="menu-link">
+                                <span class="menu-link-index">03</span>
+                                <span class="menu-link-mask"><span class="menu-link-text">Proyek</span></span>
+                                <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
+                            </a>
+                            <a href="../services/" class="menu-link">
+                                <span class="menu-link-index">04</span>
+                                <span class="menu-link-mask"><span class="menu-link-text">Layanan dan Harga</span></span>
+                                <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
+                            </a>
+                            <a href="../journal/" class="menu-link">
+                                <span class="menu-link-index">05</span>
+                                <span class="menu-link-mask"><span class="menu-link-text">Jurnal</span></span>
+                                <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
+                            </a>
+                        </nav>
+                        <div class="navbar-contact-popup">
+                            <a href="../contact/" class="menu-cta">
+                                <span>Hubungi Kami</span>
+                                <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-cta-arrow"/>
+                            </a>
+                            <div class="menu-info">
+                                <div class="menu-info-block">
+                                    <p class="menu-info-label">Studio</p>
+                                    <p class="menu-info-text">Tuban &amp; Malang, ID</p>
+                                </div>
+                                <div class="menu-info-block">
+                                    <p class="menu-info-label">Ikuti kami</p>
+                                    <p class="menu-info-text menu-socials">
+                                        <a href="https://www.instagram.com/asritektur.id" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                        <a href="https://www.tiktok.com/@asritektur.id" target="_blank" rel="noopener noreferrer">TikTok</a>
+                                        <a href="https://web.facebook.com/people/Asritektur-Indonesia/61571150611536/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="svc-main">
+            <!-- Hero: copy on the left, photo on the right; a slow ticker of services and packages below the copy -->
+            <section class="ab-hero">
+                <div class="hero-background-wrapper" aria-hidden="true">
+                    <div class="hero-background-line"></div>
+                    <div class="hero-background-line"></div>
+                    <div class="hero-background-line"></div>
+                    <div class="hero-background-line"></div>
+                    <div class="hero-background-line"></div>
+                    <div class="hero-background-line"></div>
+                </div>
+                <div class="block-container svc-container ab-hero-container">
+                    <div class="svc-block ab-hero-grid">
+                        <div class="ab-hero-left">
+                            <div class="ab-hero-copy">
+                                <div class="label-wrapper svc-hero-label">
+                                    <div class="label-line svc-line"></div>
+                                    <p class="body-medium bm-grey-300">Tentang Asritektur</p>
+                                </div>
+                                <h1 class="svc-title ab-title"><span class="ab-title-line">Merancang Ruang,</span> <span class="ab-title-line">Menghidupkan Hunian</span></h1>
+                                <p class="body-extra-large bel-grey-300 svc-lead">Kami memadukan pengalaman di bidang properti, pengembangan perumahan, dan praktik arsitektur untuk menghadirkan desain arsitektur dan interior yang estetis serta fungsional.</p>
+                                <div class="svc-hero-actions">
+                                    <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="primary-button inline-block">
+                                        <img loading="lazy" alt="" src="../assets/img/icons/bracket.svg" class="bracket-icon"/>
+                                        <div class="button-text-arrow-wrapper">
+                                            <p class="button-text bt-white">Konsultasi Gratis</p>
+                                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="promary-arrow"/>
+                                        </div>
+                                        <img loading="lazy" alt="" src="../assets/img/icons/bracket.svg" class="bracket-icon bracket-right"/>
+                                    </a>
+                                    <a href="../projects/" class="secondary-button inline-block">
+                                        <div class="button-text-arrow-wrapper">
+                                            <p class="button-text">Lihat Proyek</p>
+                                        </div>
+                                        <div class="button-arrow-wrapper">
+                                            <img loading="lazy" src="../assets/img/icons/arrow-forward-white.svg" alt="" class="arrow-button-icon"/>
+                                            <img loading="lazy" src="../assets/img/icons/arrow-forward-blue.svg" alt="" class="arrow-button-icon black"/>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ab-ticker" data-svc-reveal>
+                                <p class="body-small ab-ticker-label">Layanan dan paket</p>
+                                <div class="ab-ticker-viewport" aria-hidden="true">
+                                    <div class="ab-ticker-track">
+                                        <ul class="ab-ticker-list">
+                                            <li>Desain Arsitektur</li>
+                                            <li>Desain Interior</li>
+                                            <li>Desain Denah</li>
+                                            <li>Standard</li>
+                                            <li>Premium</li>
+                                            <li>Profesional</li>
+                                            <li>Signature</li>
+                                        </ul>
+                                        <ul class="ab-ticker-list">
+                                            <li>Desain Arsitektur</li>
+                                            <li>Desain Interior</li>
+                                            <li>Desain Denah</li>
+                                            <li>Standard</li>
+                                            <li>Premium</li>
+                                            <li>Profesional</li>
+                                            <li>Signature</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="ab-sr-only">Layanan: Desain Arsitektur, Desain Interior, Desain Denah. Paket: Standard, Premium, Profesional, Signature.</p>
+                            </div>
+                        </div>
+                        <div class="ab-hero-media img-reveal">
+                            <img src="../assets/img/about/hero-960.jpg" srcset="../assets/img/about/hero-640.jpg 640w, ../assets/img/about/hero-960.jpg 960w, ../assets/img/about/hero-1320.jpg 1320w" sizes="(max-width: 991px) 100vw, 668px" width="960" height="1117" alt="Ruang keluarga dengan plafon kayu miring, dinding batu alam, dan sofa biru petrol yang hangat" class="img-parallax"/>
+                            <span class="img-cover is-grey" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Numbers: label left, statement right, four figures, one wide photo -->
+            <section class="svc-section ab-success">
+                <div class="block-container svc-container">
+                    <div class="svc-block">
+                        <div class="ab-head">
+                            <div class="label-wrapper">
+                                <div class="label-line svc-line"></div>
+                                <p class="body-medium bm-grey-300">Dalam Angka</p>
+                            </div>
+                            <h2 class="svc-h2 ab-statement" data-svc-reveal>Dipercaya klien di seluruh Indonesia, ditangani profesional bersertifikat.</h2>
+                        </div>
+                        <dl class="ab-stats">
+                            <div class="ab-stat" data-svc-reveal>
+                                <dt>Klien di seluruh Indonesia</dt>
+                                <dd class="ab-stat-number">400<span>+</span></dd>
+                            </div>
+                            <div class="ab-stat" data-svc-reveal data-svc-delay="0.08">
+                                <dt>Profesional bersertifikat in&#8209;house</dt>
+                                <dd class="ab-stat-number">15</dd>
+                            </div>
+                            <div class="ab-stat" data-svc-reveal data-svc-delay="0.16">
+                                <dt>Kota di seluruh Indonesia</dt>
+                                <dd class="ab-stat-number">13<span>+</span></dd>
+                            </div>
+                            <div class="ab-stat" data-svc-reveal data-svc-delay="0.24">
+                                <dt>Tahun beroperasi, sejak 2024</dt>
+                                <dd class="ab-stat-number">2<span>+</span></dd>
+                            </div>
+                        </dl>
+                        <div class="ab-wide img-reveal">
+                            <img src="../assets/img/about/success-1920.jpg" srcset="../assets/img/about/success-800.jpg 800w, ../assets/img/about/success-1080.jpg 1080w, ../assets/img/about/success-1920.jpg 1920w" sizes="(max-width: 1400px) 100vw, 1336px" width="1920" height="1072" loading="lazy" alt="Ruang tamu dan ruang TV dengan tangga, lampu lingkar, dan jendela baja hitam" class="img-parallax"/>
+                            <span class="img-cover is-grey" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission: statement + three pillars (same card language as the Services page) -->
+            <section class="svc-section ab-mission">
+                <div class="block-container svc-container">
+                    <div class="svc-block">
+                        <div class="ab-head">
+                            <div class="label-wrapper">
+                                <div class="label-line svc-line"></div>
+                                <p class="body-medium bm-grey-200">Misi</p>
+                            </div>
+                            <div class="ab-head-text">
+                                <h2 class="svc-h2" data-svc-reveal>Membantu Mewujudkan Hunian Impian Setiap Orang</h2>
+                                <p class="body-large bl-white" data-svc-reveal>Setiap rancangan mempertimbangkan kebutuhan penghuni, kondisi lahan, dan anggaran pembangunan agar matang dan realistis untuk diwujudkan.</p>
+                            </div>
+                        </div>
+                        <div class="ab-pillars">
+                            <article class="ab-pillar" data-svc-reveal>
+                                <span class="ab-pillar-index">01</span>
+                                <span class="ab-pillar-rule" aria-hidden="true"></span>
+                                <h3 class="ab-pillar-title">Estetika</h3>
+                                <p class="body-medium bm-grey-200">Rancangan yang enak dipandang dan terasa seperti rumah bagi penghuninya.</p>
+                            </article>
+                            <article class="ab-pillar" data-svc-reveal data-svc-delay="0.1">
+                                <span class="ab-pillar-index">02</span>
+                                <span class="ab-pillar-rule" aria-hidden="true"></span>
+                                <h3 class="ab-pillar-title">Fungsi</h3>
+                                <p class="body-medium bm-grey-200">Denah dan ruang disusun dari cara penghuninya hidup, bukan dari tren sesaat.</p>
+                            </article>
+                            <article class="ab-pillar" data-svc-reveal data-svc-delay="0.2">
+                                <span class="ab-pillar-index">03</span>
+                                <span class="ab-pillar-rule" aria-hidden="true"></span>
+                                <h3 class="ab-pillar-title">Ketelitian</h3>
+                                <p class="body-medium bm-grey-200">Gambar kerja dan rincian disiapkan cermat supaya siap dibangun.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Journey: big paragraph, then four milestones on a dashed line that draws in on scroll -->
+            <section class="svc-section ab-journey">
+                <div class="block-container svc-container">
+                    <div class="svc-block">
+                        <div class="ab-head">
+                            <div class="label-wrapper">
+                                <div class="label-line svc-line"></div>
+                                <p class="body-medium bm-grey-300">Perjalanan</p>
+                            </div>
+                            <h2 class="svc-h2 ab-statement ab-paragraph" data-svc-reveal>Berdiri sejak 2024, Asritektur lahir dari satu keyakinan: rumah yang baik dimulai dari mendengarkan penghuninya.</h2>
+                        </div>
+                        <ol class="ab-timeline">
+                            <li class="ab-step">
+                                <p class="ab-step-figure">2024</p>
+                                <div class="ab-step-path" aria-hidden="true"><span class="ab-step-dot"><span class="ab-step-core"></span></span><span class="ab-step-line"></span><span class="ab-step-fill"></span></div>
+                                <div class="ab-step-info">
+                                    <h3 class="ab-step-title">Awal Berdiri</h3>
+                                    <p class="body-medium bm-grey-300">Asritektur memulai perjalanan dengan menghadirkan layanan desain arsitektur untuk berbagai kebutuhan bangunan.</p>
+                                </div>
+                            </li>
+                            <li class="ab-step">
+                                <p class="ab-step-figure">14 Gaya</p>
+                                <div class="ab-step-path" aria-hidden="true"><span class="ab-step-dot"><span class="ab-step-core"></span></span><span class="ab-step-line"></span><span class="ab-step-fill"></span></div>
+                                <div class="ab-step-info">
+                                    <h3 class="ab-step-title">Eksplorasi Desain</h3>
+                                    <p class="body-medium bm-grey-300">Memperluas pilihan gaya arsitektur untuk menjawab beragam preferensi dan kebutuhan klien.</p>
+                                </div>
+                            </li>
+                            <li class="ab-step">
+                                <p class="ab-step-figure">13+ kota</p>
+                                <div class="ab-step-path" aria-hidden="true"><span class="ab-step-dot"><span class="ab-step-core"></span></span><span class="ab-step-line"></span><span class="ab-step-fill"></span></div>
+                                <div class="ab-step-info">
+                                    <h3 class="ab-step-title">Memperluas Jangkauan</h3>
+                                    <p class="body-medium bm-grey-300">Mengembangkan layanan konsultasi yang menjangkau klien dari berbagai wilayah Indonesia.</p>
+                                </div>
+                            </li>
+                            <li class="ab-step">
+                                <p class="ab-step-figure">400+ Klien</p>
+                                <div class="ab-step-path" aria-hidden="true"><span class="ab-step-dot"><span class="ab-step-core"></span></span><span class="ab-step-line"></span><span class="ab-step-fill"></span></div>
+                                <div class="ab-step-info">
+                                    <h3 class="ab-step-title">Kepercayaan yang Tumbuh</h3>
+                                    <p class="body-medium bm-grey-300">Hingga 2026, lebih dari 400 klien telah mempercayakan kebutuhan desain mereka kepada Asritektur.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team: five across, three rows; round portraits on a quiet grey -->
+            <section class="svc-section ab-team">
+                <div class="block-container svc-container">
+                    <div class="svc-block">
+                        <div class="ab-team-head">
+                            <div class="label-wrapper">
+                                <div class="label-line svc-line"></div>
+                                <p class="body-medium bm-grey-300">Tim</p>
+                            </div>
+                            <h2 class="svc-h2" data-svc-reveal>Tim Profesional Kami</h2>
+                            <p class="body-large bl-grey-300" data-svc-reveal>Didukung oleh tim dengan keahlian di bidang arsitektur dan desain, kami mengutamakan kolaborasi, ketelitian, dan pemahaman terhadap kebutuhan klien dalam setiap proyek.</p>
+                        </div>
+                        <ul class="ab-members">
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.00">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/pandu-ario-pratanu.png" width="320" height="320" loading="lazy" alt="Foto Pandu Ario Pratanu, S.T" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Pandu Ario Pratanu, S.T</h3>
+                                <p class="ab-member-role">Project Manager</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.06">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/imam-zarkasy.png" width="320" height="320" loading="lazy" alt="Foto Imam Zarkasy, S.E" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Imam Zarkasy, S.E</h3>
+                                <p class="ab-member-role">Marketing Manager</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.12">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/qomarudin.png" width="320" height="320" loading="lazy" alt="Foto Ar. Qomarudin" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Ar. Qomarudin</h3>
+                                <p class="ab-member-role">Arsitek &amp; 3D Render Visualizer</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.18">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/halim-wisnuhadi.png" width="320" height="320" loading="lazy" alt="Foto Halim Wisnuhadi, S. Ars" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Halim Wisnuhadi, S.&nbsp;Ars</h3>
+                                <p class="ab-member-role">Arsitek &amp; 3D Render Visualizer</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.24">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/muammal-ilmi.png" width="320" height="320" loading="lazy" alt="Foto Ar. Muammal Ilmi" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Ar. Muammal Ilmi</h3>
+                                <p class="ab-member-role">Arsitek &amp; 3D Render Visualizer</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.00">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/bagas-prasetyo-nugroho.png" width="320" height="320" loading="lazy" alt="Foto Bagas Prasetyo Nugroho" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Bagas Prasetyo Nugroho</h3>
+                                <p class="ab-member-role">Drawing Drafter</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.06">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/attabi-khoiril-waro.png" width="320" height="320" loading="lazy" alt="Foto Attabi’ Khoiril Waro, S. Ars" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Attabi’ Khoiril Waro, S.&nbsp;Ars</h3>
+                                <p class="ab-member-role">Arsitek</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.12">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/yusuf-abi-pratama.png" width="320" height="320" loading="lazy" alt="Foto Yusuf Abi Pratama, S. Ars" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Yusuf Abi Pratama, S.&nbsp;Ars</h3>
+                                <p class="ab-member-role">Arsitek</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.18">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/fajerin-tri-hadi-wicaksono.png" width="320" height="320" loading="lazy" alt="Foto Fajerin Tri Hadi Wicaksono, S. Ars" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Fajerin Tri Hadi Wicaksono, S.&nbsp;Ars</h3>
+                                <p class="ab-member-role">Arsitek</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.24">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/ratri-rahayuwati.png" width="320" height="320" loading="lazy" alt="Foto Ratri Rahayuwati" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Ratri Rahayuwati</h3>
+                                <p class="ab-member-role">Arsitek</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.00">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/ahmad-lutfi-hikam.png" width="320" height="320" loading="lazy" alt="Foto Ahmad Lutfi Hikam" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Ahmad Lutfi Hikam</h3>
+                                <p class="ab-member-role">Drawing Drafter</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.06">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/wella-nur-fadillah.png" width="320" height="320" loading="lazy" alt="Foto Wella Nur Fadillah" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Wella Nur Fadillah</h3>
+                                <p class="ab-member-role">Customer Service</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.12">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/maratus-solikhah.png" width="320" height="320" loading="lazy" alt="Foto Maratus Solikhah" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Maratus Solikhah</h3>
+                                <p class="ab-member-role">Customer Service</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.18">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/ririn-oktavita-sari.png" width="320" height="320" loading="lazy" alt="Foto Ririn Oktavita Sari" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Ririn Oktavita Sari</h3>
+                                <p class="ab-member-role">Customer Service</p>
+                            </li>
+                            <li class="ab-member" data-svc-reveal data-svc-delay="0.24">
+                                <div class="ab-member-photo">
+                                    <img src="../assets/img/team/aliyah-zulfa-prihantoro.png" width="320" height="320" loading="lazy" alt="Foto Aliyah Zulfa Prihantoro, S. Ars" class="ab-member-img"/>
+                                </div>
+                                <h3 class="ab-member-name">Aliyah Zulfa Prihantoro, S.&nbsp;Ars</h3>
+                                <p class="ab-member-role">Account Executive</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ: same section on every page (css/faq.css, js/faq.js). Photo changes per page. -->
+            <section class="faq-section">
+                <div class="block-container faq-container">
+                    <div class="faq-block">
+                        <div class="faq-grid">
+                            <div class="faq-left">
+                                <div class="label-wrapper">
+                                    <div class="label-line faq-line"></div>
+                                    <p class="body-medium">FAQ</p>
+                                </div>
+                                <div class="faq-media" data-faq-reveal>
+                                    <img src="../assets/img/about/faq-1080.jpg" srcset="../assets/img/about/faq-800.jpg 800w, ../assets/img/about/faq-1080.jpg 1080w" sizes="(max-width: 991px) 100vw, 400px" width="1080" height="603" loading="lazy" alt="Ruang keluarga putih dengan plafon berpanel, lampu gantung, dan dapur terbuka"/>
+                                </div>
+                            </div>
+                            <div class="faq-right">
+                                <h2 class="faq-title" data-faq-reveal>Pertanyaan yang Sering Diajukan</h2>
+                                <div class="faq-list" data-faq-reveal>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-1"><span>Apakah konsultasi awalnya gratis?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-1" role="region"><div class="faq-inner"><p class="body-medium">Ya. Konsultasi awal gratis lewat WhatsApp. Ceritakan kebutuhan, lahan, dan anggaran Anda, lalu kami bantu menentukan paket yang sesuai.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-2"><span>Apakah bisa berkonsultasi dari luar kota?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-2" role="region"><div class="faq-inner"><p class="body-medium">Bisa. Konsultasi dapat dilakukan lewat WhatsApp, Zoom, atau kunjungan langsung, menyesuaikan kondisi proyek Anda. Kami melayani klien di seluruh Indonesia.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-3"><span>Berapa lama proses desainnya?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-3" role="region"><div class="faq-inner"><p class="body-medium">Paket Standard sekitar 15 hari, Premium 25 hari, dan Profesional 30 hari. Rinciannya ada di halaman Layanan dan Harga.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-4"><span>Berapa kali revisi yang bisa dilakukan?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-4" role="region"><div class="faq-inner"><p class="body-medium">Tergantung paket: 2 kali untuk Standard, 6 kali untuk Premium, dan 8 kali untuk Profesional.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-5"><span>Bagaimana proses pembayarannya?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-5" role="region"><div class="faq-inner"><p class="body-medium">Setelah ruang lingkup pekerjaan dan biaya disepakati, Anda melakukan pembayaran awal untuk memulai proyek. Langkah lengkapnya ada di bagian Proses Pemesanan pada halaman Layanan dan Harga.</p></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to action: same block as the home page -->
+                <section class="cta-section">
+                    <div class="block-container cta-container container">
+                        <div class="cta-block">
+                            <div class="hero-background-wrapper">
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                                <div class="hero-background-line"></div>
+                            </div>
+                            <div class="cta-image-wrapper cta-video-wrapper">
+                                <video class="hero-video" autoplay muted loop playsinline preload="none" poster="../assets/img/hero/hero-poster.webp" width="1920" height="1080" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+                                    <source src="../assets/vid/hero-loop.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div class="cta-wrapper">
+                                <div class="cta-display-wrapper">
+                                    <h2 class="display-medium">Punya Rencana Hunian?</h2>
+                                </div>
+                                <div class="cta-description-wrapper">
+                                    <p class="body-extra-large">Mulai dari membangun rumah hingga merenovasi ruang, ceritakan ide Anda kepada kami. Mari wujudkan bersama.</p>
+                                </div>
+                                <div class="cta-button-wrapper">
+                                    <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="primary-button inline-block">
+                                        <img loading="lazy" alt="" src="../assets/img/icons/bracket.svg" class="bracket-icon"/>
+                                        <div class="button-text-arrow-wrapper">
+                                            <p class="button-text bt-white">Konsultasi Gratis</p>
+                                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="promary-arrow"/>
+                                        </div>
+                                        <img loading="lazy" alt="" src="../assets/img/icons/bracket.svg" class="bracket-icon bracket-right"/>
+                                    </a>
+                                    <a href="../services/" class="secondary-button inline-block">
+                                        <div class="button-text-arrow-wrapper">
+                                            <p class="button-text">Lihat Paket dan Harga</p>
+                                        </div>
+                                        <div class="button-arrow-wrapper">
+                                            <img loading="lazy" src="../assets/img/icons/arrow-forward-white.svg" alt="" class="arrow-button-icon"/>
+                                            <img loading="lazy" src="../assets/img/icons/arrow-forward-blue.svg" alt="" class="arrow-button-icon black"/>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </main>
+
+        <div class="footer-section-wrapper">
+            <section class="footer-section">
+                <div class="block-container footer-container container">
+                    <div class="footer-block">
+                        <div class="footer-navigation-wrapper">
+                            <div class="footer-subtext-wrapper">
+                                <p class="body-extra-large">Asritektur adalah studio arsitektur dan interior yang memadukan estetika, fungsi, dan ketelitian dalam merancang ruang yang relevan dengan kebutuhan dan karakter setiap klien.</p>
+                            </div>
+                            <div class="footer-navigation">
+                                <p class="body-small bs-grey-400">Sosial</p>
+                                <div class="footer-link-wrapper">
+                                    <a href="https://www.instagram.com/asritektur.id" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">Instagram</p>
+                                        <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@asritektur.id" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">TikTok</p>
+                                        <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                    </a>
+                                    <a href="https://web.facebook.com/people/Asritektur-Indonesia/61571150611536/" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                        <p class="nav-text">Facebook</p>
+                                        <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-navigation">
+                                <p class="body-small bs-grey-400">Kantor Kami</p>
+                                <div class="footer-address-wrapper">
+                                    <div class="footer-office">
+                                        <p class="body-medium footer-office-name">Malang</p>
+                                        <p class="body-small bs-grey-400">Jl. Merdeka Selatan No.5, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                                        <a href="https://maps.app.goo.gl/o6NkaTuLfb2RA3ug9" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                            <p class="nav-text">Lihat peta</p>
+                                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                        </a>
+                                    </div>
+                                    <div class="footer-office">
+                                        <p class="body-medium footer-office-name">Tuban</p>
+                                        <p class="body-small bs-grey-400">Perumahan Bale Agung No.B3, Perbon, Latsari, Kec. Tuban, Kabupaten Tuban, Jawa Timur 62310</p>
+                                        <a href="https://maps.app.goo.gl/hNUdBTtqpzhVoGMj8" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                            <p class="nav-text">Lihat peta</p>
+                                            <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-form">
+                            <div class="footer-contact">
+                                <p class="body-small bs-grey-400">Ada pertanyaan?</p>
+                                <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                    <p class="nav-text">Konsultasi lewat WhatsApp</p>
+                                    <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                </a>
+                            </div>
+                            <div class="footer-logo">
+                                <img src="../assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" width="2013" height="330" class="footer-logo-image"/>
+                            </div>
+                        </div>
+                        <div class="bottom-bar-wrapper">
+                            <p class="body-small bs-grey-400">
+                                © 2026 Asritektur. Hak cipta dilindungi.
+                            </p>
+                            <button type="button" class="back-to-top" data-back-to-top>
+                                <span class="back-to-top-label">Kembali ke atas</span>
+                                <span class="back-to-top-icon" aria-hidden="true">
+                                    <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="back-to-top-arrow"/>
+                                </span>
+                            </button>
+                            <p class="body-small bs-grey-400">Dirancang &amp; dikembangkan oleh <a href="https://hellodimas.my.id/" target="_blank" rel="noopener noreferrer" class="credit-link">MDKG</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" class="wa-widget" target="_blank" rel="noopener noreferrer" aria-label="Konsultasi gratis dengan kami via WhatsApp">
+            <span class="wa-widget-label">Konsultasi dengan kami (gratis)</span>
+            <span class="wa-widget-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </span>
+        </a>
+        <script src="../js/vendor/gsap.min.js"></script>
+        <script src="../js/vendor/ScrollTrigger.min.js"></script>
+        <script src="../js/vendor/SplitText.min.js"></script>
+        <script src="../js/vendor/lenis.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/animations.js"></script>
+        <script src="../js/menu.js"></script>
+        <script src="../js/navbar.js"></script>
+        <script src="../js/faq.js"></script>
+        <script src="../js/services.js"></script>
+        <script src="../js/about.js"></script>
+        <script src="../js/hero-video.js"></script>
+    </body>
+</html>

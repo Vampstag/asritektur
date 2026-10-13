@@ -1,0 +1,183 @@
+/*
+ * FAQ section, shared by every page (home, about, services, projects, case study, contact).
+ * Standalone on purpose: it only needs the design tokens from css/main.css, so it also works on the home page,
+ * which does not load css/services.css. Behaviour: js/faq.js.
+ */
+
+.faq-section {
+  z-index: 4;
+  background-color: var(--white);
+  padding: 168px 20px;
+  position: relative;
+}
+
+.faq-container {
+  max-width: var(--_spacing---max-width-section);
+}
+
+.faq-block {
+  padding-right: var(--_spacing---spacing-section-32);
+  padding-left: var(--_spacing---spacing-section-32);
+}
+
+.faq-grid {
+  grid-column-gap: 120px;
+  grid-row-gap: 56px;
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+  align-items: start;
+  display: grid;
+}
+
+.faq-left {
+  grid-row-gap: 40px;
+  flex-flow: column;
+  display: flex;
+}
+
+.faq-left .label-wrapper p {
+  color: var(--grey-300);
+}
+
+.label-line.faq-line {
+  width: 80px;
+}
+
+.faq-media {
+  border-radius: 4px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.faq-media img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.faq-right {
+  grid-row-gap: 64px;
+  flex-flow: column;
+  display: flex;
+}
+
+.faq-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(34px, 4.6vw, 64px);
+  line-height: 1.05;
+  font-weight: var(--_typography---font-weight--regular);
+  text-wrap: balance;
+  max-width: 12em;
+  margin: 0;
+}
+
+.faq-list {
+  flex-flow: column;
+  display: flex;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--grey-200);
+  transition: border-color .3s;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--grey-200);
+}
+
+.faq-item:hover {
+  border-bottom-color: var(--blue);
+}
+
+.faq-head {
+  margin: 0;
+}
+
+.faq-btn {
+  font-family: var(--_typography---font--switzer);
+  font-size: clamp(20px, 1.9vw, 26px);
+  line-height: 1.25;
+  font-weight: var(--_typography---font-weight--medium);
+  color: var(--blue);
+  text-align: left;
+  background: none;
+  border: 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  padding: 32px 0;
+  display: flex;
+}
+
+/* Plus that turns into a minus: the vertical bar folds away when the question is open */
+.faq-icon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.faq-icon::before, .faq-icon::after {
+  content: "";
+  background-color: var(--blue);
+  height: 1px;
+  transition: transform .35s ease;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.faq-icon::after {
+  transform: rotate(90deg);
+}
+
+.faq-btn[aria-expanded="true"] .faq-icon::after {
+  transform: rotate(0);
+}
+
+html.js .faq-panel {
+  height: 0;
+  overflow: hidden;
+}
+
+.faq-inner {
+  padding: 0 64px 36px 0;
+}
+
+.faq-inner p {
+  color: var(--grey-400);
+  max-width: 560px;
+  margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .faq-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .faq-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .faq-media {
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .faq-section {
+    padding: 96px 0;
+  }
+
+  .faq-right {
+    grid-row-gap: 40px;
+  }
+
+  .faq-inner {
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,420 @@
+/*
+ * Archive tools: search field, filters (chips + selects), result count, layout switch and empty state.
+ * Shared by the project archive and the journal (js/archive.js). Standalone: only needs the tokens from css/main.css.
+ */
+
+.ar-toolbar {
+  grid-row-gap: 40px;
+  flex-flow: column;
+  margin-top: 80px;
+  display: flex;
+}
+
+.ar-label {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+  line-height: 1;
+  margin: 0;
+  display: block;
+}
+
+/* ----- search: one large underlined line, like the contact form ----- */
+
+.ar-search {
+  grid-row-gap: 16px;
+  flex-flow: column;
+  display: flex;
+}
+
+.ar-search input {
+  font-family: var(--_typography---font--switzer);
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.2;
+  color: var(--blue);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--grey-300);
+  border-radius: 0;
+  width: 100%;
+  padding: 8px 0 16px;
+  transition: border-color .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ar-search input::placeholder {
+  color: var(--grey-300);
+  opacity: .8;
+}
+
+.ar-search input:focus {
+  border-bottom-color: var(--gold);
+  outline: 0;
+}
+
+.ar-search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* ----- filters ----- */
+
+.ar-filters {
+  grid-column-gap: 40px;
+  grid-row-gap: 32px;
+  flex-flow: wrap;
+  align-items: flex-end;
+  display: flex;
+}
+
+.ar-group {
+  grid-row-gap: 14px;
+  flex-flow: column;
+  min-width: 0;
+  display: flex;
+}
+
+.ar-chips {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  flex-flow: wrap;
+  display: flex;
+}
+
+.ar-chip {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-small);
+  font-weight: var(--_typography---font-weight--medium);
+  line-height: 1;
+  color: var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 0;
+  padding: 12px 16px;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+
+.ar-chip:hover {
+  border-color: var(--blue);
+}
+
+.ar-chip.is-active {
+  color: var(--white);
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.ar-select {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-medium);
+  line-height: 1.2;
+  color: var(--blue);
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23093b4f' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-position: right 4px center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  border: 0;
+  border-bottom: 1px solid var(--grey-300);
+  border-radius: 0;
+  min-width: 168px;
+  padding: 10px 32px 12px 0;
+  transition: border-color .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ar-select:focus {
+  border-bottom-color: var(--gold);
+  outline: 0;
+}
+
+/* ----- result bar: count, reset, layout switch ----- */
+
+.ar-bar {
+  border-top: 1px solid var(--grey-200);
+  grid-column-gap: 24px;
+  grid-row-gap: 16px;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  display: flex;
+}
+
+.ar-bar-left {
+  grid-column-gap: 24px;
+  align-items: center;
+  display: flex;
+}
+
+.ar-count {
+  font-size: var(--_typography---font-size--body-small);
+  color: var(--grey-300);
+  margin: 0;
+}
+
+.ar-reset {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-small);
+  font-weight: var(--_typography---font-weight--medium);
+  color: var(--blue);
+  text-underline-offset: 5px;
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1px;
+}
+
+.ar-reset[hidden], .ar-empty[hidden] {
+  display: none;
+}
+
+.ar-layout {
+  display: flex;
+}
+
+.ar-layout-btn {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-small);
+  font-weight: var(--_typography---font-weight--medium);
+  line-height: 1;
+  color: var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 0;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  transition: background-color .2s, color .2s, border-color .2s;
+  display: flex;
+}
+
+.ar-layout-btn + .ar-layout-btn {
+  border-left-width: 0;
+}
+
+.ar-layout-btn svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.ar-layout-btn:hover {
+  border-color: var(--blue);
+}
+
+.ar-layout-btn.is-active {
+  color: var(--white);
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+/* ----- nothing found ----- */
+
+.ar-empty {
+  grid-row-gap: 20px;
+  background-color: var(--grey-100);
+  border-radius: 8px;
+  flex-flow: column;
+  align-items: flex-start;
+  margin-top: 64px;
+  padding: 48px;
+  display: flex;
+}
+
+.ar-empty p {
+  max-width: 460px;
+  margin: 0;
+}
+
+.ar-empty-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.15;
+}
+
+@media screen and (max-width: 767px) {
+  .ar-toolbar {
+    margin-top: 56px;
+  }
+
+  .ar-filters {
+    grid-column-gap: 24px;
+  }
+
+  .ar-select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .ar-group:has(.ar-select) {
+    width: 100%;
+  }
+
+  .ar-layout-btn span {
+    display: none;
+  }
+
+  .ar-empty {
+    padding: 32px 24px;
+  }
+}
+
+/* ----- minimal toolbar: search + one Filter button on a line, filters fold open on demand, result bar below ----- */
+
+.ar-toolbar {
+  grid-column-gap: 32px;
+  grid-row-gap: 24px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  margin-top: 64px;
+  display: grid;
+}
+
+.ar-search, .ar-filters, .ar-bar {
+  grid-column: 1 / -1;
+}
+
+.ar-search {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ar-search .ar-label {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.ar-search input {
+  padding: 4px 0 16px;
+}
+
+.ar-filter-toggle {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-small);
+  font-weight: var(--_typography---font-weight--medium);
+  color: var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 0;
+  grid-column: 2;
+  grid-row: 1;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  padding: 13px 18px;
+  transition: border-color .2s;
+  display: flex;
+}
+
+.ar-filter-toggle:hover, .ar-filter-toggle[aria-expanded="true"] {
+  border-color: var(--blue);
+}
+
+.ar-filter-toggle svg {
+  flex: none;
+  width: 12px;
+  height: 8px;
+  transition: transform .25s;
+}
+
+.ar-filter-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.ar-badge {
+  color: var(--white);
+  background-color: var(--blue);
+  font-size: 12px;
+  line-height: 1;
+  min-width: 20px;
+  padding: 4px 6px;
+  text-align: center;
+}
+
+.ar-badge[hidden] {
+  display: none;
+}
+
+.ar-filters {
+  display: none;
+}
+
+.ar-filters.is-open {
+  padding: 8px 0 16px;
+  display: flex;
+}
+
+.ar-bar {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* ----- phones: one column, layout switch hidden (everything is one column there) ----- */
+
+@media screen and (max-width: 767px) {
+  .ar-toolbar {
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .ar-search, .ar-filter-toggle {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .ar-search .ar-label {
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
+    width: auto;
+    height: auto;
+    position: static;
+    overflow: visible;
+  }
+
+  .ar-search input {
+    font-size: 22px;
+    padding: 8px 0 12px;
+  }
+
+  .ar-filter-toggle {
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 14px 16px;
+  }
+
+  .ar-filter-toggle > span:first-child {
+    margin-right: auto;
+  }
+
+  .ar-filters.is-open {
+    grid-row-gap: 20px;
+    flex-flow: column;
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .ar-chip {
+    padding: 9px 12px;
+  }
+
+  .ar-layout {
+    display: none;
+  }
+}

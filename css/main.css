@@ -14,11 +14,11 @@
   --grey-300: #5f7783;
   --grey-400: #2f4b59;
 
-  --_typography---font--inter-tight: "Inter Tight", sans-serif;
+  --_typography---font--inter-tight: "Be Vietnam Pro", sans-serif;
   --_typography---font-size--body-large: 18px;
   --_typography---font-height--fh-4: 1.4em;
   --_typography---font-weight--regular: 400;
-  --_typography---font--switzer: Switzer, "Times New Roman", sans-serif;
+  --_typography---font--switzer: "Be Vietnam Pro", sans-serif;
   --_typography---font-size--heading-1: 80px;
   --_typography---font-height--fh-1: 1em;
   --_typography---font-size--heading-2: 72px;
@@ -64,6 +64,7 @@
 body {
   background-color: var(--white);
   font-family: var(--_typography---font--inter-tight);
+  letter-spacing: -.02em;
   color: var(--blue);
   font-size: var(--_typography---font-size--body-large);
   line-height: var(--_typography---font-height--fh-4);
@@ -71,11 +72,11 @@ body {
   --_spacing---spacing-section-32: 32px;
   --_spacing---max-width-section: 1400px;
   --_spacing---spacing-section-80: 80px;
-  --_typography---font--inter-tight: "Inter Tight", sans-serif;
+  --_typography---font--inter-tight: "Be Vietnam Pro", sans-serif;
   --_typography---font-size--body-large: 18px;
   --_typography---font-height--fh-4: 1.4em;
   --_typography---font-weight--regular: 400;
-  --_typography---font--switzer: Switzer, "Times New Roman", sans-serif;
+  --_typography---font--switzer: "Be Vietnam Pro", sans-serif;
   --_typography---font-size--heading-1: 80px;
   --_typography---font-height--fh-1: 1em;
   --_typography---font-size--heading-2: 72px;
@@ -760,9 +761,9 @@ li {
 }
 
 .label-wrapper.service-label {
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-  justify-content: space-between;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  justify-content: flex-start;
 }
 
 .label-line {
@@ -779,7 +780,7 @@ li {
 }
 
 .label-line.service-line {
-  width: 100%;
+  width: 80px;
 }
 
 .label-line.cta-line, .label-line.footer-line {
@@ -2099,11 +2100,11 @@ li {
 
 @media screen and (max-width: 991px) {
   body {
-    --_typography---font--inter-tight: "Inter Tight", sans-serif;
+    --_typography---font--inter-tight: "Be Vietnam Pro", sans-serif;
     --_typography---font-size--body-large: 16px;
     --_typography---font-height--fh-4: 1.4em;
     --_typography---font-weight--regular: 400;
-    --_typography---font--switzer: Switzer, "Times New Roman", sans-serif;
+    --_typography---font--switzer: "Be Vietnam Pro", sans-serif;
     --_typography---font-size--heading-1: 60px;
     --_typography---font-height--fh-1: 1em;
     --_typography---font-size--heading-2: 54px;
@@ -2301,11 +2302,11 @@ li {
 
 @media screen and (max-width: 767px) {
   body {
-    --_typography---font--inter-tight: "Inter Tight", sans-serif;
+    --_typography---font--inter-tight: "Be Vietnam Pro", sans-serif;
     --_typography---font-size--body-large: 14px;
     --_typography---font-height--fh-4: 1.4em;
     --_typography---font-weight--regular: 400;
-    --_typography---font--switzer: Switzer, "Times New Roman", sans-serif;
+    --_typography---font--switzer: "Be Vietnam Pro", sans-serif;
     --_typography---font-size--heading-1: 32px;
     --_typography---font-height--fh-1: 1em;
     --_typography---font-size--heading-2: 26px;
@@ -2520,11 +2521,11 @@ li {
 
 @media screen and (max-width: 479px) {
   body {
-    --_typography---font--inter-tight: "Inter Tight", sans-serif;
+    --_typography---font--inter-tight: "Be Vietnam Pro", sans-serif;
     --_typography---font-size--body-large: 14px;
     --_typography---font-height--fh-4: 1.4em;
     --_typography---font-weight--regular: 400;
-    --_typography---font--switzer: Switzer, "Times New Roman", sans-serif;
+    --_typography---font--switzer: "Be Vietnam Pro", sans-serif;
     --_typography---font-size--heading-1: 32px;
     --_typography---font-height--fh-1: 1em;
     --_typography---font-size--heading-2: 26px;
@@ -2931,7 +2932,7 @@ li {
 .latest-card-label {
   color: var(--grey-300);
   font-size: var(--_typography---font-size--body-extra-small);
-  letter-spacing: .08em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   align-items: center;
   display: flex;
@@ -3021,7 +3022,7 @@ li {
   font-family: var(--_typography---font--switzer);
   font-size: 13px;
   font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .08em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   white-space: nowrap;
   opacity: 0;
@@ -3093,7 +3094,7 @@ li {
   text-wrap: balance;
 }
 
-/* Hero: rotating word under the "Dirancang sesuai" label */
+/* Hero: rotating word under the "Hadir, untuk setiap" label */
 .hero-meta-wrapper-h5 {
   margin-right: 0;
 }
@@ -3306,7 +3307,7 @@ html.menu-open {
     font-family: var(--_typography---font--inter-tight);
     font-size: 12px;
     font-weight: var(--_typography---font-weight--medium);
-    letter-spacing: .14em;
+    letter-spacing: .02em;
     line-height: 1.2em;
     text-transform: uppercase;
     display: block;
@@ -3414,7 +3415,7 @@ html.menu-open {
   .menu-link-index {
     font-family: var(--_typography---font--inter-tight);
     color: var(--grey-300);
-    letter-spacing: .08em;
+    letter-spacing: 0;
     font-variant-numeric: tabular-nums;
     font-size: 12px;
     font-weight: var(--_typography---font-weight--medium);
@@ -3483,7 +3484,7 @@ html.menu-open {
     font-family: var(--_typography---font--switzer);
     color: var(--white);
     background-color: var(--blue);
-    letter-spacing: .06em;
+    letter-spacing: .02em;
     text-transform: uppercase;
     -webkit-tap-highlight-color: transparent;
     justify-content: space-between;
@@ -3532,10 +3533,10 @@ html.menu-open {
   .menu-info-label {
     font-family: var(--_typography---font--inter-tight);
     color: var(--grey-300);
-    letter-spacing: .12em;
+    letter-spacing: .02em;
     text-transform: uppercase;
     margin: 0 0 8px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: var(--_typography---font-weight--medium);
     line-height: 1.2;
   }
@@ -3679,7 +3680,7 @@ html.menu-open .wa-widget {
   background-color: var(--grey-200);
   font-size: 18px;
   font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .02em;
+  letter-spacing: 0;
   border-radius: 3px;
   flex: none;
   justify-content: center;
@@ -3720,7 +3721,7 @@ html.menu-open .wa-widget {
 
 .back-to-top-label {
   font-family: var(--_typography---font--inter-tight);
-  letter-spacing: .1em;
+  letter-spacing: .03em;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: var(--_typography---font-weight--medium);
@@ -3789,10 +3790,10 @@ html.menu-open .wa-widget {
 .meta-label {
   color: var(--grey-200);
   opacity: .7;
-  letter-spacing: .06em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   margin-bottom: 2px;
-  font-size: 10px;
+  font-size: 12px;
   display: block;
 }
 
@@ -3841,4 +3842,68 @@ html.menu-open .wa-widget {
   .navbar-logo {
     height: 28px;
   }
+}
+
+/* Footer: short contact line (replaces the newsletter form until a form service exists) */
+.footer-contact {
+  grid-row-gap: 8px;
+  flex-flow: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.footer-contact p {
+  margin: 0;
+}
+
+/* Home: same airy rhythm as the other pages. These two sections have no fixed height, so only their padding changes. */
+.about-section, .works-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+@media screen and (max-width: 991px) {
+  .about-section, .works-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-section, .works-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+/* Services block: the two empty "sc-last" cards only fill the 3-column grid on desktop. On tablet and phone they
+   became ~400px of blank space between the last card and the button, so they are hidden there. */
+@media screen and (max-width: 991px) {
+  .service-card.sc-last {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service-block {
+    grid-column-gap: 48px;
+    grid-row-gap: 48px;
+  }
+
+  .service-section {
+    padding-top: 80px;
+  }
+}
+
+/* "Layanan Kami" label now follows the same pattern as the other section labels (short gold line + small text),
+   so the heading below it needs the same 24px gap used in the Proyek Pilihan header. */
+.service-heading-wrapper {
+  grid-row-gap: 24px;
+  flex-flow: column;
+  display: flex;
+}
+
+/* Tracking for Be Vietnam Pro (a wide face): body slightly tight, display type tighter still */
+h1, h2, h3, h4, h5, h6, [class*="title"], [class*="-h2"], [class*="heading"] {
+  letter-spacing: -.05em;
 }

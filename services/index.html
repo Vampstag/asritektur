@@ -4,14 +4,14 @@
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="#093B4F" name="theme-color"/>
-        <title>Layanan &amp; Paket Desain - Asritektur</title>
+        <title>Layanan dan Harga - Asritektur</title>
         <meta content="Paket desain arsitektur dan interior Asritektur: Standard, Premium, Profesional, dan Signature. Lihat cakupan, jumlah revisi, durasi, dan harga setiap paket." name="description"/>
-        <meta content="Layanan &amp; Paket Desain - Asritektur" property="og:title"/>
+        <meta content="Layanan dan Harga - Asritektur" property="og:title"/>
         <meta content="Paket desain arsitektur dan interior Asritektur: Standard, Premium, Profesional, dan Signature. Lihat cakupan, jumlah revisi, durasi, dan harga setiap paket." property="og:description"/>
         <meta content="../assets/img/og/og-image.png" property="og:image"/>
         <meta property="og:type" content="website"/>
         <meta property="og:locale" content="id_ID"/>
-        <meta content="Layanan &amp; Paket Desain - Asritektur" name="twitter:title"/>
+        <meta content="Layanan dan Harga - Asritektur" name="twitter:title"/>
         <meta content="Paket desain arsitektur dan interior Asritektur: Standard, Premium, Profesional, dan Signature. Lihat cakupan, jumlah revisi, durasi, dan harga setiap paket." name="twitter:description"/>
         <meta content="../assets/img/og/og-image.png" name="twitter:image"/>
         <meta content="summary_large_image" name="twitter:card"/>
@@ -23,12 +23,13 @@
         <link href="../assets/img/favicons/icon-512.png" rel="icon" type="image/png" sizes="512x512"/>
         <link href="../assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 
-        <link href="../assets/fonts/Switzer-Regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
-        <link href="../assets/fonts/Switzer-Medium.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="../assets/fonts/BeVietnamPro-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="../assets/fonts/BeVietnamPro-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
         <link href="../css/fonts.css" rel="stylesheet"/>
         <link href="../css/base.css" rel="stylesheet"/>
         <link href="../css/main.css" rel="stylesheet"/>
         <link href="../css/animations.css" rel="stylesheet"/>
+        <link href="../css/faq.css" rel="stylesheet"/>
         <link href="../css/services.css" rel="stylesheet"/>
 
         <!-- Marks JS as available (animations.css / services.css hide animated elements until the scripts are ready). -->
@@ -56,7 +57,7 @@
                             <p class="nav-text">Beranda</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
-                        <a href="../#About" class="link-wrapper inline-block">
+                        <a href="../about/" class="link-wrapper inline-block">
                             <p class="nav-text">Tentang</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
@@ -68,14 +69,13 @@
                             <p class="nav-text">Layanan dan Harga</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
-                        <!-- TODO: point href to the journal page once it exists -->
-                        <a href="#" class="link-wrapper inline-block">
+                        <a href="../journal/" class="link-wrapper inline-block">
                             <p class="nav-text">Jurnal</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
                     </div>
                     <div class="navbar-contact-wrapper">
-                        <a href="../contact.html" class="link-wrapper inline-block">
+                        <a href="../contact/" class="link-wrapper inline-block">
                             <p class="nav-text">HUBUNGI KAMI</p>
                             <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
@@ -99,7 +99,7 @@
                                 <span class="menu-link-mask"><span class="menu-link-text">Beranda</span></span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
-                            <a href="../#About" class="menu-link">
+                            <a href="../about/" class="menu-link">
                                 <span class="menu-link-index">02</span>
                                 <span class="menu-link-mask"><span class="menu-link-text">Tentang</span></span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
@@ -114,15 +114,14 @@
                                 <span class="menu-link-mask"><span class="menu-link-text">Layanan dan Harga</span></span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
-                            <!-- TODO: point href to the journal page once it exists -->
-                            <a href="#" class="menu-link">
+                            <a href="../journal/" class="menu-link">
                                 <span class="menu-link-index">05</span>
                                 <span class="menu-link-mask"><span class="menu-link-text">Jurnal</span></span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
                         </nav>
                         <div class="navbar-contact-popup">
-                            <a href="../contact.html" class="menu-cta">
+                            <a href="../contact/" class="menu-cta">
                                 <span>Hubungi Kami</span>
                                 <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-cta-arrow"/>
                             </a>
@@ -162,7 +161,7 @@
                         <div class="svc-block svc-hero-block">
                             <div class="label-wrapper svc-hero-label">
                                 <div class="label-line svc-line"></div>
-                                <p class="body-medium bm-grey-300">Layanan &amp; Paket</p>
+                                <p class="body-medium bm-grey-300">Layanan dan Harga</p>
                             </div>
                             <h1 class="svc-title">Paket Desain untuk Setiap Rencana Hunian</h1>
                             <div class="svc-hero-bottom">
@@ -203,7 +202,7 @@
                         <div class="svc-heading">
                             <div class="label-wrapper">
                                 <div class="label-line svc-line"></div>
-                                <p class="body-medium bm-grey-200">Paket &amp; Harga</p>
+                                <p class="body-medium bm-grey-200">Paket dan Harga</p>
                             </div>
                             <h2 class="svc-h2" data-svc-reveal>Empat Paket untuk Setiap Kebutuhan</h2>
                         </div>
@@ -302,7 +301,7 @@
                                             <span class="svc-row-cta">Konsultasikan paket ini<img src="../assets/img/icons/arrow-forward-white.svg" width="14" height="14" alt="" class="svc-row-arrow"/></span>
                                         </div>
                                         <div class="svc-row-media img-reveal">
-                                            <img src="../assets/img/about/slide-3-800.webp" srcset="../assets/img/about/slide-3-800.webp 800w, ../assets/img/about/slide-3-1080.webp 1080w" sizes="(max-width: 767px) 100vw, 33vw" width="800" height="447" loading="lazy" alt="Rumah tiga lantai berpelapis gelap dengan carport dan tanaman di atap saat senja" class="img-parallax"/>
+                                            <img src="../assets/img/services/interior-800.jpg" srcset="../assets/img/services/interior-800.jpg 800w, ../assets/img/services/interior-1080.jpg 1080w" sizes="(max-width: 767px) 100vw, 33vw" width="800" height="476" loading="lazy" alt="Ruang keluarga dan dapur dengan dinding kayu, jendela besar, dan kursi pijat oranye" class="img-parallax"/>
                                             <span class="img-cover is-blue" aria-hidden="true"></span>
                                         </div>
                                     </div>
@@ -355,7 +354,7 @@
                             <p class="body-large bl-grey-300 svc-why-lead" data-svc-reveal>Setiap proyek berawal dari kebutuhan yang berbeda. Kami mendengarkan, memahami, dan menerjemahkannya ke dalam desain yang sesuai dengan kebutuhan Anda.</p>
                         </div>
                         <div class="svc-why-media img-reveal">
-                            <img src="../assets/img/about/slide-6-1600.webp" srcset="../assets/img/about/slide-6-800.webp 800w, ../assets/img/about/slide-6-1080.webp 1080w, ../assets/img/about/slide-6-1600.webp 1600w" sizes="(max-width: 1400px) 100vw, 1336px" width="1600" height="893" loading="lazy" alt="Rumah dua lantai dengan dinding batu, panel kaca besar, dan atap pelana" class="img-parallax"/>
+                            <img src="../assets/img/services/why-1600.jpg" srcset="../assets/img/services/why-800.jpg 800w, ../assets/img/services/why-1080.jpg 1080w, ../assets/img/services/why-1600.jpg 1600w" sizes="(max-width: 1400px) 100vw, 1336px" width="1600" height="893" loading="lazy" alt="Koridor ruang ganti berlantai marmer dengan lemari kaca, lampu gantung kristal, dan pulau laci putih" class="img-parallax"/>
                             <span class="img-cover is-grey" aria-hidden="true"></span>
                         </div>
                         <div class="svc-why-cards">
@@ -459,6 +458,50 @@
                 </div>
             </section>
 
+            <!-- FAQ: same section on every page (css/faq.css, js/faq.js). Photo changes per page. -->
+            <section class="faq-section">
+                <div class="block-container faq-container">
+                    <div class="faq-block">
+                        <div class="faq-grid">
+                            <div class="faq-left">
+                                <div class="label-wrapper">
+                                    <div class="label-line faq-line"></div>
+                                    <p class="body-medium">FAQ</p>
+                                </div>
+                                <div class="faq-media" data-faq-reveal>
+                                    <img src="../assets/img/about/slide-3-1080.webp" srcset="../assets/img/about/slide-3-800.webp 800w, ../assets/img/about/slide-3-1080.webp 1080w" sizes="(max-width: 991px) 100vw, 400px" width="1080" height="603" loading="lazy" alt="Rumah tiga lantai berpelapis gelap dengan carport dan tanaman di atap saat senja"/>
+                                </div>
+                            </div>
+                            <div class="faq-right">
+                                <h2 class="faq-title" data-faq-reveal>Pertanyaan yang Sering Diajukan</h2>
+                                <div class="faq-list" data-faq-reveal>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-1"><span>Apakah konsultasi awalnya gratis?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-1" role="region"><div class="faq-inner"><p class="body-medium">Ya. Konsultasi awal gratis lewat WhatsApp. Ceritakan kebutuhan, lahan, dan anggaran Anda, lalu kami bantu menentukan paket yang sesuai.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-2"><span>Apakah bisa berkonsultasi dari luar kota?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-2" role="region"><div class="faq-inner"><p class="body-medium">Bisa. Konsultasi dapat dilakukan lewat WhatsApp, Zoom, atau kunjungan langsung, menyesuaikan kondisi proyek Anda. Kami melayani klien di seluruh Indonesia.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-3"><span>Berapa lama proses desainnya?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-3" role="region"><div class="faq-inner"><p class="body-medium">Paket Standard sekitar 15 hari, Premium 25 hari, dan Profesional 30 hari. Rinciannya ada di halaman Layanan dan Harga.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-4"><span>Berapa kali revisi yang bisa dilakukan?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-4" role="region"><div class="faq-inner"><p class="body-medium">Tergantung paket: 2 kali untuk Standard, 6 kali untuk Premium, dan 8 kali untuk Profesional.</p></div></div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-5"><span>Bagaimana proses pembayarannya?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+                                        <div class="faq-panel" id="faq-5" role="region"><div class="faq-inner"><p class="body-medium">Setelah ruang lingkup pekerjaan dan biaya disepakati, Anda melakukan pembayaran awal untuk memulai proyek. Langkah lengkapnya ada di bagian Proses Pemesanan pada halaman Layanan dan Harga.</p></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Contact: two cards over the ghosted photo -->
             <section class="svc-contact">
                 <div class="cta-image-wrapper">
@@ -549,20 +592,12 @@
                             </div>
                         </div>
                         <div class="footer-form">
-                            <div class="contact-form">
-                                <div class="form-block form-wrap">
-                                    <form id="newsletter-form" name="newsletter" method="post" data-endpoint="" class="form">
-                                        <label for="newsletter-email" class="field-label">Email</label>
-                                        <input class="text-field form-input" maxlength="256" name="email" placeholder="Email" type="email" id="newsletter-email" autocomplete="email" required/>
-                                        <input type="submit" data-wait-text="Mohon tunggu..." aria-label="Kirim pendaftaran" class="submit-button btn-base" value="KIRIM"/>
-                                    </form>
-                                    <div class="success-message form-done">
-                                        <div>Terima kasih! Email Anda sudah kami terima.</div>
-                                    </div>
-                                    <div class="error-message form-fail">
-                                        <div>Maaf, terjadi kesalahan saat mengirim formulir.</div>
-                                    </div>
-                                </div>
+                            <div class="footer-contact">
+                                <p class="body-small bs-grey-400">Ada pertanyaan?</p>
+                                <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                    <p class="nav-text">Konsultasi lewat WhatsApp</p>
+                                    <img loading="lazy" src="../assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                </a>
                             </div>
                             <div class="footer-logo">
                                 <img src="../assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" width="2013" height="330" class="footer-logo-image"/>
@@ -578,7 +613,7 @@
                                     <img src="../assets/img/icons/arrow.svg" width="14" height="14" alt="" class="back-to-top-arrow"/>
                                 </span>
                             </button>
-                            <p class="body-small bs-grey-400">Designed &amp; developed by <a href="https://hellodimas.my.id/" target="_blank" rel="noopener noreferrer" class="credit-link">MDKG</a></p>
+                            <p class="body-small bs-grey-400">Dirancang &amp; dikembangkan oleh <a href="https://hellodimas.my.id/" target="_blank" rel="noopener noreferrer" class="credit-link">MDKG</a></p>
                         </div>
                     </div>
                 </div>
@@ -598,7 +633,7 @@
         <script src="../js/animations.js"></script>
         <script src="../js/menu.js"></script>
         <script src="../js/navbar.js"></script>
+        <script src="../js/faq.js"></script>
         <script src="../js/services.js"></script>
-        <script src="../js/form.js"></script>
     </body>
 </html>

@@ -1,0 +1,139 @@
+﻿/*
+ * Journal page (journal/index.html): centred one-screen hero + a two-column grid of article cards.
+ * Reuses the Services building blocks (css/services.css: .svc-* hero, sections, image reveal) and the FAQ (css/faq.css).
+ * Motion: js/services.js (hero intro, image reveal, fade-ups).
+ */
+
+/* ---------- hero: everything centred ---------- */
+
+.jr-hero .svc-hero-block {
+  align-items: center;
+  text-align: center;
+}
+
+.jr-hero .svc-hero-label {
+  justify-content: center;
+}
+
+.jr-hero .svc-title {
+  max-width: 10em;
+  text-align: center;
+}
+
+.jr-hero .svc-hero-bottom {
+  align-items: center;
+}
+
+.jr-hero .svc-lead {
+  max-width: 600px;
+  text-wrap: balance;
+}
+
+.jr-hero .svc-hero-actions {
+  justify-content: center;
+}
+
+/* ---------- article grid ---------- */
+
+.jr-section {
+  background-color: var(--white);
+}
+
+.jr-grid {
+  grid-column-gap: 48px;
+  grid-row-gap: 112px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  margin-top: 72px;
+  display: grid;
+}
+
+/* Every second card sits lower, like the Works cards on the home page */
+.jr-grid > [data-pos="even"] {
+  margin-top: 120px;
+}
+
+.jr-card {
+  grid-row-gap: 20px;
+  color: var(--blue);
+  flex-flow: column;
+  text-decoration: none;
+  display: flex;
+}
+
+.jr-card-media {
+  border-radius: 4px;
+  aspect-ratio: 16 / 9;
+}
+
+.jr-card-meta {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+  line-height: 1;
+  grid-column-gap: 16px;
+  align-items: center;
+  margin-top: 12px;
+  display: flex;
+}
+
+/* Hairline between the category and the date */
+.jr-card-meta time::before {
+  content: "";
+  background-color: var(--grey-200);
+  vertical-align: middle;
+  width: 1px;
+  height: 12px;
+  margin-right: 16px;
+  display: inline-block;
+}
+
+.jr-card-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(28px, 2.8vw, 40px);
+  line-height: 1.1;
+  font-weight: var(--_typography---font-weight--regular);
+  text-transform: none;
+  text-wrap: balance;
+  margin: 0;
+}
+
+.jr-card-excerpt {
+  max-width: 520px;
+  margin: 0;
+}
+
+/* Linked card (when its article page exists): photo zooms, title gets a gold underline */
+a.jr-card:hover .jr-card-title, a.jr-card:focus-visible .jr-card-title {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
+}
+
+@media screen and (max-width: 991px) {
+  .jr-grid {
+    grid-row-gap: 80px;
+    margin-top: 72px;
+  }
+
+  .jr-grid > [data-pos="even"] {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .jr-grid {
+    grid-row-gap: 64px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.jr-card[hidden] {
+  display: none;
+}
+

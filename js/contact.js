@@ -1,5 +1,5 @@
 /*
- * Contact form (contact.html).
+ * Contact form (contact/index.html).
  * The site is static and has no mail server, and WhatsApp is how Asritektur takes consultations, so the form builds
  * the message and opens WhatsApp with it. The visitor can still edit the text before sending.
  * The target number is the form's data-whatsapp attribute (digits only, with country code).

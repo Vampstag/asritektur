@@ -55,7 +55,7 @@
   font-family: var(--_typography---font--inter-tight);
   font-size: var(--_typography---font-size--body-extra-small);
   font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .08em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   color: var(--grey-300);
   line-height: 1;
@@ -258,12 +258,12 @@
   grid-row-gap: 112px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  margin-top: 112px;
+  margin-top: 72px;
   display: grid;
 }
 
 /* Every second cell sits lower, like the Works cards on the home page */
-.pl-grid > :nth-child(even) {
+.pl-grid[data-layout="editorial"] > [data-pos="even"] {
   margin-top: 120px;
 }
 
@@ -329,7 +329,7 @@
   font-family: var(--_typography---font--inter-tight);
   font-size: var(--_typography---font-size--body-extra-small);
   font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .08em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   color: var(--grey-300);
   line-height: 1;
@@ -375,7 +375,7 @@
     margin-top: 72px;
   }
 
-  .pl-grid > :nth-child(even) {
+  .pl-grid[data-layout="editorial"] > [data-pos="even"] {
     margin-top: 0;
   }
 }
@@ -388,5 +388,155 @@
 
   .pl-note {
     padding: 32px 24px;
+  }
+}
+
+/* A project without a case-study page yet: same card, no link, so nothing looks clickable */
+.pl-card.is-static .pl-card-arrow {
+  display: none;
+}
+
+/* ---------- archive: card details and the three layouts (js/archive.js sets data-layout) ---------- */
+
+.pl-card[hidden] {
+  display: none;
+}
+
+.pl-card-heading {
+  grid-row-gap: 10px;
+  flex-flow: column;
+  display: flex;
+}
+
+.pl-card-kicker {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+  line-height: 1;
+  margin: 0;
+}
+
+.pl-card-arrow {
+  transition: transform .2s;
+}
+
+.pl-card:hover .pl-card-arrow, .pl-card:focus-visible .pl-card-arrow {
+  transform: rotate(0);
+}
+
+.pl-card:hover .pl-card-title, .pl-card:focus-visible .pl-card-title {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
+}
+
+/* Kisi: three columns, compact cards, no description */
+.pl-grid[data-layout="grid"] {
+  grid-column-gap: 32px;
+  grid-row-gap: 72px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pl-grid[data-layout="grid"] .pl-card {
+  grid-row-gap: 14px;
+}
+
+.pl-grid[data-layout="grid"] .pl-card-desc {
+  display: none;
+}
+
+.pl-grid[data-layout="grid"] .pl-card-title {
+  font-size: clamp(22px, 2vw, 28px);
+}
+
+.pl-grid[data-layout="grid"] .pl-card-meta {
+  grid-column-gap: 16px;
+  grid-row-gap: 14px;
+  padding-top: 16px;
+}
+
+.pl-grid[data-layout="grid"] .pl-card-meta dd {
+  font-size: var(--_typography---font-size--body-medium);
+}
+
+/* Daftar: one row per project, small photo on the left, facts in a line */
+.pl-grid[data-layout="list"] {
+  grid-row-gap: 0;
+  grid-template-columns: minmax(0, 1fr);
+  border-top: 1px solid var(--grey-200);
+}
+
+.pl-grid[data-layout="list"] .pl-card {
+  grid-column-gap: 40px;
+  grid-row-gap: 12px;
+  border-bottom: 1px solid var(--grey-200);
+  grid-template-columns: 280px minmax(0, 1.1fr) minmax(0, 1.5fr) 20px;
+  grid-template-areas: "media head meta arrow";
+  align-items: center;
+  padding: 24px 0;
+  transition: background-color .2s;
+  display: grid;
+}
+
+.pl-grid[data-layout="list"] .pl-card-media {
+  grid-area: media;
+}
+
+.pl-grid[data-layout="list"] .pl-card-head {
+  grid-area: head;
+  margin-top: 0;
+}
+
+.pl-grid[data-layout="list"] .pl-card-arrow {
+  display: none;
+}
+
+.pl-grid[data-layout="list"] .pl-card-desc {
+  display: none;
+}
+
+.pl-grid[data-layout="list"] .pl-card-meta {
+  grid-area: meta;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.pl-grid[data-layout="list"] .pl-card-meta dd {
+  font-size: var(--_typography---font-size--body-medium);
+}
+
+@media screen and (max-width: 1100px) {
+  .pl-grid[data-layout="grid"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pl-grid[data-layout="list"] .pl-card {
+    grid-column-gap: 24px;
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-areas: "media head" "media meta";
+  }
+
+  .pl-grid[data-layout="list"] .pl-card-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-row-gap: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pl-grid[data-layout="grid"] {
+    grid-row-gap: 56px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pl-grid[data-layout="list"] .pl-card {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "media" "head" "meta";
+    padding: 24px 0 32px;
   }
 }

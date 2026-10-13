@@ -1,5 +1,5 @@
 /*
- * Contact page (contact.html) and 404 page (404.html).
+ * Contact page (contact/index.html) and 404 page (404.html).
  * Both reuse the building blocks of the Services page (css/services.css) and the home page (css/main.css).
  */
 
@@ -63,7 +63,7 @@
   font-family: var(--_typography---font--inter-tight);
   font-size: var(--_typography---font-size--body-extra-small);
   font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .08em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   color: var(--grey-300);
   white-space: nowrap;
@@ -173,7 +173,7 @@
   font-family: var(--_typography---font--inter-tight);
   font-size: var(--_typography---font-size--body-extra-small);
   font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .08em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   color: var(--grey-200);
   line-height: 1;
@@ -196,7 +196,7 @@
   color: var(--white);
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid var(--grey-300);
+  border-bottom: 1px solid #8aa2ae;
   border-radius: 0;
   width: 100%;
   padding: 8px 0 12px;
@@ -228,7 +228,7 @@
 .ct-field input::placeholder,
 .ct-field textarea::placeholder {
   color: var(--grey-200);
-  opacity: .55;
+  opacity: .8;
 }
 
 .ct-field input:focus,

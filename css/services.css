@@ -300,7 +300,7 @@ html.js:not(.svc-ready):not(.svc-failed) :is(
   font-family: var(--_typography---font--inter-tight);
   font-size: var(--_typography---font-size--body-extra-small);
   font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .08em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   color: var(--grey-200);
   line-height: 1;
@@ -338,7 +338,7 @@ html.js:not(.svc-ready):not(.svc-failed) :is(
   font-family: var(--_typography---font--inter-tight);
   font-size: var(--_typography---font-size--body-extra-small);
   font-variant-numeric: tabular-nums;
-  letter-spacing: .04em;
+  letter-spacing: 0;
   color: var(--gold);
   flex: none;
   width: 20px;
@@ -369,7 +369,7 @@ html.js:not(.svc-ready):not(.svc-failed) :is(
   font-family: var(--_typography---font--inter-tight);
   font-size: var(--_typography---font-size--body-extra-small);
   font-weight: var(--_typography---font-weight--regular);
-  letter-spacing: .08em;
+  letter-spacing: .02em;
   text-transform: uppercase;
   color: var(--grey-200);
   line-height: 1;
@@ -381,7 +381,7 @@ html.js:not(.svc-ready):not(.svc-failed) :is(
   font-weight: var(--_typography---font-weight--medium);
   color: var(--white);
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   grid-column-gap: 8px;
   align-items: center;
   margin-top: 4px;
@@ -819,5 +819,23 @@ html.js:not(.svc-ready):not(.svc-failed) :is(
 
   .svc-order-number {
     min-width: 32px;
+  }
+}
+
+/* Muted text on the light-grey sections: --grey-300 is 4.19:1 on #eef2f4, so these sections use a slightly deeper tone (5.1:1) */
+.svc-why, .svc-process, .ab-success, .ab-team, .pl-note, .cs-gallery-section {
+  --grey-300: #4f6a77;
+}
+
+/* Phones: the closing contact cards were 120px above and below plus a 320px minimum height, which left a large empty
+   area inside each card. Tighter, still airy. */
+@media screen and (max-width: 767px) {
+  .svc-contact-layout {
+    grid-row-gap: 16px;
+    padding: 80px 0;
+  }
+
+  .svc-card {
+    min-height: 260px;
   }
 }

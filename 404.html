@@ -19,8 +19,8 @@
         <link href="/assets/img/favicons/icon-512.png" rel="icon" type="image/png" sizes="512x512"/>
         <link href="/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 
-        <link href="/assets/fonts/Switzer-Regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
-        <link href="/assets/fonts/Switzer-Medium.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="/assets/fonts/BeVietnamPro-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
+        <link href="/assets/fonts/BeVietnamPro-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous"/>
         <link href="/css/fonts.css" rel="stylesheet"/>
         <link href="/css/base.css" rel="stylesheet"/>
         <link href="/css/main.css" rel="stylesheet"/>
@@ -53,7 +53,7 @@
                             <p class="nav-text">Beranda</p>
                             <img loading="lazy" src="/assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
-                        <a href="/#About" class="link-wrapper inline-block">
+                        <a href="/about/" class="link-wrapper inline-block">
                             <p class="nav-text">Tentang</p>
                             <img loading="lazy" src="/assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
@@ -65,14 +65,13 @@
                             <p class="nav-text">Layanan dan Harga</p>
                             <img loading="lazy" src="/assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
-                        <!-- TODO: point href to the journal page once it exists -->
-                        <a href="#" class="link-wrapper inline-block">
+                        <a href="/journal/" class="link-wrapper inline-block">
                             <p class="nav-text">Jurnal</p>
                             <img loading="lazy" src="/assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
                     </div>
                     <div class="navbar-contact-wrapper">
-                        <a href="/contact.html" class="link-wrapper inline-block" >
+                        <a href="/contact/" class="link-wrapper inline-block" >
                             <p class="nav-text">HUBUNGI KAMI</p>
                             <img loading="lazy" src="/assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
@@ -96,7 +95,7 @@
                                 <span class="menu-link-mask"><span class="menu-link-text">Beranda</span></span>
                                 <img src="/assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
-                            <a href="/#About" class="menu-link">
+                            <a href="/about/" class="menu-link">
                                 <span class="menu-link-index">02</span>
                                 <span class="menu-link-mask"><span class="menu-link-text">Tentang</span></span>
                                 <img src="/assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
@@ -111,15 +110,14 @@
                                 <span class="menu-link-mask"><span class="menu-link-text">Layanan dan Harga</span></span>
                                 <img src="/assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
-                            <!-- TODO: point href to the journal page once it exists -->
-                            <a href="#" class="menu-link">
+                            <a href="/journal/" class="menu-link">
                                 <span class="menu-link-index">05</span>
                                 <span class="menu-link-mask"><span class="menu-link-text">Jurnal</span></span>
                                 <img src="/assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
                         </nav>
                         <div class="navbar-contact-popup">
-                            <a href="/contact.html" class="menu-cta" >
+                            <a href="/contact/" class="menu-cta" >
                                 <span>Hubungi Kami</span>
                                 <img src="/assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-cta-arrow"/>
                             </a>
@@ -259,20 +257,12 @@
                             </div>
                         </div>
                         <div class="footer-form">
-                            <div class="contact-form">
-                                <div class="form-block form-wrap">
-                                    <form id="newsletter-form" name="newsletter" method="post" data-endpoint="" class="form">
-                                        <label for="newsletter-email" class="field-label">Email</label>
-                                        <input class="text-field form-input" maxlength="256" name="email" placeholder="Email" type="email" id="newsletter-email" autocomplete="email" required/>
-                                        <input type="submit" data-wait-text="Mohon tunggu..." aria-label="Kirim pendaftaran" class="submit-button btn-base" value="KIRIM"/>
-                                    </form>
-                                    <div class="success-message form-done">
-                                        <div>Terima kasih! Email Anda sudah kami terima.</div>
-                                    </div>
-                                    <div class="error-message form-fail">
-                                        <div>Maaf, terjadi kesalahan saat mengirim formulir.</div>
-                                    </div>
-                                </div>
+                            <div class="footer-contact">
+                                <p class="body-small bs-grey-400">Ada pertanyaan?</p>
+                                <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Ka+Wella+asritektur.id%0ASaya+mau+konsultasi+layanan+arsiteknya.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="link-wrapper link-wrapper--footer inline-block">
+                                    <p class="nav-text">Konsultasi lewat WhatsApp</p>
+                                    <img loading="lazy" src="/assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
+                                </a>
                             </div>
                             <div class="footer-logo">
                                 <img src="/assets/logo/logo-typeface-dark.png" loading="lazy" alt="Asritektur" width="2013" height="330" class="footer-logo-image"/>
@@ -288,7 +278,7 @@
                                     <img src="/assets/img/icons/arrow.svg" width="14" height="14" alt="" class="back-to-top-arrow"/>
                                 </span>
                             </button>
-                            <p class="body-small bs-grey-400">Designed &amp; developed by <a href="https://hellodimas.my.id/" target="_blank" rel="noopener noreferrer" class="credit-link">MDKG</a></p>
+                            <p class="body-small bs-grey-400">Dirancang &amp; dikembangkan oleh <a href="https://hellodimas.my.id/" target="_blank" rel="noopener noreferrer" class="credit-link">MDKG</a></p>
                         </div>
                     </div>
                 </div>
@@ -309,6 +299,5 @@
         <script src="/js/menu.js"></script>
         <script src="/js/navbar.js"></script>
         <script src="/js/not-found.js"></script>
-        <script src="/js/form.js"></script>
     </body>
 </html>

@@ -10,6 +10,12 @@
   gsap.ticker.add((time) => lenis.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
 
+  // Keep the scroll limit in step with the real page height. If it goes stale (an FAQ answer opens, a lazy image or a
+  // font loads), the page stops short of the bottom and the fixed footer stays partly covered by the section above it.
+  const syncHeight = () => lenis.resize();
+  window.addEventListener("load", syncHeight);
+  if (window.ResizeObserver) new ResizeObserver(syncHeight).observe(document.body);
+
   // Footer "Kembali ke atas" button
   document.querySelectorAll("[data-back-to-top]").forEach((button) => {
     button.addEventListener("click", () => {
