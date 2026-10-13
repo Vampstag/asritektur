@@ -4061,7 +4061,7 @@ html.i18n-wait body {
   /* the desktop switch sits in the hidden contact area; no second copy inside the menu */
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 460px) {
   .lang-switch--bar {
     margin-right: 12px;
   }
@@ -4090,4 +4090,11 @@ html {
 
 a, button, summary, label, input, select, textarea, [role="button"] {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Smallest phones (320 px): shrink the logo a little more so it never touches the language switch */
+@media screen and (max-width: 340px) {
+  .navbar-logo {
+    height: 22px;
+  }
 }
