@@ -3972,3 +3972,122 @@ h1, h2, h3, h4, h5, h6, [class*="title"], [class*="-h2"], [class*="heading"] {
     height: 100svh;
   }
 }
+
+/* Language switch (ID / EN): js/i18n.js. English is translated before the body is shown, so it never flashes Indonesian. */
+html.i18n-wait body {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-contact-wrapper {
+    grid-column-gap: 32px;
+    align-items: center;
+    display: flex;
+  }
+}
+
+/* ID / EN switch: a small two-segment toggle. The blue segment slides to the active language before the page reloads. */
+.lang-switch {
+  border: 1px solid var(--grey-200);
+  background-color: var(--white);
+  align-items: stretch;
+  height: 34px;
+  padding: 2px;
+  display: inline-flex;
+  position: relative;
+  isolation: isolate;
+}
+
+.lang-switch::before {
+  content: "";
+  background-color: var(--blue);
+  z-index: -1;
+  width: calc(50% - 2px);
+  transition: transform .28s cubic-bezier(.76, 0, .24, 1);
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+}
+
+.lang-switch[data-active="en"]::before {
+  transform: translateX(100%);
+}
+
+.lang-btn {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: 12px;
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .04em;
+  line-height: 1;
+  color: var(--blue);
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  min-width: 38px;
+  padding: 0 10px;
+  transition: color .2s .06s;
+}
+
+.lang-btn[aria-pressed="true"] {
+  color: var(--white);
+}
+
+.lang-btn:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Phones and tablets: the switch moves to the top bar, next to the MENU button (the desktop one lives in the navbar contact area) */
+.lang-switch--bar {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .lang-switch--bar {
+    height: 30px;
+    margin-left: auto;
+    margin-right: 22px;
+    display: inline-flex;
+  }
+
+  .lang-switch--bar .lang-btn {
+    font-size: 11px;
+    min-width: 32px;
+    padding: 0 8px;
+  }
+
+  /* the desktop switch sits in the hidden contact area; no second copy inside the menu */
+}
+
+@media screen and (max-width: 420px) {
+  .lang-switch--bar {
+    margin-right: 12px;
+  }
+
+  .lang-switch--bar .lang-btn {
+    min-width: 27px;
+    padding: 0 5px;
+  }
+
+  .navbar-logo {
+    height: 26px;
+  }
+}
+
+/* Very narrow phones: logo + switch + MENU do not fit with the word "MENU", so only the icon stays */
+@media screen and (max-width: 399px) {
+  .menu-wrapper .menu-label {
+    display: none;
+  }
+}
+
+/* Phones: no blue flash when a link or button is tapped (keyboard focus rings are untouched) */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button, summary, label, input, select, textarea, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}

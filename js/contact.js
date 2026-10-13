@@ -10,6 +10,8 @@
     if (!form) return;
 
     const status = form.querySelector(".ct-status");
+    const i18n = window.i18n;
+    const t = (text) => (i18n ? i18n.t(text) : text);
     const field = (name) => form.elements[name];
     const value = (name) => (field(name) ? field(name).value.trim() : "");
 
@@ -32,18 +34,18 @@
       });
       if (firstInvalid) {
         firstInvalid.focus();
-        showStatus("Mohon lengkapi nama dan nomor WhatsApp Anda.");
+        showStatus(t("Mohon lengkapi nama dan nomor WhatsApp Anda."));
         return;
       }
 
       const lines = [
-        "Halo Asritektur, saya " + value("nama") + ".",
-        "Nomor WhatsApp: " + value("whatsapp"),
+        (i18n ? i18n.tf("Halo Asritektur, saya {nama}.", { nama: value("nama") }) : "Halo Asritektur, saya " + value("nama") + "."),
+        t("Nomor WhatsApp:") + " " + value("whatsapp"),
       ];
-      if (value("email")) lines.push("Email: " + value("email"));
-      lines.push("Paket yang diminati: " + value("paket"));
-      if (value("pesan")) lines.push("", "Informasi proyek:", value("pesan"));
-      lines.push("", "Saya tahu info dari website.");
+      if (value("email")) lines.push(t("Email:") + " " + value("email"));
+      lines.push(t("Paket yang diminati:") + " " + t(value("paket")));
+      if (value("pesan")) lines.push("", t("Informasi proyek:"), value("pesan"));
+      lines.push("", t("Saya tahu info dari website."));
 
       const url =
         "https://api.whatsapp.com/send/?phone=" +
@@ -55,8 +57,8 @@
       const opened = window.open(url, "_blank", "noopener");
       showStatus(
         opened
-          ? "WhatsApp dibuka di tab baru. Tekan kirim di sana untuk menyelesaikan."
-          : "Pop-up diblokir browser. Izinkan pop-up untuk situs ini, lalu kirim ulang."
+          ? t("WhatsApp dibuka di tab baru. Tekan kirim di sana untuk menyelesaikan.")
+          : t("Pop-up diblokir browser. Izinkan pop-up untuk situs ini, lalu kirim ulang.")
       );
     });
 

@@ -540,3 +540,103 @@
     padding: 24px 0 32px;
   }
 }
+
+/* ---------- share this project ---------- */
+
+.cs-share {
+  border-top: 1px solid var(--grey-200);
+  grid-column-gap: 48px;
+  grid-row-gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 96px;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cs-share[hidden] {
+  display: none;
+}
+
+.cs-share-text {
+  grid-row-gap: 12px;
+  flex-flow: column;
+  display: flex;
+}
+
+.cs-share-label {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+  line-height: 1;
+  margin: 0;
+}
+
+.cs-share-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.cs-share-actions {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  flex-flow: wrap;
+  align-items: center;
+  display: flex;
+}
+
+.cs-share-btn {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-small);
+  font-weight: var(--_typography---font-weight--medium);
+  line-height: 1;
+  color: var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 0;
+  padding: 13px 18px;
+  text-decoration: none;
+  transition: background-color .2s, color .2s, border-color .2s;
+  display: inline-block;
+}
+
+.cs-share-btn:hover, .cs-share-btn:focus-visible {
+  border-color: var(--blue);
+}
+
+.cs-share-btn.is-done {
+  color: var(--white);
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.cs-share-btn[hidden] {
+  display: none;
+}
+
+.cs-share-status {
+  font-size: var(--_typography---font-size--body-small);
+  color: var(--blue);
+  min-height: 1.4em;
+  margin: 0;
+  flex-basis: 100%;
+  text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+  .cs-share {
+    margin-top: 72px;
+    padding-top: 32px;
+  }
+
+  .cs-share-status {
+    text-align: left;
+  }
+}

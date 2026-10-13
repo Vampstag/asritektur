@@ -52,7 +52,8 @@
       navbar?.classList.toggle("is-open", isOpen);
       document.documentElement.classList.toggle("menu-open", isOpen);
       toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Tutup menu" : "Buka menu");
+      const label = (text) => (window.i18n ? window.i18n.t(text) : text);
+      toggle.setAttribute("aria-label", isOpen ? label("Tutup menu") : label("Buka menu"));
       clearTimeout(focusTimer);
 
       if (isOpen) {

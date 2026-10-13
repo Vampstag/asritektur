@@ -41,6 +41,8 @@ js/
   services.js        Services + case-study animations (hero intro, image reveal/parallax, fade-ups, row hovers)
   contact.js         contact form: opens WhatsApp with the filled-in message
   faq.js             FAQ accordion + fade-up, shared by every page
+  share.js           "Bagikan Proyek" on case study pages (WhatsApp, Facebook, X, copy link, phone share sheet)
+  i18n.js            ID / EN language switch (dictionary: i18n/en.js, loaded for English only)
   archive.js         search + filters + layout switch for [data-archive] sections (projects, journal)
   about.js           About page: journey timeline (scroll-linked, pinned)
   vendor/            gsap, ScrollTrigger, SplitText, lenis
@@ -65,9 +67,25 @@ contact/index.html   Hubungi Kami: form builds a WhatsApp message (js/contact.js
 - GSAP, ScrollTrigger and SplitText are GreenSock libraries and fall under the
   [GSAP license](https://gsap.com/standard-license).
 
-## Language
+## Language (ID / EN)
 
-The site is Indonesian-first (`<html lang="id">`). An English version is planned as a language switch.
-`i18n/index.en.snapshot.html` is a snapshot of `index.html` taken just before the Indonesian pass (English copy,
-except for a few sections that were already Indonesian: About text, "Proyek Terbaru" card, WhatsApp widget).
-It is only a reference for the future English strings, not a page to publish.
+Indonesian is the default and the single source of copy: write every new text in the HTML in Indonesian.
+English is a switch (ID / EN in the navbar and the mobile menu), built to stay light:
+
+- `js/i18n.js` (about 5 KB, every page) picks the language: `?lang=en|id`, then the saved choice (localStorage), then Indonesian.
+- Only English visitors download `i18n/en.js`, the dictionary. It is loaded from `<head>` before the body is parsed, so the page is
+  already English when the animations start (no flash, SplitText measures the English text).
+- The dictionary keys are the Indonesian texts themselves. `js/i18n.js` translates every text node, `alt`, `aria-label`,
+  `placeholder`, `title`, the meta description / og tags, the hero word list and the ready-made WhatsApp messages in links.
+  Text without an entry simply stays Indonesian.
+- Texts built by scripts use `window.i18n.t("Indonesian text")` or `window.i18n.tf("Text with {name}", { name })`
+  (archive count, contact form messages, share messages, menu button label).
+- Numbers, dates and photo captions ("3 dari 8", "Proyek 04 · Residensial", "13 Oktober 2026", "Foto ...") are handled by `rules` at the bottom of `i18n/en.js`.
+- **Adding or changing copy:** edit the Indonesian in the HTML, then add / update the same Indonesian text as a key in `i18n/en.js`.
+  (A changed Indonesian sentence no longer matches its old key, so it shows in Indonesian on the English site until the key is updated.)
+- Choosing a language reloads the page on purpose, so every animation starts clean.
+- Limits: the English text is applied in the browser, so search engines and link previews (WhatsApp, Facebook) still see the Indonesian
+  HTML. If English search traffic matters later, generate static `/en/` pages from the same dictionary.
+- `i18n/index.en.snapshot.html` is an old snapshot of the home page from before the Indonesian pass; it is not used by the site.
+
+The brand line "Everyone Deserves Better Living" stays in English in both languages.

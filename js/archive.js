@@ -96,7 +96,12 @@
         badge.hidden = activeFilters === 0;
       }
 
-      if (count) count.textContent = `Menampilkan ${shown} dari ${items.length} ${noun}`;
+      if (count) {
+        const i18n = window.i18n;
+        count.textContent = i18n
+          ? i18n.tf("Menampilkan {shown} dari {total} {noun}", { shown, total: items.length, noun: i18n.t(noun) })
+          : `Menampilkan ${shown} dari ${items.length} ${noun}`;
+      }
       if (empty) empty.hidden = shown > 0;
 
       const active = tokens.length > 0 || Object.values(filters).some(Boolean);
