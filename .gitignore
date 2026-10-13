@@ -8,10 +8,11 @@ desktop.ini
 # Old Webflow copy: no page uses it any more (see README)
 legacy/
 
-# Raw source renders (2-7 MB each, ~20 now, ~400 planned). The site uses the optimised works-*.webp files.
-# Remove these two lines to track the originals, or move them to Git LFS / cloud storage first.
-assets/img/works/*
-!assets/img/works/works-*.webp
+# Raw source renders (2-7 MB each, ~20 now, ~400 planned). Organised per style: assets/img/works/<style>/<style>-eksterior-01.png (raw, ignored) next to its optimised .webp (tracked).
+# Remove these lines to track the originals, or move them to Git LFS / cloud storage first.
+assets/img/works/**/*
+!assets/img/works/**/
+!assets/img/works/**/*.webp
 
 # Scratch files
 _test*.html

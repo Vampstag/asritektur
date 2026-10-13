@@ -46,6 +46,9 @@ js/
   vendor/            gsap, ScrollTrigger, SplitText, lenis
 assets/
   fonts/  img/  logo/  docs/
+  img/works/<style>/   project photos, one folder per architectural style:
+                     <style>-eksterior-01.png (raw, git-ignored) + <style>-eksterior-01.webp / -500 / -800 (optimised, tracked)
+                     new photo: <style>-eksterior-NN or <style>-interior-NN, then export the 3 webp sizes next to it
 legacy/            no longer used by any page; safe to delete (kept only until you confirm)
 projects/index.html   Arsip Proyek: 30 placeholder cards, search, filters (paket, jenis, gaya, lokasi) and 3 layouts
 contact/index.html   Hubungi Kami: form builds a WhatsApp message (js/contact.js, number in data-whatsapp)

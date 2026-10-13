@@ -3232,16 +3232,26 @@ li {
   margin: 0;
 }
 
-/* Footer credit */
+/* Footer credit: MDKG is the studio behind the site, so the name is bold and always underlined in gold */
+.bottom-bar-wrapper .credit {
+  font-size: 14px;
+}
+
 .credit-link {
   color: var(--blue);
+  letter-spacing: .04em;
   text-decoration: none;
-  border-bottom: 1px solid var(--grey-200);
-  transition: border-color .25s;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+  transition: color .25s, border-color .25s;
+}
+
+.credit-link strong {
+  font-weight: 600;
 }
 
 .credit-link:hover, .credit-link:focus-visible {
-  border-bottom-color: var(--gold);
+  border-bottom-color: var(--blue);
 }
 
 .bottom-bar-wrapper p {
@@ -3906,4 +3916,51 @@ html.menu-open .wa-widget {
 /* Tracking for Be Vietnam Pro (a wide face): body slightly tight, display type tighter still */
 h1, h2, h3, h4, h5, h6, [class*="title"], [class*="-h2"], [class*="heading"] {
   letter-spacing: -.05em;
+}
+
+/* Home project cards: description on top, the meta in one quiet row along the bottom (hairline above) */
+.works-card-text, .works-card-text.wct-down {
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: stretch;
+  grid-row-gap: 28px;
+  height: auto;
+}
+
+.works-card-text.wct-down {
+  min-height: 240px;
+}
+
+.works-description-wrapper-1, .works-description-wrapper-2, .works-description-wrapper-3 {
+  width: 100%;
+  margin-right: 0;
+}
+
+.works-card-text .works-support-wrapper, .works-card-text.wct-down .works-support-wrapper {
+  border-top: 1px solid #ffffff26;
+  grid-column-gap: 24px;
+  grid-row-gap: 16px;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+  padding-top: 16px;
+  display: grid;
+}
+
+@media screen and (max-width: 767px) {
+  .works-card-text .works-support-wrapper, .works-card-text.wct-down .works-support-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+
+  .works-support-wrapper p {
+    white-space: normal;
+  }
+}
+
+/* The middle card is the narrowest: two rows of two while it cannot fit four columns */
+@media screen and (min-width: 992px) and (max-width: 1340px) {
+  .works-card.wc-2 .works-support-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+  }
 }
