@@ -118,7 +118,6 @@ dict: {
     "Garis bersih, bukaan luas, dan material yang hangat.":  "Clean lines, generous openings, and warm materials.",
     "Gaya":  "Style",
     "HUBUNGI KAMI":  "CONTACT US",
-    "Gulir":  "Scroll",
     "Gulir ke bawah":  "Scroll down",
     "Hadir, untuk setiap":  "Here for every",
     "Halaman Tidak Ditemukan":  "Page Not Found",

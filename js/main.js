@@ -70,7 +70,7 @@
     });
   });
 
-  // Scroll cue: a small "Gulir" + arrow chip fixed at the bottom centre of the first screen of every page that opens with a
+  // Scroll cue: a round gold arrow button fixed at the bottom centre of the first screen of every page that opens with a
   // hero. Heroes fill the screen (and on phones run past it), so visitors who do not expect to scroll can miss that there is
   // more. It fades out as soon as the page moves, comes back at the top, and a tap scrolls roughly one screen down.
   const hero = document.querySelector(".hero-section, .ab-hero, .svc-hero, .ct-section");
@@ -80,9 +80,9 @@
     cue.type = "button";
     cue.className = "scroll-cue";
     cue.setAttribute("aria-label", tr("Gulir ke bawah"));
+    // Icon only (sized in css/main.css); the 1px line stays hairline thin whatever the size
     cue.innerHTML =
-      '<span class="scroll-cue-label">' + tr("Gulir") + "</span>" +
-      '<svg viewBox="0 0 14 22" width="10" height="16" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M7 1v19M1.5 14.5 7 20l5.5-5.5"/></svg>';
+      '<svg viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path vector-effect="non-scaling-stroke" d="M7 1v19M1.5 14.5 7 20l5.5-5.5"/></svg>';
     document.body.appendChild(cue);
 
     const update = () => {

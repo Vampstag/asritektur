@@ -4110,7 +4110,7 @@ a, button, summary, label, input, select, textarea, [role="button"] {
   --glass-light-ring: #093b4f14;
   --glass-dark-fill: linear-gradient(135deg, #ffffff1f, #ffffff0a);
   --glass-dark-edge: #ffffff26;
-  --glow-on-white: radial-gradient(30% 34% at 50% 16%, #aa9b3f47, transparent 72%), radial-gradient(34% 38% at 50% 84%, #3f8aa63d, transparent 72%), radial-gradient(40% 40% at 94% 6%, #aa9b3f26, transparent 70%), radial-gradient(44% 44% at 6% 94%, #093b4f1f, transparent 70%);
+  --glow-on-white: radial-gradient(30% 34% at 50% 16%, #aa9b3f2b, transparent 72%), radial-gradient(34% 38% at 50% 84%, #3f8aa63d, transparent 72%), radial-gradient(40% 40% at 94% 6%, #aa9b3f26, transparent 70%), radial-gradient(44% 44% at 6% 94%, #093b4f1f, transparent 70%);
   --glow-on-blue: radial-gradient(46% 42% at 90% 10%, #aa9b3f3d, transparent 70%), radial-gradient(54% 50% at 6% 94%, #3f8aa633, transparent 70%);
 }
 
@@ -4183,50 +4183,45 @@ a, button, summary, label, input, select, textarea, [role="button"] {
    Fixed "Gulir" + arrow chip at the bottom centre of the first screen on pages that open with a hero (js/main.js).
    Glass, so it stays legible over the light hero video, the photos and the blue panels alike. */
 :root {
-  --cue-space: 28px; /* free band the hero layouts keep above the scroll cue */
+  --cue-space: 56px; /* free band the hero layouts keep above the scroll cue */
 }
 
 .scroll-cue {
   z-index: 55;
-  color: var(--blue);
-  font: inherit;
-  font-size: 12px;
-  font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .04em;
-  text-transform: uppercase;
+  color: var(--gold);
   background: var(--glass-light-fill);
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-light-edge);
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px var(--glass-light-ring), inset 0 1px 0 #ffffffe6;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  box-shadow: inset 0 1px 0 #ffffffe6;
   cursor: pointer;
-  grid-column-gap: 10px;
-  flex-flow: row;
+  justify-content: center;
   align-items: center;
-  padding: 11px 16px 11px 18px;
-  transition: opacity .4s ease, transform .4s ease, border-color .25s;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  transition: opacity .4s ease, transform .4s ease, background-color .25s, color .25s;
   display: flex;
   position: fixed;
-  bottom: 12px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .scroll-cue:hover, .scroll-cue:focus-visible {
-  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--white);
 }
 
 .scroll-cue:focus-visible {
   outline: 1px solid var(--gold);
-  outline-offset: 3px;
-}
-
-.scroll-cue-label {
-  line-height: 1;
+  outline-offset: 4px;
 }
 
 .scroll-cue svg {
+  width: 16px;
+  height: 30px;
   animation: scroll-cue-drift 2.4s ease-in-out infinite;
 }
 
@@ -4246,7 +4241,24 @@ html.menu-open .scroll-cue {
 /* Home, phones and tablets: the "Proyek Terbaru" card reaches the bottom centre of the screen, so the cue sits just above it */
 @media screen and (max-width: 991px) {
   body:has(.hero-section) .scroll-cue {
-    bottom: 136px;
+    bottom: 148px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .scroll-cue {
+    width: 56px;
+    height: 56px;
+    bottom: 12px;
+  }
+
+  .scroll-cue svg {
+    width: 14px;
+    height: 26px;
+  }
+
+  body:has(.hero-section) .scroll-cue {
+    bottom: 140px;
   }
 }
 
@@ -4256,4 +4268,45 @@ html.menu-open .scroll-cue {
 
 @media (prefers-reduced-transparency: reduce) {
   .scroll-cue { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* ---------- Stats spacing ----------
+   Editorial white space: the numbers keep a generous margin to the card edges. The card, not the viewport, decides how much
+   room a number has: its size follows the card width so "400+" (the widest) always fits with air on both sides.
+   Declared last so it wins over the older per-breakpoint rules above. */
+.stats-card {
+  --stats-number-size: min(6.2vw, 96px);
+  grid-row-gap: 32px;
+  padding: 56px 32px 48px;
+}
+
+@supports (container-type: inline-size) {
+  .stats-card {
+    container-type: inline-size;
+    --stats-number-size: min(40cqw, 96px);
+  }
+}
+
+.stats-card .body-medium {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .stats-card {
+    padding: 40px 24px 36px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .stats-card {
+    grid-row-gap: 12px;
+    padding: 22px 24px;
+  }
+
+  @supports (container-type: inline-size) {
+    .stats-card {
+      --stats-number-size: min(40cqw, 56px);
+    }
+  }
 }
