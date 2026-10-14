@@ -4098,3 +4098,83 @@ a, button, summary, label, input, select, textarea, [role="button"] {
     height: 22px;
   }
 }
+
+/* ---------- Glass layer ----------
+   Frosted surfaces: a translucent fill, a backdrop blur, a bright hairline edge and a faint inner highlight. No drop shadows.
+   Glass only reads when something sits behind it, so the flat sections it lives on carry a soft ambient glow
+   (--glow-on-white / --glow-on-blue). "light" is for white / photo backgrounds, "dark" for the blue sections. */
+:root {
+  --glass-blur: blur(18px) saturate(1.5);
+  --glass-light-fill: linear-gradient(135deg, #ffffffb8, #eef2f48f);
+  --glass-light-edge: #ffffffb3;
+  --glass-light-ring: #093b4f14;
+  --glass-dark-fill: linear-gradient(135deg, #ffffff1f, #ffffff0a);
+  --glass-dark-edge: #ffffff26;
+  --glow-on-white: radial-gradient(30% 34% at 50% 16%, #aa9b3f47, transparent 72%), radial-gradient(34% 38% at 50% 84%, #3f8aa63d, transparent 72%), radial-gradient(40% 40% at 94% 6%, #aa9b3f26, transparent 70%), radial-gradient(44% 44% at 6% 94%, #093b4f1f, transparent 70%);
+  --glow-on-blue: radial-gradient(46% 42% at 90% 10%, #aa9b3f3d, transparent 70%), radial-gradient(54% 50% at 6% 94%, #3f8aa633, transparent 70%);
+}
+
+.navbar-section {
+  background-color: #ffffffb8;
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-bottom-color: var(--glass-light-ring);
+}
+
+.latest-card {
+  background: var(--glass-light-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-color: var(--glass-light-edge);
+  box-shadow: 0 0 0 1px var(--glass-light-ring), inset 0 1px 0 #ffffffe6;
+}
+
+.wa-widget {
+  background-color: #093b4fe0;
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: inset 0 0 0 1px var(--glass-dark-edge);
+}
+
+.works-section,
+.stats-section {
+  background-image: var(--glow-on-blue);
+}
+
+.works-card-text,
+.stats-card {
+  background: var(--glass-dark-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-dark-edge);
+  box-shadow: inset 0 1px 0 #ffffff1f;
+}
+
+.testimonial-section {
+  background-image: var(--glow-on-white);
+}
+
+.testimonial-card {
+  background: var(--glass-light-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-light-edge);
+  box-shadow: 0 0 0 1px var(--glass-light-ring), inset 0 1px 0 #ffffffe6;
+}
+
+/* No blur support, or the visitor asked for less transparency: fall back to the plain solid surfaces */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .navbar-section { background-color: var(--white); }
+  .latest-card { background: var(--white); }
+  .wa-widget { background-color: var(--blue); }
+  .works-card-text, .stats-card { background: #ffffff12; }
+  .testimonial-card { background: var(--grey-100); }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .navbar-section { background-color: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .latest-card { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .wa-widget { background-color: var(--blue); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .works-card-text, .stats-card { background: #ffffff12; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .testimonial-card { background: var(--grey-100); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

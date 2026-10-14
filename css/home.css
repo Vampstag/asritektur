@@ -418,3 +418,33 @@
     transition: none;
   }
 }
+
+/* ---------- Glass (tokens and rationale in css/main.css) ---------- */
+.home-section {
+  background-image: var(--glow-on-white);
+}
+
+.home-strengths {
+  background-image: var(--glow-on-blue);
+}
+
+.home-pack {
+  background: var(--glass-light-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-color: var(--glass-light-edge);
+  box-shadow: 0 0 0 1px var(--glass-light-ring), inset 0 1px 0 #ffffffe6;
+}
+
+.home-pack:hover, .home-pack:focus-visible {
+  background: var(--blue);
+  box-shadow: none;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .home-pack { background: var(--white); }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .home-pack { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

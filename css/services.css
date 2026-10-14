@@ -839,3 +839,41 @@ html.js:not(.svc-ready):not(.svc-failed) :is(
     min-height: 260px;
   }
 }
+
+/* ---------- Glass (tokens and rationale in css/main.css) ---------- */
+.svc-section:has(.svc-card) {
+  background-image: var(--glow-on-white);
+}
+
+.svc-card {
+  background: var(--glass-light-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-light-edge);
+  box-shadow: 0 0 0 1px var(--glass-light-ring), inset 0 1px 0 #ffffffe6;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .svc-card { background: var(--grey-100); }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .svc-card { background: var(--grey-100); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* The value cards overlap a photo, so this is where the blur shows most. A denser white keeps the text readable over the image. */
+.svc-why-card {
+  background: linear-gradient(135deg, #ffffffe6, #ffffffa6);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-color: var(--glass-light-edge);
+  box-shadow: 0 0 0 1px var(--glass-light-ring), inset 0 1px 0 #fff;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .svc-why-card { background: var(--white); }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .svc-why-card { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
