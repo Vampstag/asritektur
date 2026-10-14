@@ -416,9 +416,11 @@
   padding-left: 0;
 }
 
+/* Every header cell has the same 3px top edge (transparent, blue on this package's column) and the same padding,
+   so the three package names and prices always sit on the same line. */
 .pkg-table thead th {
-  border-top: 0;
-  padding-top: 0;
+  border-top: 3px solid transparent;
+  padding-top: 16px;
   padding-bottom: 24px;
 }
 
@@ -488,19 +490,7 @@
 }
 
 .pkg-table thead .is-current {
-  border-top: 3px solid var(--blue);
-  padding-top: 24px;
-}
-
-.pkg-table-flag {
-  font-family: var(--_typography---font--inter-tight);
-  color: var(--gold);
-  font-size: var(--_typography---font-size--body-extra-small);
-  font-weight: var(--_typography---font-weight--medium);
-  letter-spacing: .02em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  display: block;
+  border-top-color: var(--blue);
 }
 
 .pkg-table .is-no {
@@ -598,34 +588,30 @@
   }
 
   .pkg-table thead th {
+    padding-top: 12px;
     padding-bottom: 16px;
   }
 
-  .pkg-table thead .is-current {
-    padding-top: 16px;
-  }
-
+  /* Same box for the name on every column (a transparent underline on the current one), so nothing shifts */
   .pkg-table-name {
     font-size: clamp(11px, 3.5vw, 15px);
     letter-spacing: -.03em;
-  }
-
-  a.pkg-table-head .pkg-table-name {
-    border-bottom: 1px solid var(--gold);
+    border-bottom: 1px solid transparent;
     padding-bottom: 2px;
     display: inline-block;
   }
 
+  a.pkg-table-head .pkg-table-name {
+    border-bottom-color: var(--gold);
+  }
+
+  /* Narrow enough that every price breaks the same way: "Mulai" on the first line, the amount on the second */
   .pkg-table-price {
     font-size: 11px;
     line-height: 1.3;
-    margin-top: 6px;
+    max-width: 6em;
+    margin: 6px auto 0;
     text-wrap: balance;
-  }
-
-  .pkg-table-flag {
-    font-size: 10px;
-    margin-bottom: 8px;
   }
 
   .pkg-table-link {
