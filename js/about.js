@@ -29,16 +29,19 @@
     mm.add("(min-width: 992px)", () => {
       list.classList.add("is-scrub");
 
-      // The timeline itself is pinned in the middle of the screen while the animation plays, so it cannot scroll away
-      // before the last step has appeared (the paragraph above scrolls up normally). It is ~270px tall, so it always fits.
-      const pinned = list;
+      // The whole block (paragraph + timeline) is pinned while the animation plays, so the paragraph stays readable
+      // and nothing scrolls away before the last step has appeared.
+      const pinned = list.closest(".svc-block") || list;
+      const nav = $$(".navbar-section")[0];
+      const navHeight = () => (nav ? nav.offsetHeight : 0);
 
       // One unit of time = one full column. The first and last lines are half a column long.
       const tl = gsap.timeline({
         defaults: { ease: "none" },
         scrollTrigger: {
           trigger: pinned,
-          start: "center center",
+          // centred in the space below the fixed navbar, or flush under it when the block is taller than that space
+          start: () => (pinned.offsetHeight < window.innerHeight - navHeight() ? "center center+=" + navHeight() / 2 : "top top+=" + navHeight()),
           end: () => "+=" + Math.round(window.innerHeight * 1.1),
           pin: true,
           scrub: 0.6,

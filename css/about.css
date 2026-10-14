@@ -642,3 +642,10 @@
     display: flex;
   }
 }
+
+/* Short desktop screens: the paragraph and the timeline are pinned together, so tighten the gap to keep both in view */
+@media screen and (min-width: 992px) and (max-height: 760px) {
+  .ab-timeline {
+    margin-top: 56px;
+  }
+}
