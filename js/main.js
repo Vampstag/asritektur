@@ -70,11 +70,6 @@
     });
   });
 
-  // Ambient glow (css/main.css): start every glow section at a random point of its drift so no two move in step
-  document.querySelectorAll(".works-section, .stats-section, .testimonial-section, .home-section, .svc-section").forEach((section) => {
-    section.style.setProperty("--glow-seed", (Math.random() * 90).toFixed(1));
-  });
-
   // Scroll cue: a big thin gold arrow fixed at the bottom centre of the first screen of every page that opens with a
   // hero. Heroes fill the screen (and on phones run past it), so visitors who do not expect to scroll can miss that there is
   // more. It fades out as soon as the page moves, comes back at the top, and a tap scrolls roughly one screen down.
