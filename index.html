@@ -30,6 +30,7 @@
         <link href="css/main.css" rel="stylesheet"/>
         <link href="css/animations.css" rel="stylesheet"/>
         <link href="css/faq.css" rel="stylesheet"/>
+        <link href="css/home.css" rel="stylesheet"/>
 
         <!-- Marks JS as available (animations.css hides animated elements until js/animations.js is ready). -->
         <script>
@@ -129,7 +130,7 @@
                             <img loading="lazy" src="assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
                         <a href="services/" class="link-wrapper inline-block">
-                            <p class="nav-text">Layanan dan Harga</p>
+                            <p class="nav-text">Layanan</p>
                             <img loading="lazy" src="assets/img/icons/arrow.svg" alt="" class="arrow-link-icon"/>
                         </a>
                                 <a href="journal/" class="link-wrapper inline-block">
@@ -182,7 +183,7 @@
                             </a>
                             <a href="services/" class="menu-link">
                                 <span class="menu-link-index">04</span>
-                                <span class="menu-link-mask"><span class="menu-link-text">Layanan dan Harga</span></span>
+                                <span class="menu-link-mask"><span class="menu-link-text">Layanan</span></span>
                                 <img src="assets/img/icons/arrow.svg" width="14" height="14" alt="" class="menu-link-arrow"/>
                             </a>
                             <a href="journal/" class="menu-link">
@@ -345,6 +346,7 @@
                             <p class="body-medium bm-white">Arsip Proyek / Asritektur / 2026</p>
                         </div>
                     </div>
+                    <!-- TODO: each card links to the archive until its own case study exists; then point href to projects/<tahun>/<slug>.html (see _internal/asritektur-konten-seo.xlsx, tab Proyek). Numbers match the archive cards (Proyek 01-03). -->
                     <div class="works-card-block">
                         <div class="works-card-wrapper">
                             <div>
@@ -356,6 +358,7 @@
                                             </div>
                                             <div class="works-card-text">
                                                 <div class="works-description-wrapper-1">
+                                                    <p class="works-kicker">Proyek 01 · Residensial</p>
                                                     <h3 class="heading-3 h3-white">Brutalism</h3>
                                                     <p class="body-small bs-grey-200">Beton ekspos, massa tegas, dan tekstur material yang jujur.</p>
                                                 </div>
@@ -379,6 +382,7 @@
                                             </div>
                                             <div class="works-card-text">
                                                 <div class="works-description-wrapper-2">
+                                                    <p class="works-kicker">Proyek 02 · Residensial</p>
                                                     <h3 class="heading-3 h3-white">Minimalist Kontemporer</h3>
                                                     <p class="body-small bs-grey-200">Garis bersih, bukaan luas, dan material yang hangat.</p>
                                                 </div>
@@ -403,6 +407,7 @@
                                         </div>
                                         <div class="works-card-text wct-down">
                                             <div class="works-description-wrapper-3">
+                                                <p class="works-kicker">Proyek 03 · Residensial</p>
                                                 <h3 class="heading-3 h3-white">Modern Tropis</h3>
                                                 <p class="body-small bs-grey-200">Atap miring, sirkulasi udara alami, dan dekat dengan taman.</p>
                                             </div>
@@ -683,6 +688,186 @@
                         </section>
                     </div>
                 </div>
+            <!-- Paket dan Harga: price strip, the four packages from the Layanan page (css/home.css, js/home.js) -->
+            <section id="Harga" class="home-section home-packs">
+                <div class="block-container home-container">
+                    <div class="home-block">
+                        <div class="home-head">
+                            <div class="home-head-main">
+                                <div class="label-wrapper">
+                                    <div class="label-line home-line"></div>
+                                    <p class="body-medium bm-grey-300">Paket dan Harga</p>
+                                </div>
+                                <h2 class="home-h2" data-home-reveal>Harga Jelas Sebelum Anda Mulai</h2>
+                            </div>
+                            <p class="home-lead" data-home-reveal>Pilih paket sesuai luas dan kebutuhan proyek. Konsultasi awal gratis lewat WhatsApp.</p>
+                        </div>
+                        <div class="home-pack-grid">
+                            <a href="services/standard/" class="home-pack" data-home-reveal>
+                                <div class="home-pack-head">
+                                    <span class="home-pack-num">01</span>
+                                    <h3 class="home-pack-name">Standard</h3>
+                                    <p class="home-pack-price">Mulai Rp4 juta</p>
+                                </div>
+                                <div class="home-pack-body">
+                                    <ul class="home-pack-list">
+                                        <li>Denah</li>
+                                        <li>3D fasad</li>
+                                        <li>Gambar kerja arsitektural</li>
+                                    </ul>
+                                    <p class="home-pack-note">Survei lokasi tidak termasuk.</p>
+                                    <ul class="home-pack-meta">
+                                        <li><span>Luas maks.</span>150 m²</li>
+                                        <li><span>Revisi</span>2x</li>
+                                        <li><span>Durasi</span>15 hari</li>
+                                    </ul>
+                                </div>
+                                <span class="home-pack-cta">Lihat detail paket<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></span>
+                            </a>
+                            <a href="services/premium/" class="home-pack" data-home-reveal>
+                                <div class="home-pack-head">
+                                    <span class="home-pack-num">02</span>
+                                    <h3 class="home-pack-name">Premium</h3>
+                                    <p class="home-pack-price">Mulai Rp8 juta</p>
+                                </div>
+                                <div class="home-pack-body">
+                                    <ul class="home-pack-list">
+                                        <li>Denah</li>
+                                        <li>3D fasad</li>
+                                        <li>Gambar kerja</li>
+                                        <li>RAB</li>
+                                    </ul>
+                                    <ul class="home-pack-meta">
+                                        <li><span>Revisi</span>6x</li>
+                                        <li><span>Durasi</span>25 hari</li>
+                                    </ul>
+                                </div>
+                                <span class="home-pack-cta">Lihat detail paket<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></span>
+                            </a>
+                            <a href="services/profesional/" class="home-pack" data-home-reveal>
+                                <div class="home-pack-head">
+                                    <span class="home-pack-num">03</span>
+                                    <h3 class="home-pack-name">Profesional</h3>
+                                    <p class="home-pack-price">Mulai Rp15 juta</p>
+                                </div>
+                                <div class="home-pack-body">
+                                    <ul class="home-pack-list">
+                                        <li>Denah</li>
+                                        <li>3D fasad</li>
+                                        <li>Gambar kerja arsitektural</li>
+                                        <li>Gambar kerja struktur</li>
+                                        <li>MEP</li>
+                                        <li>RAB</li>
+                                        <li>Desain interior 8 ruang</li>
+                                    </ul>
+                                    <ul class="home-pack-meta">
+                                        <li><span>Luas maks.</span>250 m²</li>
+                                        <li><span>Revisi</span>8x</li>
+                                        <li><span>Durasi</span>30 hari</li>
+                                    </ul>
+                                </div>
+                                <span class="home-pack-cta">Lihat detail paket<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></span>
+                            </a>
+                            <a href="https://api.whatsapp.com/send/?phone=6282221780331&amp;text=Halo+Asritektur%2C+saya+tertarik+dengan+paket+Signature.+Saya+tau+info+dari+website.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="home-pack" data-home-reveal>
+                                <div class="home-pack-head">
+                                    <span class="home-pack-num">04</span>
+                                    <h3 class="home-pack-name">Signature</h3>
+                                    <p class="home-pack-price">Rp150.000 / m²</p>
+                                </div>
+                                <div class="home-pack-body">
+                                    <p class="home-pack-note">Biaya dihitung per meter persegi sesuai luas bangunan.</p>
+                                    <ul class="home-pack-meta">
+                                        <li><span>Biaya</span>Per m²</li>
+                                        <li><span>Cakupan</span>Via konsultasi</li>
+                                    </ul>
+                                </div>
+                                <span class="home-pack-cta">Konsultasikan paket ini<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></span>
+                            </a>
+                        </div>
+                        <a href="services/#Perbandingan" class="home-link" data-home-reveal>Bandingkan semua paket<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Keunggulan: four reasons to trust the studio, short version of the Layanan page -->
+            <section class="home-section home-strengths">
+                <div class="block-container home-container">
+                    <div class="home-block">
+                        <div class="home-head">
+                            <div class="home-head-main">
+                                <div class="label-wrapper">
+                                    <div class="label-line home-line"></div>
+                                    <p class="body-medium bm-grey-300">Keunggulan</p>
+                                </div>
+                                <h2 class="home-h2" data-home-reveal>Apa yang Membedakan Kami</h2>
+                            </div>
+                        </div>
+                        <ul class="home-strength-grid">
+                            <li class="home-strength" data-home-reveal>
+                                <p class="home-strength-num">01</p>
+                                <h3 class="home-strength-name">Arsitek Bersertifikat</h3>
+                                <p>Ditangani arsitek dengan kualifikasi dan STRA sesuai ketentuan yang berlaku.</p>
+                            </li>
+                            <li class="home-strength" data-home-reveal>
+                                <p class="home-strength-num">02</p>
+                                <h3 class="home-strength-name">Software Berlisensi</h3>
+                                <p>SketchUp, V-Ray, Enscape, dan Autodesk Revit untuk rancangan yang detail dan terukur.</p>
+                            </li>
+                            <li class="home-strength" data-home-reveal>
+                                <p class="home-strength-num">03</p>
+                                <h3 class="home-strength-name">Konsultasi Fleksibel</h3>
+                                <p>Lewat WhatsApp, Zoom, atau kunjungan langsung, menyesuaikan kondisi proyek Anda.</p>
+                            </li>
+                            <li class="home-strength" data-home-reveal>
+                                <p class="home-strength-num">04</p>
+                                <h3 class="home-strength-name">Alternatif Desain</h3>
+                                <p>Beberapa kemungkinan desain dieksplorasi sesuai kebutuhan, preferensi, dan anggaran Anda.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Proses: five steps, titles only; the full text is on the Layanan page -->
+            <section class="home-section home-process">
+                <div class="block-container home-container">
+                    <div class="home-block">
+                        <div class="home-head">
+                            <div class="home-head-main">
+                                <div class="label-wrapper">
+                                    <div class="label-line home-line"></div>
+                                    <p class="body-medium bm-grey-300">Proses Pemesanan</p>
+                                </div>
+                                <h2 class="home-h2" data-home-reveal>Lima Langkah Mudah Memulai Proyek Anda</h2>
+                            </div>
+                            <a href="services/#Pemesanan" class="home-link" data-home-reveal>Lihat proses lengkap<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></a>
+                        </div>
+                        <ol class="home-step-grid">
+                            <li class="home-step" data-home-reveal>
+                                <span class="home-step-num">01</span>
+                                <h3 class="home-step-name">Hubungi Kami</h3>
+                            </li>
+                            <li class="home-step" data-home-reveal>
+                                <span class="home-step-num">02</span>
+                                <h3 class="home-step-name">Diskusi &amp; Konsultasi</h3>
+                            </li>
+                            <li class="home-step" data-home-reveal>
+                                <span class="home-step-num">03</span>
+                                <h3 class="home-step-name">Kesepakatan &amp; Pembayaran Awal</h3>
+                            </li>
+                            <li class="home-step" data-home-reveal>
+                                <span class="home-step-num">04</span>
+                                <h3 class="home-step-name">Pengembangan Konsep Desain</h3>
+                            </li>
+                            <li class="home-step" data-home-reveal>
+                                <span class="home-step-num">05</span>
+                                <h3 class="home-step-name">Pengiriman Hasil &amp; Persetujuan</h3>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
             <!-- FAQ: same section on every page (css/faq.css, js/faq.js). Photo changes per page. -->
             <section class="faq-section">
                 <div class="block-container faq-container">
@@ -710,7 +895,7 @@
                                     </div>
                                     <div class="faq-item">
                                         <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-3"><span>Berapa lama proses desainnya?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-                                        <div class="faq-panel" id="faq-3" role="region"><div class="faq-inner"><p class="body-medium">Paket Standard sekitar 15 hari, Premium 25 hari, dan Profesional 30 hari. Rinciannya ada di halaman Layanan dan Harga.</p></div></div>
+                                        <div class="faq-panel" id="faq-3" role="region"><div class="faq-inner"><p class="body-medium">Paket Standard sekitar 15 hari, Premium 25 hari, dan Profesional 30 hari. Rinciannya ada di halaman Layanan.</p></div></div>
                                     </div>
                                     <div class="faq-item">
                                         <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-4"><span>Berapa kali revisi yang bisa dilakukan?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
@@ -718,7 +903,7 @@
                                     </div>
                                     <div class="faq-item">
                                         <h3 class="faq-head"><button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-5"><span>Bagaimana proses pembayarannya?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-                                        <div class="faq-panel" id="faq-5" role="region"><div class="faq-inner"><p class="body-medium">Setelah ruang lingkup pekerjaan dan biaya disepakati, Anda melakukan pembayaran awal untuk memulai proyek. Langkah lengkapnya ada di bagian Proses Pemesanan pada halaman Layanan dan Harga.</p></div></div>
+                                        <div class="faq-panel" id="faq-5" role="region"><div class="faq-inner"><p class="body-medium">Setelah ruang lingkup pekerjaan dan biaya disepakati, Anda melakukan pembayaran awal untuk memulai proyek. Langkah lengkapnya ada di bagian Proses Pemesanan pada halaman Layanan.</p></div></div>
                                     </div>
                                 </div>
                             </div>
@@ -866,6 +1051,7 @@
         <script src="js/menu.js"></script>
         <script src="js/navbar.js"></script>
         <script src="js/faq.js"></script>
+        <script src="js/home.js"></script>
         <script src="js/slider.js"></script>
         <script src="js/hero-video.js"></script>
         <script src="js/rotator.js"></script>

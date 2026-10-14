@@ -15,6 +15,7 @@ npx serve .          # or VS Code "Live Server", or: python -m http.server 8000
 ```
 index.html
 services/index.html   Layanan dan Harga
+services/<standard|premium|profesional>/index.html   one landing page per package (generated, see _internal/build_packages.py)
 about/index.html      Tentang (hero, numbers, mission, journey, team, FAQ)
 journal/index.html    Jurnal (centred hero + two-column article cards; articles are TODO examples)
 projects/2026/template-1.html   case-study template: copy per project, replace everything marked TODO
@@ -30,6 +31,8 @@ css/
   archive.css        search / filters / layout switch shared by projects and journal (.ar-*)
   contact.css        contact and 404 pages
   faq.css            FAQ section shared by every page (.faq-*)
+  home.css           home sections after the testimonials: Paket dan Harga, Keunggulan, Proses (.home-*)
+  package.css        package landing pages only (.pkg-*: price line, deliverables, offer band, proof, comparison table)
 js/
   main.js            smooth scrolling (Lenis) synced with GSAP
   animations.js      hovers, text reveals, scroll animations (GSAP + ScrollTrigger + SplitText)
@@ -41,6 +44,8 @@ js/
   services.js        Services + case-study animations (hero intro, image reveal/parallax, fade-ups, row hovers)
   contact.js         contact form: opens WhatsApp with the filled-in message
   faq.js             FAQ accordion + fade-up, shared by every page
+  home.js            fade-up for the home sections after the testimonials ([data-home-reveal])
+  package.js         package pages: scrolls the comparison table to this package on narrow screens
   share.js           "Bagikan Proyek" on case study pages (WhatsApp, Facebook, X, copy link, phone share sheet)
   i18n.js            ID / EN language switch (dictionary: i18n/en.js, loaded for English only)
   archive.js         search + filters + layout switch for [data-archive] sections (projects, journal)

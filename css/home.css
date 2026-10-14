@@ -1,0 +1,420 @@
+/*
+ * Home page sections added after the testimonials: Paket dan Harga, Keunggulan, Proses (js/home.js reveals them),
+ * plus the small "Proyek 01 · Residensial" line on the Proyek Pilihan cards.
+ * They sit in .testimonial-cta-wrapper like the FAQ, so they need the same stacking (z-index 4, solid background)
+ * to scroll over the sticky testimonial block.
+ * Only needs the design tokens from css/main.css.
+ */
+
+.home-section {
+  z-index: 4;
+  background-color: var(--white);
+  padding: 140px 20px;
+  position: relative;
+}
+
+.home-container {
+  max-width: var(--_spacing---max-width-section);
+}
+
+.home-block {
+  padding-right: var(--_spacing---spacing-section-32);
+  padding-left: var(--_spacing---spacing-section-32);
+  grid-row-gap: 72px;
+  flex-flow: column;
+  display: flex;
+}
+
+.home-head {
+  grid-column-gap: 64px;
+  grid-row-gap: 32px;
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.home-head-main {
+  grid-row-gap: 32px;
+  flex-flow: column;
+  max-width: 760px;
+  display: flex;
+}
+
+.label-line.home-line {
+  width: 80px;
+}
+
+.home-h2 {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.05;
+  font-weight: var(--_typography---font-weight--regular);
+  text-wrap: balance;
+  margin: 0;
+}
+
+.home-lead {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--grey-300);
+  font-size: var(--_typography---font-size--body-large);
+  line-height: var(--_typography---font-height--fh-4);
+  max-width: 400px;
+  margin: 0;
+}
+
+.home-link {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: var(--_typography---font-size--nav);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--gold);
+  grid-column-gap: 12px;
+  align-items: center;
+  align-self: flex-start;
+  padding-bottom: 6px;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.home-link svg, .home-pack-cta svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  transition: transform .3s ease;
+}
+
+.home-link:hover svg, .home-pack:hover .home-pack-cta svg {
+  transform: translateX(4px);
+}
+
+/* ---------- Paket dan Harga ---------- */
+
+.home-pack-grid {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid;
+}
+
+.home-pack {
+  --pack-line: var(--grey-200);
+  --pack-muted: var(--grey-300);
+  color: var(--blue);
+  border: 1px solid var(--grey-200);
+  border-radius: 4px;
+  grid-row-gap: 28px;
+  flex-flow: column;
+  padding: 28px;
+  text-decoration: none;
+  transition: background-color .35s ease, color .35s ease, border-color .35s ease;
+  display: flex;
+}
+
+.home-pack:hover, .home-pack:focus-visible {
+  --pack-line: #ffffff2e;
+  --pack-muted: var(--grey-200);
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
+
+.home-pack-head {
+  grid-row-gap: 14px;
+  flex-flow: column;
+  display: flex;
+}
+
+.home-pack-num {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--gold);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .02em;
+  line-height: 1;
+}
+
+.home-pack-name {
+  font-family: var(--_typography---font--switzer);
+  font-size: clamp(26px, 2.4vw, 34px);
+  line-height: 1.05;
+  font-weight: var(--_typography---font-weight--regular);
+  margin: 0;
+}
+
+.home-pack-price {
+  color: inherit;
+  font-family: var(--_typography---font--switzer);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+.home-pack-body {
+  grid-row-gap: 20px;
+  flex-flow: column;
+  flex: 1;
+  display: flex;
+}
+
+.home-pack-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-pack-list li {
+  color: inherit;
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-medium);
+  line-height: 1.3;
+  border-top: 1px solid var(--pack-line);
+  padding: 10px 0;
+  transition: border-color .35s ease;
+}
+
+.home-pack-list li:last-child {
+  border-bottom: 1px solid var(--pack-line);
+}
+
+.home-pack-note {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--pack-muted);
+  font-size: var(--_typography---font-size--body-small);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.home-pack-meta {
+  grid-column-gap: 28px;
+  grid-row-gap: 14px;
+  flex-flow: wrap;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.home-pack-meta li {
+  color: inherit;
+  font-family: var(--_typography---font--switzer);
+  font-size: var(--_typography---font-size--body-medium);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  grid-row-gap: 6px;
+  flex-flow: column;
+  display: flex;
+}
+
+.home-pack-meta li span {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--pack-muted);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--regular);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.home-pack-cta {
+  font-family: var(--_typography---font--switzer);
+  font-size: var(--_typography---font-size--nav);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: 0;
+  grid-column-gap: 12px;
+  align-items: center;
+  display: inline-flex;
+}
+
+/* ---------- Keunggulan (blue band) ---------- */
+
+.home-strengths {
+  background-color: var(--blue);
+}
+
+.home-strengths .home-h2 {
+  color: var(--white);
+}
+
+.home-strengths .body-medium.bm-grey-300 {
+  color: var(--grey-200);
+}
+
+.home-strength-grid {
+  grid-column-gap: 32px;
+  grid-row-gap: 48px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+}
+
+.home-strength {
+  border-top: 1px solid #ffffff2e;
+  grid-row-gap: 20px;
+  flex-flow: column;
+  padding-top: 24px;
+  display: flex;
+}
+
+.home-strength-num {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--gold);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .02em;
+  line-height: 1;
+}
+
+.home-strength-name {
+  font-family: var(--_typography---font--switzer);
+  color: var(--white);
+  font-size: var(--_typography---font-size--heading-6);
+  line-height: 1.15;
+  font-weight: var(--_typography---font-weight--medium);
+  margin: 0;
+}
+
+.home-strength p:not(.home-strength-num) {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--grey-200);
+  font-size: var(--_typography---font-size--body-medium);
+  line-height: var(--_typography---font-height--fh-4);
+  margin: 0;
+}
+
+/* ---------- Proses ---------- */
+
+.home-process {
+  border-top: 1px solid var(--grey-200);
+}
+
+.home-step-grid {
+  counter-reset: step;
+  grid-column-gap: 32px;
+  grid-row-gap: 40px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+}
+
+.home-step {
+  border-top: 1px solid var(--blue);
+  grid-row-gap: 28px;
+  flex-flow: column;
+  padding-top: 20px;
+  display: flex;
+}
+
+.home-step-num {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(48px, 5.2vw, 76px);
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+
+.home-step-name {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(18px, 1.7vw, 22px);
+  line-height: 1.2;
+  font-weight: var(--_typography---font-weight--medium);
+  margin: 0;
+}
+
+/* ---------- Proyek Pilihan cards: kicker above the style name ---------- */
+
+.works-kicker {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--grey-200);
+  font-size: var(--_typography---font-size--body-extra-small);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 4px;
+}
+
+/* ---------- responsive ---------- */
+
+@media screen and (max-width: 1199px) {
+  .home-pack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-step-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .home-section {
+    padding: 104px 20px;
+  }
+
+  .home-head {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .home-strength-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-section {
+    padding: 80px 16px;
+  }
+
+  .home-block {
+    grid-row-gap: 48px;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .home-pack-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-pack {
+    padding: 24px;
+  }
+
+  .home-step-grid {
+    grid-row-gap: 28px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-step {
+    grid-column-gap: 24px;
+    flex-flow: row;
+    align-items: baseline;
+    padding-top: 16px;
+  }
+
+  .home-step-num {
+    min-width: 72px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .home-strength-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-pack, .home-link svg, .home-pack-cta svg {
+    transition: none;
+  }
+}

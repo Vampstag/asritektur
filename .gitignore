@@ -17,3 +17,6 @@ assets/img/works/**/*
 # Scratch files
 _test*.html
 *.log
+
+# Internal working files (content spreadsheet): not part of the published site
+_internal/

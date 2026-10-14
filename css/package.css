@@ -1,0 +1,699 @@
+/*
+ * Package pages (services/standard/, services/premium/, services/profesional/).
+ * They reuse the Services page (css/services.css: hero, .svc-* sections, process, image reveal) and the case-study page
+ * (css/project.css: .cs-specs, the blue .cs-concept band with .cs-principles). This file only adds what is specific to a
+ * package page: price line, fit lists, the deliverables list, the inline offer band, social proof, the comparison table.
+ * Motion: js/services.js ([data-svc-reveal], .img-reveal).
+ */
+
+/* ---------- hero ---------- */
+
+.pkg-price-row {
+  grid-column-gap: 20px;
+  grid-row-gap: 8px;
+  flex-flow: wrap;
+  align-items: baseline;
+  display: flex;
+}
+
+.pkg-price {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(30px, 3.4vw, 48px);
+  line-height: 1;
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: -.04em;
+  margin: 0;
+}
+
+.pkg-price-note {
+  color: var(--grey-300);
+  margin: 0;
+}
+
+/* ---------- brief: fit lists under the spec sheet ---------- */
+
+.pkg-fit {
+  grid-column-gap: 24px;
+  grid-row-gap: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 96px;
+  display: grid;
+}
+
+.pkg-fit-col {
+  border-top: 1px solid var(--grey-200);
+  grid-row-gap: 24px;
+  flex-flow: column;
+  padding-top: 24px;
+  display: flex;
+}
+
+.pkg-fit-label {
+  font-family: var(--_typography---font--inter-tight);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+  line-height: 1;
+  margin: 0;
+}
+
+.pkg-fit-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pkg-fit-list li {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.25;
+  border-top: 1px solid var(--grey-200);
+  grid-column-gap: 16px;
+  padding: 16px 0;
+  display: flex;
+}
+
+.pkg-fit-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.pkg-fit-list li::before {
+  content: "";
+  background-color: var(--gold);
+  flex: none;
+  width: 16px;
+  height: 1px;
+  margin-top: .7em;
+}
+
+.pkg-fit-col.is-alt .pkg-fit-list li {
+  color: var(--grey-300);
+}
+
+.pkg-fit-link {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: var(--_typography---font-size--nav);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--gold);
+  grid-column-gap: 12px;
+  align-items: center;
+  align-self: flex-start;
+  padding-bottom: 6px;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+/* ---------- deliverables ---------- */
+
+.pkg-items {
+  counter-reset: item;
+  margin: 112px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pkg-item {
+  grid-column-gap: 32px;
+  grid-row-gap: 12px;
+  border-top: 1px solid var(--grey-200);
+  grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: baseline;
+  padding: 36px 0;
+  display: grid;
+}
+
+.pkg-item:last-child {
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.pkg-item-num {
+  font-family: var(--_typography---font--switzer);
+  color: var(--gold);
+  font-size: var(--_typography---font-size--heading-6);
+  line-height: 1;
+  font-weight: var(--_typography---font-weight--medium);
+  font-variant-numeric: tabular-nums;
+}
+
+.pkg-item-head {
+  grid-row-gap: 12px;
+  flex-flow: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.pkg-item-name {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(24px, 2.4vw, 34px);
+  line-height: 1.1;
+  font-weight: var(--_typography---font-weight--regular);
+  text-transform: none;
+  margin: 0;
+}
+
+.pkg-item-tag {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--blue);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  border-radius: 100px;
+  padding: 6px 12px;
+  line-height: 1;
+}
+
+.pkg-item-desc {
+  max-width: 520px;
+  margin: 0;
+}
+
+.pkg-item.is-key {
+  background-color: var(--grey-100);
+  margin-right: -24px;
+  margin-left: -24px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.pkg-notice {
+  max-width: 640px;
+  margin: 40px 0 0;
+}
+
+.pkg-notice a {
+  color: var(--blue);
+  border-bottom: 1px solid var(--gold);
+  text-decoration: none;
+}
+
+/* Offer band: the price and the single action, repeated after the list so nobody has to scroll back up */
+.pkg-band {
+  border: 1px solid var(--grey-200);
+  border-radius: 8px;
+  grid-column-gap: 48px;
+  grid-row-gap: 32px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding: 40px 48px;
+  display: flex;
+}
+
+.pkg-band-text {
+  grid-row-gap: 12px;
+  flex-flow: column;
+  display: flex;
+}
+
+.pkg-band-price {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(30px, 3.4vw, 48px);
+  line-height: 1;
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: -.04em;
+  margin: 0;
+}
+
+.pkg-band-text p:not(.pkg-band-price) {
+  max-width: 460px;
+  margin: 0;
+}
+
+/* ---------- social proof ---------- */
+
+.pkg-stats {
+  grid-column-gap: 24px;
+  grid-row-gap: 40px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 112px 0 0;
+  padding: 0;
+  display: grid;
+}
+
+.pkg-stat {
+  border-top: 1px solid var(--grey-200);
+  grid-row-gap: 16px;
+  flex-flow: column;
+  padding-top: 24px;
+  display: flex;
+}
+
+.pkg-stat-number {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(56px, 7vw, 112px);
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: -.05em;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+.pkg-stat p:not(.pkg-stat-number) {
+  margin: 0;
+}
+
+.pkg-quotes {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 96px 0 0;
+  display: grid;
+}
+
+.pkg-quote {
+  background-color: var(--grey-100);
+  border-radius: 8px;
+  grid-row-gap: 40px;
+  flex-flow: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 32px;
+  display: flex;
+}
+
+.pkg-quote blockquote {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--blue);
+  font-size: var(--_typography---font-size--body-large);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.pkg-quote figcaption {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--grey-300);
+  font-size: var(--_typography---font-size--body-small);
+  line-height: 1.4;
+}
+
+.pkg-quote figcaption strong {
+  color: var(--blue);
+  font-weight: var(--_typography---font-weight--medium);
+}
+
+/* One project made with this package: photo left, facts right */
+.pkg-case {
+  color: inherit;
+  border-top: 1px solid var(--grey-200);
+  grid-column-gap: 64px;
+  grid-row-gap: 32px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  margin-top: 96px;
+  padding-top: 56px;
+  text-decoration: none;
+  display: grid;
+}
+
+.pkg-case-media {
+  border-radius: 4px;
+  aspect-ratio: 16 / 9;
+}
+
+.pkg-case-text {
+  grid-row-gap: 24px;
+  flex-flow: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.pkg-case-title {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: clamp(32px, 3.6vw, 56px);
+  line-height: 1.04;
+  font-weight: var(--_typography---font-weight--regular);
+  text-transform: none;
+  margin: 0;
+}
+
+.pkg-case-meta {
+  grid-column-gap: 40px;
+  grid-row-gap: 16px;
+  flex-flow: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.pkg-case-meta li {
+  font-family: var(--_typography---font--switzer);
+  color: var(--blue);
+  font-size: var(--_typography---font-size--body-large);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  grid-row-gap: 8px;
+  flex-flow: column;
+  display: flex;
+}
+
+.pkg-case-meta li span {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--grey-300);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--regular);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ---------- comparison ---------- */
+
+.pkg-compare-section {
+  background-color: var(--grey-100);
+}
+
+/* On the Services page it sits between two other bands, so it stays white */
+.pkg-compare-section.is-white {
+  background-color: var(--white);
+}
+
+.pkg-compare-section.is-white .pkg-table tbody th {
+  background-color: var(--white);
+}
+
+.pkg-table-wrap {
+  margin-top: 96px;
+  overflow-x: auto;
+}
+
+.pkg-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+
+.pkg-table th, .pkg-table td {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--blue);
+  font-size: var(--_typography---font-size--body-medium);
+  line-height: 1.3;
+  font-weight: var(--_typography---font-weight--regular);
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid var(--grey-200);
+  padding: 20px 24px;
+}
+
+.pkg-table tbody th {
+  color: var(--grey-300);
+  font-size: var(--_typography---font-size--body-small);
+  width: 28%;
+  padding-left: 0;
+}
+
+.pkg-table thead th {
+  border-top: 0;
+  padding-top: 0;
+  padding-bottom: 24px;
+}
+
+.pkg-table-name {
+  font-family: var(--_typography---font--switzer);
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.1;
+  font-weight: var(--_typography---font-weight--regular);
+  display: block;
+}
+
+.pkg-table-price {
+  color: var(--grey-300);
+  margin-top: 8px;
+  display: block;
+}
+
+/* The whole header cell is the link to that package's page (the small label only shows on wide screens) */
+.pkg-table-head {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.pkg-table-link {
+  color: var(--blue);
+  font-size: var(--_typography---font-size--body-small);
+  font-weight: var(--_typography---font-weight--medium);
+  border-bottom: 1px solid var(--gold);
+  margin-top: 16px;
+  display: inline-block;
+}
+
+/* Yes / no as marks instead of words: a check in blue, a quiet dash. The words stay in the markup for screen readers. */
+.pkg-mark.is-yes, .pkg-mark.is-none {
+  font-size: 0;
+  width: 18px;
+  height: 18px;
+  display: block;
+  position: relative;
+}
+
+.pkg-mark.is-yes::before {
+  content: "";
+  border: solid var(--blue);
+  border-width: 0 2px 2px 0;
+  width: 6px;
+  height: 11px;
+  position: absolute;
+  top: 1px;
+  left: 6px;
+  transform: rotate(45deg);
+}
+
+.pkg-mark.is-none::before {
+  content: "";
+  background-color: var(--grey-200);
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  top: 8px;
+  left: 3px;
+}
+
+.pkg-table .is-current {
+  background-color: var(--white);
+}
+
+.pkg-table thead .is-current {
+  border-top: 3px solid var(--blue);
+  padding-top: 24px;
+}
+
+.pkg-table-flag {
+  font-family: var(--_typography---font--inter-tight);
+  color: var(--gold);
+  font-size: var(--_typography---font-size--body-extra-small);
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.pkg-table .is-no {
+  color: var(--grey-300);
+}
+
+/* ---------- responsive ---------- */
+
+@media screen and (max-width: 991px) {
+  .pkg-fit {
+    margin-top: 72px;
+  }
+
+  .pkg-items {
+    margin-top: 72px;
+  }
+
+  .pkg-item {
+    grid-template-columns: 48px minmax(0, 1fr);
+    padding: 28px 0;
+  }
+
+  .pkg-item-desc {
+    grid-column: 2;
+  }
+
+  .pkg-item.is-key {
+    margin-right: -16px;
+    margin-left: -16px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .pkg-stats, .pkg-quotes {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 72px;
+  }
+
+  .pkg-case {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 72px;
+    padding-top: 40px;
+  }
+
+  .pkg-band {
+    flex-flow: column;
+    align-items: flex-start;
+    padding: 32px;
+  }
+
+  .pkg-table-wrap {
+    margin-top: 72px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pkg-fit {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pkg-item {
+    grid-template-columns: 36px minmax(0, 1fr);
+    grid-column-gap: 16px;
+  }
+
+  .pkg-band {
+    margin-top: 56px;
+    padding: 24px;
+  }
+
+  .pkg-quote {
+    padding: 24px;
+  }
+
+  /* Fit all three packages on one phone screen: no sideways scrolling. A narrow label column, three equal columns,
+     tighter type; the "Lihat paket" label goes away and the package name itself is the link. */
+  .pkg-table {
+    table-layout: fixed;
+    min-width: 0;
+  }
+
+  .pkg-table th, .pkg-table td {
+    font-size: var(--_typography---font-size--body-small);
+    padding: 14px 4px;
+  }
+
+  .pkg-table thead th:first-child, .pkg-table tbody th {
+    width: 26%;
+    padding-right: 8px;
+  }
+
+  .pkg-table tbody th {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .pkg-table thead th {
+    padding-bottom: 16px;
+  }
+
+  .pkg-table thead .is-current {
+    padding-top: 16px;
+  }
+
+  .pkg-table-name {
+    font-size: clamp(11px, 3.5vw, 15px);
+    letter-spacing: -.03em;
+  }
+
+  a.pkg-table-head .pkg-table-name {
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    display: inline-block;
+  }
+
+  .pkg-table-price {
+    font-size: 11px;
+    line-height: 1.3;
+    margin-top: 6px;
+    text-wrap: balance;
+  }
+
+  .pkg-table-flag {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .pkg-table-link {
+    display: none;
+  }
+}
+
+/* Visually hidden, still read by screen readers (empty corner cell of the comparison table) */
+.sr-only {
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* ---------- fixes found while testing ---------- */
+
+/* Package headlines are longer than the Services one: size them by screen height too, so the price and the
+   Konsultasi button stay above the fold on a 720px-high laptop. */
+.package-page .svc-title {
+  font-size: min(clamp(40px, 6.2vw, 100px), 11vh);
+  max-width: 14em;
+}
+
+.package-page .svc-hero-bottom {
+  grid-row-gap: 24px;
+}
+
+.package-page .svc-lead {
+  max-width: 640px;
+}
+
+.pkg-quote blockquote {
+  border: 0;
+  padding: 0;
+}
+
+.pkg-quote figcaption {
+  text-align: left;
+}
+
+.pkg-table thead th:not(:first-child), .pkg-table tbody td {
+  width: 24%;
+}
+
+/* Very small phones (320px): a little less type in the comparison table so every package name and row label still fits */
+@media screen and (max-width: 340px) {
+  .pkg-table tbody th {
+    font-size: 11.5px;
+  }
+
+  .pkg-table th, .pkg-table td {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+}
+
+/* Comparison table: package columns (headers, marks and values) are centred; only the row labels stay left */
+.pkg-table thead th:not(:first-child), .pkg-table tbody td {
+  text-align: center;
+}
+
+.pkg-mark.is-yes, .pkg-mark.is-none {
+  margin-right: auto;
+  margin-left: auto;
+}
