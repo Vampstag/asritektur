@@ -4178,3 +4178,82 @@ a, button, summary, label, input, select, textarea, [role="button"] {
   .works-card-text, .stats-card { background: #ffffff12; -webkit-backdrop-filter: none; backdrop-filter: none; }
   .testimonial-card { background: var(--grey-100); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
+
+/* ---------- Scroll cue ----------
+   Fixed "Gulir" + arrow chip at the bottom centre of the first screen on pages that open with a hero (js/main.js).
+   Glass, so it stays legible over the light hero video, the photos and the blue panels alike. */
+:root {
+  --cue-space: 28px; /* free band the hero layouts keep above the scroll cue */
+}
+
+.scroll-cue {
+  z-index: 55;
+  color: var(--blue);
+  font: inherit;
+  font-size: 12px;
+  font-weight: var(--_typography---font-weight--medium);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  background: var(--glass-light-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-light-edge);
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px var(--glass-light-ring), inset 0 1px 0 #ffffffe6;
+  cursor: pointer;
+  grid-column-gap: 10px;
+  flex-flow: row;
+  align-items: center;
+  padding: 11px 16px 11px 18px;
+  transition: opacity .4s ease, transform .4s ease, border-color .25s;
+  display: flex;
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-cue:hover, .scroll-cue:focus-visible {
+  border-color: var(--gold);
+}
+
+.scroll-cue:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.scroll-cue-label {
+  line-height: 1;
+}
+
+.scroll-cue svg {
+  animation: scroll-cue-drift 2.4s ease-in-out infinite;
+}
+
+@keyframes scroll-cue-drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.scroll-cue.is-away,
+.scroll-cue.is-blocked,
+html.menu-open .scroll-cue {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+}
+
+/* Home, phones and tablets: the "Proyek Terbaru" card reaches the bottom centre of the screen, so the cue sits just above it */
+@media screen and (max-width: 991px) {
+  body:has(.hero-section) .scroll-cue {
+    bottom: 136px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue svg { animation: none; }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .scroll-cue { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

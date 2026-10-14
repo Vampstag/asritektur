@@ -69,4 +69,62 @@
       else lenis.scrollTo(0, { duration: 1.8, easing: (t) => 1 - Math.pow(1 - t, 4) });
     });
   });
+
+  // Scroll cue: a small "Gulir" + arrow chip fixed at the bottom centre of the first screen of every page that opens with a
+  // hero. Heroes fill the screen (and on phones run past it), so visitors who do not expect to scroll can miss that there is
+  // more. It fades out as soon as the page moves, comes back at the top, and a tap scrolls roughly one screen down.
+  const hero = document.querySelector(".hero-section, .ab-hero, .svc-hero, .ct-section");
+  if (hero) {
+    const tr = (text) => (window.i18n ? window.i18n.t(text) : text);
+    const cue = document.createElement("button");
+    cue.type = "button";
+    cue.className = "scroll-cue";
+    cue.setAttribute("aria-label", tr("Gulir ke bawah"));
+    cue.innerHTML =
+      '<span class="scroll-cue-label">' + tr("Gulir") + "</span>" +
+      '<svg viewBox="0 0 14 22" width="10" height="16" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M7 1v19M1.5 14.5 7 20l5.5-5.5"/></svg>';
+    document.body.appendChild(cue);
+
+    const update = () => {
+      const away = window.scrollY > 40;
+      if (!away && cue.classList.contains("is-away")) scheduleCheck(); // back at the top: measure again
+      cue.classList.toggle("is-away", away);
+    };
+    lenis.on("scroll", update);
+
+    // On small phones a dense hero can run past the screen and reach the cue's spot. The cue never sits on top of a button,
+    // link or form field: if it would, it stays hidden (the cut-off content already shows there is more below).
+    const checkBlocked = () => {
+      if (window.scrollY > 40) return; // only the first screen matters
+      cue.classList.remove("is-blocked");
+      const r = cue.getBoundingClientRect();
+      const targets = [...hero.querySelectorAll("a, button, input, select, textarea"), ...document.querySelectorAll(".latest-card")];
+      const hit = targets.some((el) => {
+        const b = el.getBoundingClientRect();
+        return b.width > 1 && b.height > 1 && b.left < r.right && b.right > r.left && b.top < r.bottom && b.bottom > r.top;
+      });
+      cue.classList.toggle("is-blocked", hit);
+    };
+    let blockedTimer;
+    const scheduleCheck = () => {
+      window.clearTimeout(blockedTimer);
+      blockedTimer = window.setTimeout(checkBlocked, 150);
+    };
+    window.addEventListener("resize", scheduleCheck);
+    // after the intro animations settle (they move the hero content for a moment), and once more to be sure
+    window.addEventListener("load", () => {
+      window.setTimeout(checkBlocked, 900);
+      window.setTimeout(checkBlocked, 2600);
+    });
+    update();
+
+    cue.addEventListener("click", () => {
+      // The next section, but never further than about one screen: the contact hero alone is taller than a screen
+      const next = hero.nextElementSibling;
+      const nextTop = next ? next.getBoundingClientRect().top + window.scrollY : Infinity;
+      const y = Math.min(nextTop, window.scrollY + window.innerHeight * 0.85);
+      if (reducedMotion.matches) lenis.scrollTo(y, { immediate: true });
+      else lenis.scrollTo(y, { duration: 1.4, easing: (t) => 1 - Math.pow(1 - t, 4) });
+    });
+  }
 })();

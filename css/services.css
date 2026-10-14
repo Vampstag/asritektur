@@ -95,7 +95,8 @@
 
 .svc-hero-block {
   padding-top: var(--_spacing---spacing-section-32);
-  padding-bottom: var(--_spacing---spacing-section-32);
+  /* keeps a free band at the bottom for the scroll cue (css/main.css) */
+  padding-bottom: calc(var(--_spacing---spacing-section-32) + var(--cue-space, 0px));
   grid-row-gap: 40px;
   flex-flow: column;
   flex: 1;
@@ -876,4 +877,13 @@ html.js:not(.svc-ready):not(.svc-failed) :is(
 
 @media (prefers-reduced-transparency: reduce) {
   .svc-why-card { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* Short phones: the package heroes carry the most text and run past the screen, which would put their buttons under the scroll cue.
+   Tighter gaps between the text groups lift the buttons clear of it. */
+@media screen and (max-width: 767px) and (max-height: 820px) {
+  .svc-hero-block,
+  .svc-hero-bottom {
+    grid-row-gap: 24px;
+  }
 }
