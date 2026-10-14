@@ -4369,3 +4369,11 @@ html.menu-open .scroll-cue {
 .body-extra-large {
   font-weight: 300;
 }
+
+/* Light text on the blue sections reads heavier than the same weight on white (the bright glyphs bleed into the dark ground),
+   so white paragraphs are softened a little instead of going to an even thinner weight. Same weight 300, 82% white. */
+.body-medium.bm-white,
+.body-large.bl-white,
+.body-extra-large.bel-white {
+  color: rgb(255 255 255 / 82%);
+}
