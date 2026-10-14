@@ -4112,11 +4112,11 @@ a, button, summary, label, input, select, textarea, [role="button"] {
   --glass-dark-fill: linear-gradient(135deg, #ffffff1f, #ffffff0a);
   --glass-dark-edge: #ffffff26;
   /* Ambient glow, two layers per background so they can drift independently (see "Ambient glow" below). Positions are
-     percentages of a layer that is 28% larger than its section, so the section edge sits at 11% / 89%. */
-  --glow-white-a: radial-gradient(23% 27% at 50% 21%, #aa9b3f2b, transparent 72%), radial-gradient(27% 30% at 50% 79%, #3f8aa63d, transparent 72%);
-  --glow-white-b: radial-gradient(31% 31% at 80% 16%, #aa9b3f26, transparent 70%), radial-gradient(34% 34% at 17% 83%, #093b4f1f, transparent 70%);
-  --glow-blue-a: radial-gradient(36% 33% at 80% 17%, #aa9b3f3d, transparent 70%);
-  --glow-blue-b: radial-gradient(42% 39% at 16% 85%, #3f8aa633, transparent 70%);
+     percentages of a layer that is 36% larger than its section, so the section edge sits at 13% / 87%. */
+  --glow-white-a: radial-gradient(ellipse 28% 22% at 62% 30%, rgb(170 155 63 / 100%), rgb(170 155 63 / 95%) 12%, rgb(170 155 63 / 82%) 25%, rgb(170 155 63 / 62%) 40%, rgb(170 155 63 / 40%) 55%, rgb(170 155 63 / 22%) 70%, rgb(170 155 63 / 9%) 85%, rgb(170 155 63 / 0%)), radial-gradient(ellipse 28% 22% at 40% 70%, rgb(63 138 166 / 100%), rgb(63 138 166 / 95%) 12%, rgb(63 138 166 / 82%) 25%, rgb(63 138 166 / 62%) 40%, rgb(63 138 166 / 40%) 55%, rgb(63 138 166 / 22%) 70%, rgb(63 138 166 / 9%) 85%, rgb(63 138 166 / 0%));
+  --glow-white-b: radial-gradient(ellipse 28% 22% at 30% 34%, rgb(9 59 79 / 100%), rgb(9 59 79 / 95%) 12%, rgb(9 59 79 / 82%) 25%, rgb(9 59 79 / 62%) 40%, rgb(9 59 79 / 40%) 55%, rgb(9 59 79 / 22%) 70%, rgb(9 59 79 / 9%) 85%, rgb(9 59 79 / 0%)), radial-gradient(ellipse 24% 20% at 72% 68%, rgb(170 155 63 / 100%), rgb(170 155 63 / 95%) 12%, rgb(170 155 63 / 82%) 25%, rgb(170 155 63 / 62%) 40%, rgb(170 155 63 / 40%) 55%, rgb(170 155 63 / 22%) 70%, rgb(170 155 63 / 9%) 85%, rgb(170 155 63 / 0%));
+  --glow-blue-a: radial-gradient(ellipse 28% 22% at 68% 30%, rgb(86 156 186 / 100%), rgb(86 156 186 / 95%) 12%, rgb(86 156 186 / 82%) 25%, rgb(86 156 186 / 62%) 40%, rgb(86 156 186 / 40%) 55%, rgb(86 156 186 / 22%) 70%, rgb(86 156 186 / 9%) 85%, rgb(86 156 186 / 0%));
+  --glow-blue-b: radial-gradient(ellipse 28% 22% at 32% 70%, rgb(63 138 166 / 100%), rgb(63 138 166 / 95%) 12%, rgb(63 138 166 / 82%) 25%, rgb(63 138 166 / 62%) 40%, rgb(63 138 166 / 40%) 55%, rgb(63 138 166 / 22%) 70%, rgb(63 138 166 / 9%) 85%, rgb(63 138 166 / 0%));
 }
 
 .navbar-section {
@@ -4303,8 +4303,17 @@ html.menu-open .scroll-cue {
 /* ---------- Ambient glow ----------
    The soft light behind the glass cards. Each glow section gets two oversized layers (::before / ::after) that drift on their
    own slow, uneven paths, so the light never repeats in step and the frosted cards keep catching something new.
-   Only transform is animated (compositor, no repaint), the section clips the overhang, and main.js gives every section a
-   random starting point (--glow-seed) so no two sections move together. */
+   - The gradients are drawn at full strength with a smooth eased falloff and dimmed with `opacity`: a gradient painted at low
+     alpha is stored with only a few dozen steps and shows up as rings, a dimmed full-alpha one keeps its fine steps.
+   - A faint grain on the section background (below) dithers whatever banding is left.
+   - Every blob sits well inside its layer and fades out before the edge, so a layer edge can never show.
+   - Only transform is animated (compositor, no repaint); the section clips the overhang with overflow: clip; main.js gives
+     every section a random starting point (--glow-seed) so no two sections move together. */
+:root {
+  --grain-on-blue: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .035 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+  --grain-on-white: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .03  0 0 0 0 .23  0 0 0 0 .31  0 0 0 .02 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+}
+
 .works-section,
 .stats-section,
 .testimonial-section,
@@ -4312,6 +4321,13 @@ html.menu-open .scroll-cue {
 .svc-section:has(.svc-card) {
   isolation: isolate;
   overflow: clip;
+  background-image: var(--grain-on-white);
+}
+
+.works-section,
+.stats-section,
+.home-strengths {
+  background-image: var(--grain-on-blue);
 }
 
 :is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::before,
@@ -4325,39 +4341,41 @@ html.menu-open .scroll-cue {
   animation-direction: alternate;
   animation-delay: calc(var(--glow-seed, 0) * -1s);
   position: absolute;
-  inset: -14%;
+  inset: -18%;
 }
 
 :is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::before {
   background-image: var(--glow-white-a);
   animation-name: glow-drift-a;
   animation-duration: 36s;
+  opacity: .09;
 }
 
 :is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::after {
   background-image: var(--glow-white-b);
   animation-name: glow-drift-b;
   animation-duration: 49s;
+  opacity: .07;
 }
 
 /* The blue sections carry the blue pair (declared after the white default, same specificity) */
-:is(.works-section, .stats-section, .home-strengths)::before { background-image: var(--glow-blue-a); }
-:is(.works-section, .stats-section, .home-strengths)::after { background-image: var(--glow-blue-b); }
+:is(.works-section, .stats-section, .home-strengths)::before { background-image: var(--glow-blue-a); opacity: .15; }
+:is(.works-section, .stats-section, .home-strengths)::after { background-image: var(--glow-blue-b); opacity: .12; }
 
 @keyframes glow-drift-a {
   0%   { transform: translate3d(0, 0, 0) scale(1); }
-  23%  { transform: translate3d(8%, -5%, 0) scale(1.08); }
-  48%  { transform: translate3d(-4%, 6%, 0) scale(1.03); }
-  74%  { transform: translate3d(6%, 4%, 0) scale(1.1); }
-  100% { transform: translate3d(-8%, -3%, 0) scale(1.04); }
+  23%  { transform: translate3d(6%, -4%, 0) scale(1.06); }
+  48%  { transform: translate3d(-3%, 5%, 0) scale(1.02); }
+  74%  { transform: translate3d(5%, 3%, 0) scale(1.08); }
+  100% { transform: translate3d(-6%, -2%, 0) scale(1.03); }
 }
 
 @keyframes glow-drift-b {
-  0%   { transform: translate3d(0, 0, 0) scale(1.05); }
-  19%  { transform: translate3d(-6%, 5%, 0) scale(1); }
-  43%  { transform: translate3d(5%, -6%, 0) scale(1.09); }
-  69%  { transform: translate3d(-5%, -4%, 0) scale(1.02); }
-  100% { transform: translate3d(8%, 5%, 0) scale(1.07); }
+  0%   { transform: translate3d(0, 0, 0) scale(1.04); }
+  19%  { transform: translate3d(-5%, 4%, 0) scale(1); }
+  43%  { transform: translate3d(4%, -5%, 0) scale(1.07); }
+  69%  { transform: translate3d(-4%, -3%, 0) scale(1.02); }
+  100% { transform: translate3d(6%, 4%, 0) scale(1.05); }
 }
 
 @media (prefers-reduced-motion: reduce) {
