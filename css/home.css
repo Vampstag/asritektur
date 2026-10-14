@@ -317,7 +317,7 @@
   font-family: var(--_typography---font--switzer);
   color: var(--blue);
   font-size: clamp(48px, 5.2vw, 76px);
-  font-weight: 300;
+  font-weight: 400; /* was 300 but rendered as 400 (no Light file at the time); kept as it looked */
   font-variant-numeric: tabular-nums;
   letter-spacing: -.04em;
   line-height: 1;

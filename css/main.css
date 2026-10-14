@@ -4361,3 +4361,11 @@ html.menu-open .scroll-cue {
     min-height: 880px;
   }
 }
+
+/* Paragraph text is Be Vietnam Pro Light (300): the Regular felt too heavy next to the tight, medium-weight headings. The small
+   body size (14px, captions and metadata) stays Regular so it keeps its legibility. */
+.body-medium,
+.body-large,
+.body-extra-large {
+  font-weight: 300;
+}

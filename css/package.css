@@ -254,7 +254,7 @@
   color: var(--blue);
   font-size: clamp(56px, 7vw, 112px);
   line-height: 1;
-  font-weight: 300;
+  font-weight: 400; /* was 300 but rendered as 400 (no Light file at the time); kept as it looked */
   letter-spacing: -.05em;
   font-variant-numeric: tabular-nums;
   margin: 0;
