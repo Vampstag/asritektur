@@ -4189,19 +4189,15 @@ a, button, summary, label, input, select, textarea, [role="button"] {
 .scroll-cue {
   z-index: 55;
   color: var(--gold);
-  background: var(--glass-light-fill);
-  -webkit-backdrop-filter: var(--glass-blur);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  box-shadow: inset 0 1px 0 #ffffffe6;
+  background: none;
+  border: 0;
   cursor: pointer;
   justify-content: center;
   align-items: center;
   width: 64px;
   height: 64px;
   padding: 0;
-  transition: opacity .4s ease, transform .4s ease, background-color .25s, color .25s;
+  transition: opacity .4s ease, transform .4s ease, color .25s;
   display: flex;
   position: fixed;
   bottom: 16px;
@@ -4210,18 +4206,19 @@ a, button, summary, label, input, select, textarea, [role="button"] {
 }
 
 .scroll-cue:hover, .scroll-cue:focus-visible {
-  background: var(--gold);
-  color: var(--white);
+  color: var(--blue);
 }
 
 .scroll-cue:focus-visible {
   outline: 1px solid var(--gold);
-  outline-offset: 4px;
+  outline-offset: -8px;
 }
 
+/* A soft white halo keeps the hairline arrow readable over photos and text */
 .scroll-cue svg {
-  width: 16px;
-  height: 30px;
+  width: 20px;
+  height: 38px;
+  filter: drop-shadow(0 0 5px #ffffffd9);
   animation: scroll-cue-drift 2.4s ease-in-out infinite;
 }
 
@@ -4253,8 +4250,8 @@ html.menu-open .scroll-cue {
   }
 
   .scroll-cue svg {
-    width: 14px;
-    height: 26px;
+    width: 18px;
+    height: 34px;
   }
 
   body:has(.hero-section) .scroll-cue {
@@ -4264,10 +4261,6 @@ html.menu-open .scroll-cue {
 
 @media (prefers-reduced-motion: reduce) {
   .scroll-cue svg { animation: none; }
-}
-
-@media (prefers-reduced-transparency: reduce) {
-  .scroll-cue { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
 
 /* ---------- Stats spacing ----------
