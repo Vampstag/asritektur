@@ -842,10 +842,6 @@ html.js:not(.svc-ready):not(.svc-failed) :is(
 }
 
 /* ---------- Glass (tokens and rationale in css/main.css) ---------- */
-.svc-section:has(.svc-card) {
-  background-image: var(--glow-on-white);
-}
-
 .svc-card {
   background: var(--glass-light-fill);
   -webkit-backdrop-filter: var(--glass-blur);

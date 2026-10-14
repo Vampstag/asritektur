@@ -420,14 +420,6 @@
 }
 
 /* ---------- Glass (tokens and rationale in css/main.css) ---------- */
-.home-section {
-  background-image: var(--glow-on-white);
-}
-
-.home-strengths {
-  background-image: var(--glow-on-blue);
-}
-
 .home-pack {
   background: var(--glass-light-fill);
   -webkit-backdrop-filter: var(--glass-blur);

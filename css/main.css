@@ -4101,8 +4101,9 @@ a, button, summary, label, input, select, textarea, [role="button"] {
 
 /* ---------- Glass layer ----------
    Frosted surfaces: a translucent fill, a backdrop blur, a bright hairline edge and a faint inner highlight. No drop shadows.
-   Glass only reads when something sits behind it, so the flat sections it lives on carry a soft ambient glow
-   (--glow-on-white / --glow-on-blue). "light" is for white / photo backgrounds, "dark" for the blue sections. */
+   Glass only reads when something sits behind it, so the flat sections it lives on carry a soft ambient glow that drifts
+   slowly (--glow-white-* / --glow-blue-*, "Ambient glow" at the end of this file). "light" is for white / photo
+   backgrounds, "dark" for the blue sections. */
 :root {
   --glass-blur: blur(18px) saturate(1.5);
   --glass-light-fill: linear-gradient(135deg, #ffffffb8, #eef2f48f);
@@ -4110,8 +4111,12 @@ a, button, summary, label, input, select, textarea, [role="button"] {
   --glass-light-ring: #093b4f14;
   --glass-dark-fill: linear-gradient(135deg, #ffffff1f, #ffffff0a);
   --glass-dark-edge: #ffffff26;
-  --glow-on-white: radial-gradient(30% 34% at 50% 16%, #aa9b3f2b, transparent 72%), radial-gradient(34% 38% at 50% 84%, #3f8aa63d, transparent 72%), radial-gradient(40% 40% at 94% 6%, #aa9b3f26, transparent 70%), radial-gradient(44% 44% at 6% 94%, #093b4f1f, transparent 70%);
-  --glow-on-blue: radial-gradient(46% 42% at 90% 10%, #aa9b3f3d, transparent 70%), radial-gradient(54% 50% at 6% 94%, #3f8aa633, transparent 70%);
+  /* Ambient glow, two layers per background so they can drift independently (see "Ambient glow" below). Positions are
+     percentages of a layer that is 28% larger than its section, so the section edge sits at 11% / 89%. */
+  --glow-white-a: radial-gradient(23% 27% at 50% 21%, #aa9b3f2b, transparent 72%), radial-gradient(27% 30% at 50% 79%, #3f8aa63d, transparent 72%);
+  --glow-white-b: radial-gradient(31% 31% at 80% 16%, #aa9b3f26, transparent 70%), radial-gradient(34% 34% at 17% 83%, #093b4f1f, transparent 70%);
+  --glow-blue-a: radial-gradient(36% 33% at 80% 17%, #aa9b3f3d, transparent 70%);
+  --glow-blue-b: radial-gradient(42% 39% at 16% 85%, #3f8aa633, transparent 70%);
 }
 
 .navbar-section {
@@ -4136,11 +4141,6 @@ a, button, summary, label, input, select, textarea, [role="button"] {
   box-shadow: inset 0 0 0 1px var(--glass-dark-edge);
 }
 
-.works-section,
-.stats-section {
-  background-image: var(--glow-on-blue);
-}
-
 .works-card-text,
 .stats-card {
   background: var(--glass-dark-fill);
@@ -4148,10 +4148,6 @@ a, button, summary, label, input, select, textarea, [role="button"] {
   backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-dark-edge);
   box-shadow: inset 0 1px 0 #ffffff1f;
-}
-
-.testimonial-section {
-  background-image: var(--glow-on-white);
 }
 
 .testimonial-card {
@@ -4301,5 +4297,72 @@ html.menu-open .scroll-cue {
     .stats-card {
       --stats-number-size: min(40cqw, 56px);
     }
+  }
+}
+
+/* ---------- Ambient glow ----------
+   The soft light behind the glass cards. Each glow section gets two oversized layers (::before / ::after) that drift on their
+   own slow, uneven paths, so the light never repeats in step and the frosted cards keep catching something new.
+   Only transform is animated (compositor, no repaint), the section clips the overhang, and main.js gives every section a
+   random starting point (--glow-seed) so no two sections move together. */
+.works-section,
+.stats-section,
+.testimonial-section,
+.home-section,
+.svc-section:has(.svc-card) {
+  isolation: isolate;
+  overflow: clip;
+}
+
+:is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::before,
+:is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::after {
+  content: "";
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: calc(var(--glow-seed, 0) * -1s);
+  position: absolute;
+  inset: -14%;
+}
+
+:is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::before {
+  background-image: var(--glow-white-a);
+  animation-name: glow-drift-a;
+  animation-duration: 36s;
+}
+
+:is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::after {
+  background-image: var(--glow-white-b);
+  animation-name: glow-drift-b;
+  animation-duration: 49s;
+}
+
+/* The blue sections carry the blue pair (declared after the white default, same specificity) */
+:is(.works-section, .stats-section, .home-strengths)::before { background-image: var(--glow-blue-a); }
+:is(.works-section, .stats-section, .home-strengths)::after { background-image: var(--glow-blue-b); }
+
+@keyframes glow-drift-a {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  23%  { transform: translate3d(8%, -5%, 0) scale(1.08); }
+  48%  { transform: translate3d(-4%, 6%, 0) scale(1.03); }
+  74%  { transform: translate3d(6%, 4%, 0) scale(1.1); }
+  100% { transform: translate3d(-8%, -3%, 0) scale(1.04); }
+}
+
+@keyframes glow-drift-b {
+  0%   { transform: translate3d(0, 0, 0) scale(1.05); }
+  19%  { transform: translate3d(-6%, 5%, 0) scale(1); }
+  43%  { transform: translate3d(5%, -6%, 0) scale(1.09); }
+  69%  { transform: translate3d(-5%, -4%, 0) scale(1.02); }
+  100% { transform: translate3d(8%, 5%, 0) scale(1.07); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::before,
+  :is(.works-section, .stats-section, .testimonial-section, .home-section, .svc-section:has(.svc-card))::after {
+    animation: none;
   }
 }
