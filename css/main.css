@@ -4352,3 +4352,12 @@ html.menu-open .scroll-cue {
 :is(.works-section, .stats-section, .home-strengths)::before { background-image: var(--glow-blue-a); opacity: .15; }
 :is(.works-section, .stats-section, .home-strengths)::after { background-image: var(--glow-blue-b); opacity: .12; }
 
+
+/* Home "Layanan": the section is one screen tall and the cards take whatever room is left, so on shorter laptop screens they
+   shrank to ~130px. A minimum section height keeps the cards at about 200px (their size on a 900px-tall screen); on shorter
+   screens the section simply runs a little past the fold. */
+@media screen and (min-width: 992px) {
+  .service-section {
+    min-height: 880px;
+  }
+}
