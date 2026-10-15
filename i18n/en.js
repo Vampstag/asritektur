@@ -15,6 +15,8 @@ dict: {
     "3D fasad":  "3D facade",
     "400+ Klien":  "400+ Clients",
     "Ada pertanyaan?":  "Have a question?",
+    "Ingin tahu lebih lengkap?":  "Want to know more?",
+    "Baca Company Profile (PDF, 3 MB)":  "Read the Company Profile (PDF, 3 MB)",
     "Alternatif Desain":  "Design Alternatives",
     "Anggaran.":  "Budget.",
     "Apa Kata":  "What Our Clients",

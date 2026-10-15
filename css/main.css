@@ -3860,6 +3860,10 @@ html.menu-open .wa-widget {
   margin: 0;
 }
 
+.footer-contact .footer-contact-next {
+  margin-top: 16px;
+}
+
 /* Home: same airy rhythm as the other pages. These two sections have no fixed height, so only their padding changes. */
 .about-section, .works-section {
   padding-top: 120px;
